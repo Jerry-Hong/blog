@@ -1,34 +1,34 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
+import React from 'react';
+import { navigate } from 'gatsby-link';
+import Layout from '../../components/Layout';
 
-function encode(data) {
-  const formData = new FormData()
+function encode (data) {
+  const formData = new FormData();
 
   for (const key of Object.keys(data)) {
-    formData.append(key, data[key])
+    formData.append(key, data[key]);
   }
 
-  return formData
+  return formData;
 }
 
 export default class Contact extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
+  constructor (props) {
+    super(props);
+    this.state = {};
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   handleAttachment = e => {
-    this.setState({ [e.target.name]: e.target.files[0] })
-  }
+    this.setState({ [e.target.name]: e.target.files[0] });
+  };
 
   handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
     fetch('/', {
       method: 'POST',
       body: encode({
@@ -37,10 +37,10 @@ export default class Contact extends React.Component {
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error))
-  }
+      .catch(error => alert(error));
+  };
 
-  render() {
+  render () {
     return (
       <Layout>
         <section className="section">
@@ -55,7 +55,6 @@ export default class Contact extends React.Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="file-upload" />
                 <div hidden>
                   <label>
@@ -103,6 +102,6 @@ export default class Contact extends React.Component {
           </div>
         </section>
       </Layout>
-    )
+    );
   }
 }
