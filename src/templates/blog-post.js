@@ -4,7 +4,6 @@ import { kebabCase } from 'lodash';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
-import { rgba } from 'polished';
 import { format } from 'date-fns';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';

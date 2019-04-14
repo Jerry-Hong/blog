@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 import { normalize, rgba } from 'polished';
 import { theme } from '../../theme';
-import { StaticQuery,graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 const Continer = styled.div`
   width: 100%;
