@@ -86,7 +86,7 @@ const Layout = ({ children }) => {
                 color="#ff4400"
               />
               <link
-                href="https://fonts.googleapis.com/css?family=Noto+Sans+TC"
+                href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&amp;subset=chinese-traditional"
                 rel="stylesheet"
               />
               <meta name="theme-color" content="#fff" />
