@@ -23,6 +23,7 @@ const Content = styled.div`
 `;
 
 const Title = styled.h2`
+  color: rgba(0, 0, 0, 0.8);
   font-size: 1.4em;
   margin: 0 0 0.5em 0;
 `;
