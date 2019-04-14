@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 const CardLink = styled(Link)`
   display: flex;
   flex-direction: column;
-  min-height: 180px;
+  min-height: 100px;
   max-width: 600px;
   width: 100%;
   border-radius: 5px;
