@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-y: scroll;
   }
 
-  body.light {
+  body, body.light {
     --bg: ${theme[THEME.LIGHT].COLOR.BG};
     --text: ${theme[THEME.LIGHT].COLOR.TEXT};
     --link: ${theme[THEME.LIGHT].COLOR.LINK};
