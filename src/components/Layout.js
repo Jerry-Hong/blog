@@ -5,6 +5,7 @@ import useSiteMetadata from './SiteMetadata';
 import Header from './Header';
 import { theme } from '../../theme';
 import { normalize } from 'polished';
+import { IS_CLIENT } from '../constants';
 
 const Continer = styled.div`
   width: 100%;
@@ -44,9 +45,12 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children }) => {
   const { title, description } = useSiteMetadata();
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(() =>
+    IS_CLIENT ? (localStorage.getItem('mode') === 'true' ? true : false) : false
+  );
   const toggleMode = useCallback(() => {
     setDarkMode(state => {
+      localStorage.setItem('mode', !state);
       return !state;
     });
   }, []);
