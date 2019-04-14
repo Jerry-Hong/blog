@@ -76,14 +76,18 @@ class ZoomImg extends React.Component {
     const { isZoomed } = this.state;
     const { style: _, ...props } = this.props;
     const pose = isZoomed ? 'zoom' : 'init';
-    console.log(this.props)
+
     return (
       <span
-        style={props.className ? {
-          position: 'absolute',
-          top: 0,
-          left: 0,
-        } : {}}
+        style={
+          props.className
+            ? {
+              position: 'absolute',
+              top: 0,
+              left: 0,
+            }
+            : {}
+        }
         onClick={this.toggleZoom}
       >
         <Frame isZoomed={isZoomed} pose={pose} className="frame" />

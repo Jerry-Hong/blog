@@ -8,8 +8,9 @@ const renderAst = new rehypeReact({
   components: { img: ZoomImg },
 }).Compiler;
 
-export const HTMLContent = ({ content, className }) =>
-  console.log(content) || <div className={className}>{renderAst(content)}</div>;
+export const HTMLContent = ({ content, className }) => (
+  <div className={className}>{renderAst(content)}</div>
+);
 
 const Content = ({ content, className }) => (
   <div className={className}>{content}</div>

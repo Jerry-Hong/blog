@@ -13,7 +13,6 @@ const Content = styled.div`
 `;
 
 const PostList = ({ data = [] }) => {
-  console.log(data);
   return (
     <Content>
       {data

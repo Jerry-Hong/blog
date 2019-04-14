@@ -165,7 +165,6 @@ const Desc = styled.div`
 `;
 
 const TagList = styled.ul`
-  
   display: flex;
   list-style: none;
   padding: 0;
@@ -193,7 +192,7 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log(description);
+
   return (
     <Section>
       {helmet || ''}
