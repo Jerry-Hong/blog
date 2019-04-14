@@ -39,7 +39,7 @@ const Section = styled.section`
       }
     }
   }
-  
+
   blockquote {
     border-left: 3px solid ${({ theme }) => rgba(theme.COLOR.TEXT, 0.7)};
     padding: 0 0 0 0.5em;
@@ -164,6 +164,24 @@ const Desc = styled.div`
   line-height: 1.5em;
 `;
 
+const TagList = styled.ul`
+  
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 3em;
+  align-items: center;
+
+  &::before {
+    content: 'Tags: ';
+    margin-right: 10px;
+  }
+`;
+
+const Tag = styled.li`
+  margin-right: 10px;
+`;
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -187,16 +205,13 @@ export const BlogPostTemplate = ({
 
       <PostContent content={content} />
       {tags && tags.length ? (
-        <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
-            {tags.map(tag => (
-              <li key={`${tag}tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <TagList>
+          {tags.map(tag => (
+            <Tag key={`${tag}tag`}>
+              <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+            </Tag>
+          ))}
+        </TagList>
       ) : null}
     </Section>
   );
