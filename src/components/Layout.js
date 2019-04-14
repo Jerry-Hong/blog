@@ -9,7 +9,7 @@ import { normalize } from 'polished';
 const Continer = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => theme.COLOR.BG};
   transition: background-color 0.3s;
 `;
 

@@ -4,46 +4,62 @@ import { kebabCase } from 'lodash';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
+import { rgba } from 'polished';
 import Content, { HTMLContent } from '../components/Content';
 import { darken, rgba } from 'polished';
 import Layout from '../components/Layout';
 
 const Section = styled.section`
   padding: 15px;
+  color: ${({ theme }) => rgba(theme.COLOR.TEXT, 0.88)};
 
-  h1 {
-    color: ${({ theme }) => theme.textTitle};
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ${({ theme }) => rgba(theme.COLOR.TITLE, 0.88)};
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
   }
 
   h2 {
     font-size: 1.6em;
-    margin-top: 1em;
-    color: ${({ theme }) => theme.textTitle};
-  }
-
-  h3 {
-    margin-top: 0.5em;
-    color: ${({ theme }) => theme.textTitle};
   }
 
   a {
-    color: ${({ theme }) => theme.activeColor};
-  }
+    color: ${({ theme }) => theme.COLOR.LINK};
+    margin: 0 3px;
 
+    &.anchor {
+      margin: 0 0 0 -20px;
+
+      svg {
+        fill: ${({ theme }) => theme.COLOR.LINK};
+      }
+    }
+  }
+  
   blockquote {
-    border-left: 3px solid rgb(229, 229, 235);
+    border-left: 3px solid ${({ theme }) => rgba(theme.COLOR.TEXT, 0.7)};
     padding: 0 0 0 0.5em;
     margin: 1.5em 0 2em 1em;
-    color: ${rgba('#000', 0.6)};
+    color: ${({ theme }) => rgba(theme.COLOR.TEXT, 0.7)};
   }
 
   strong {
-    color: ${darken(0.1, '#575e70')};
+    color: ${({ theme }) => theme.COLOR.TEXT};
+  }
+
+  hr {
+    background: ${({ theme }) => rgba(theme.COLOR.TITLE, 0.3)};
+    height: 1px;
+    border: none;
   }
 
   pre {
-    background-color: #292c34;
-    color: #bbbbbb;
+    background-color: ${({ theme }) => theme.COLOR.BLOCKCODE_BG};
+    color: ${({ theme }) => theme.COLOR.BLOCKCODE};
     padding: 0.5em;
     line-height: 1.5em;
     margin-top: 20px;
@@ -52,13 +68,13 @@ const Section = styled.section`
     word-wrap: normal;
     border-radius: 5px;
   }
-  code,
+  code[class*='language-text'],
   kbd,
   samp {
     font-size: 1em;
-    padding: 5px;
-    background-color: #292c34;
-    color: #bbbbbb;
+    padding: 3px;
+    background-color: ${({ theme }) => rgba(theme.COLOR.INLINECODE_BG, 0.8)};
+    color: ${({ theme }) => theme.COLOR.INLINECODE};
     border-radius: 5px;
   }
 

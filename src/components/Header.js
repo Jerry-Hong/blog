@@ -19,12 +19,12 @@ const StyledLink = styled(Link)`
 `;
 
 const Title = styled.h1`
-  color: ${({ theme }) => theme.textTitle};
+  color: ${({ theme }) => theme.COLOR.TITLE};
   margin: 0 20px;
 `;
 
 const Button = styled.span`
-  color: ${({ theme }) => theme.activeColor};
+  color: ${({ theme }) => theme.COLOR.LINK};
   margin-left: auto;
   cursor: pointer;
 `;
