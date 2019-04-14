@@ -21,7 +21,6 @@ export default class HTML extends React.Component {
               (function() {
                 window.__onThemeChange = function() {};
                 function setTheme(newTheme) {
-                  console.log(window.__theme)
                   window.__theme = newTheme;
                   preferredTheme = newTheme;
                   document.body.className = newTheme;

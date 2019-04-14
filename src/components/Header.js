@@ -45,10 +45,7 @@ const INVERT_THEME = {
 
 const ToggleThemeButton = ({ mode, onClick }) => (
   <Button
-    onClick={() => {
-      console.log(mode);
-      onClick(INVERT_THEME[mode]);
-    }}
+    onClick={() => onClick(INVERT_THEME[mode])}
   >
     {mode === 'dark' ? <Sunrise /> : <Sunset />}
   </Button>
