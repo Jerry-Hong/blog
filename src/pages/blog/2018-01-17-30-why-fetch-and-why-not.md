@@ -12,8 +12,6 @@ tags:
   - service-worker
 ---
 
-> 今天(1/16) 在 Facebook 社團上看到網友提問為什麼要用 fetch，在我們已經有 jQuery ajax 的情況下，fetch 能取代 jQuery 的 ajax 嗎？
-
 ## 為什麼我們應該學 fetch ?
 
 Fetch API 是 whatwg 訂製的[標準(spec)](https://github.com/whatwg/fetch)，各家瀏覽器都會依照這個標準去實作 **JS 的宿主環境**。也就是說 fetch 是瀏覽器內建的方法，我們可以直接使用，不需要載入額外的 Library。

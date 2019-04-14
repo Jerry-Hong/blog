@@ -14,8 +14,6 @@ tags:
 
 
 > [NPM](https://www.npmjs.com/) (Node Package Manager) 是 Node.js 的套件管理工具。就跟 Ruby 的 gem 或是 Asp.Net 的 Nuget 是扮演相同的角色，負責管理專案使用的模組，像是模組的下載、版本、移除...等。
-  
-> 由於 JavaScript 是前端的語言，所以近年來 Node.js 逐漸成為前端的開發必備環境，許多前端開發工具都是跑在 Node.js 之上，像是 [Gulp](http://gulpjs.com/), [Grunt](http://gruntjs.com/), [Webpack](https://webpack.github.io/)。因此 NPM 也成為前端必會的基礎工具之一！
 
 
 ## 前言

@@ -5,8 +5,8 @@ import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { rgba } from 'polished';
+import { format } from 'date-fns';
 import Content, { HTMLContent } from '../components/Content';
-import { darken, rgba } from 'polished';
 import Layout from '../components/Layout';
 
 const Section = styled.section`
@@ -149,21 +149,42 @@ const Section = styled.section`
   }
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+`;
+const Note = styled.span``;
+const Desc = styled.div`
+  display: inline-block;
+  padding: 10px;
+  margin-top: 3.5em;
+  border-radius: 5px;
+  background-color: ${({ theme }) => theme.COLOR.DESC_BG};
+  color: ${({ theme }) => rgba(theme.COLOR.TITLE, 0.9)};
+  line-height: 1.5em;
+`;
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   tags,
   title,
+  description,
+  date,
+  timeToRead,
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-
+  console.log(description);
   return (
     <Section>
       {helmet || ''}
       <Title>{title}</Title>
+      <Note>
+        {format(new Date(date), 'MMM Do, YYYY')}. {timeToRead} mins read
+      </Note>
+      <Desc>{description}</Desc>
+
       <PostContent content={content} />
       {tags && tags.length ? (
         <div style={{ marginTop: `4rem` }}>
@@ -207,6 +228,8 @@ const BlogPost = ({ data }) => {
             />
           </Helmet>
         }
+        date={post.frontmatter.date}
+        timeToRead={post.timeToRead}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
@@ -231,6 +254,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        description
       }
     }
   }

@@ -11,8 +11,6 @@ tags:
 
 > JavaScript 最早是網頁的腳本語言，單純的被拿來做 DOM 的操作，而隨著時間的推演 JavaScript 逐漸成熟，但一直到 [ECMAScript2015](http://www.ecma-international.org/ecma-262/6.0/) 之前都還沒有「標準的」模組化機制。在 ES2015 推出前就發展出了許多套第三方的模組規範，像是 CommonJS, AMD, CMD, UMD...等 
 
-> 這篇文章會著重在帶大家了解 JavaScript 模組大致的發展歷程，而不會放在各個模組化機制的使用方式，希望能在這前端渾沌的時代，留下一點紀錄。
-
 
 **ECMAScript**
 
