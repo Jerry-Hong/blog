@@ -11,14 +11,14 @@ import Layout from '../components/Layout';
 
 const Section = styled.section`
   padding: 15px;
-  color: ${({ theme }) => rgba(theme.COLOR.TEXT, 0.88)};
+  color: var(--article_text);
 
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: ${({ theme }) => rgba(theme.COLOR.TITLE, 0.88)};
+    color: var(--article_title);
     margin-top: 2.5em;
     margin-bottom: 1.5em;
   }
@@ -28,38 +28,38 @@ const Section = styled.section`
   }
 
   a {
-    color: ${({ theme }) => theme.COLOR.LINK};
+    color: var(--link);
     margin: 0 3px;
 
     &.anchor {
       margin: 0 0 0 -20px;
 
       svg {
-        fill: ${({ theme }) => theme.COLOR.LINK};
+        fill: var(--link);
       }
     }
   }
 
   blockquote {
-    border-left: 3px solid ${({ theme }) => rgba(theme.COLOR.TEXT, 0.7)};
+    border-left: 3px solid var(--article_blockquote);
     padding: 0 0 0 0.5em;
     margin: 1.5em 0 2em 1em;
-    color: ${({ theme }) => rgba(theme.COLOR.TEXT, 0.7)};
+    color: var(--article_blockquote);
   }
 
   strong {
-    color: ${({ theme }) => theme.COLOR.TEXT};
+    color: var(--text);
   }
 
   hr {
-    background: ${({ theme }) => rgba(theme.COLOR.TITLE, 0.3)};
+    background: var(--hr);
     height: 1px;
     border: none;
   }
 
   pre {
-    background-color: ${({ theme }) => theme.COLOR.BLOCKCODE_BG};
-    color: ${({ theme }) => theme.COLOR.BLOCKCODE};
+    background-color: var(--blockcode_bg);
+    color: var(--blockcode);
     padding: 0.5em;
     line-height: 1.5em;
     margin-top: 20px;
@@ -73,8 +73,8 @@ const Section = styled.section`
   samp {
     font-size: 1em;
     padding: 3px;
-    background-color: ${({ theme }) => rgba(theme.COLOR.INLINECODE_BG, 0.8)};
-    color: ${({ theme }) => theme.COLOR.INLINECODE};
+    background-color: var(--inlinecode_bg);
+    color: var(--inlinecode);
     border-radius: 5px;
   }
 
@@ -159,8 +159,8 @@ const Desc = styled.div`
   padding: 10px;
   margin-top: 3.5em;
   border-radius: 5px;
-  background-color: ${({ theme }) => theme.COLOR.DESC_BG};
-  color: ${({ theme }) => rgba(theme.COLOR.TITLE, 0.9)};
+  background-color: var(--desc_bg);
+  color: var(--article_title);
   line-height: 1.5em;
 `;
 

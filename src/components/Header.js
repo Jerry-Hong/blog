@@ -16,31 +16,52 @@ const StyledLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  > svg {
+    #logo-eye {
+      fill: var(--logo_eye);
+    }
+    #logo-j {
+      fill: var(--logo_j);
+    }
+  }
 `;
 
 const Title = styled.h1`
-  color: ${({ theme }) => theme.COLOR.TITLE};
+  color: var(--title);
   margin: 0 20px;
 `;
 
 const Button = styled.span`
-  color: ${({ theme }) => theme.COLOR.LINK};
+  color: var(--link);
   margin-left: auto;
   cursor: pointer;
 `;
 
-const ToggleThemeButton = ({ isDarkMode, onClick }) => (
-  <Button onClick={onClick}>{isDarkMode ? <Sunrise /> : <Sunset />}</Button>
+const INVERT_THEME = {
+  dark: 'light',
+  light: 'dark',
+};
+
+const ToggleThemeButton = ({ mode, onClick }) => (
+  <Button
+    onClick={() => {
+      console.log(mode);
+      onClick(INVERT_THEME[mode]);
+    }}
+  >
+    {mode === 'dark' ? <Sunrise /> : <Sunset />}
+  </Button>
 );
 
-const Header = ({ isDarkMode, toggleMode }) => {
+const Header = ({ mode, toggleMode }) => {
   return (
     <Content>
       <StyledLink to="/">
         <Logo />
         <Title>Jerry Blog</Title>
       </StyledLink>
-      <ToggleThemeButton isDarkMode={isDarkMode} onClick={toggleMode} />
+      <ToggleThemeButton mode={mode} onClick={toggleMode} />
     </Content>
   );
 };
