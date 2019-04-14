@@ -6,6 +6,7 @@ import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import Content, { HTMLContent } from '../components/Content';
 import { darken, rgba } from 'polished';
+import Layout from '../components/Layout';
 
 const Section = styled.section`
   padding: 15px;
@@ -176,22 +177,24 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <BlogPostTemplate
-      content={post.htmlAst}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={
-        <Helmet titleTemplate="%s | Blog">
-          <title>{`${post.frontmatter.title}`}</title>
-          <meta
-            name="description"
-            content={`${post.frontmatter.description}`}
-          />
-        </Helmet>
-      }
-      tags={post.frontmatter.tags}
-      title={post.frontmatter.title}
-    />
+    <Layout>
+      <BlogPostTemplate
+        content={post.htmlAst}
+        contentComponent={HTMLContent}
+        description={post.frontmatter.description}
+        helmet={
+          <Helmet titleTemplate="%s | Blog">
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta
+              name="description"
+              content={`${post.frontmatter.description}`}
+            />
+          </Helmet>
+        }
+        tags={post.frontmatter.tags}
+        title={post.frontmatter.title}
+      />
+    </Layout>
   );
 };
 

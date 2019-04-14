@@ -1,12 +1,16 @@
 import * as React from 'react';
 import PostList from '../components/PostList';
 import { useStaticQuery, graphql } from 'gatsby';
+import Layout from '../components/Layout';
 
 const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(limit: 1000, sort: {fields:frontmatter___date, order: DESC}) {
+        allMarkdownRemark(
+          limit: 1000
+          sort: { fields: frontmatter___date, order: DESC }
+        ) {
           edges {
             node {
               id
@@ -35,7 +39,11 @@ const IndexPage = () => {
     `
   );
 
-  return <PostList data={allMarkdownRemark.edges} />;
+  return (
+    <Layout>
+      <PostList data={allMarkdownRemark.edges} />
+    </Layout>
+  );
 };
 
 export default IndexPage;

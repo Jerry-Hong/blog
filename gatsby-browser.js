@@ -1,35 +1,17 @@
+// gatsby-browser.js
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-import { normalize } from 'polished';
-import Layout from './src/components/Layout.js';
 
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: inherit;
-  }
+// Forked Gatsby default to not remount on switches between
+// translated versions of the same page.
+export function replaceComponentRenderer ({ props }) {
+  return React.createElement(props.pageResources.component, {
+    ...props,
 
-  ${normalize()}
+    // Gatsby default is:
+    // key: props.pageResources.page.path,
 
-  html {
-    font-family: 'Noto Sans TC', sans-serif;
-    box-sizing: border-box;
-    overflow-y: scroll;
-  }
-
-  a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */  
-  }
-`;
-
-export function wrapPageElement ({ element, props }) {
-  return (
-    <Layout {...props}>
-      <GlobalStyle />
-
-      {element}
-    </Layout>
-  );
+    // But we're happy with letting React do its thing.
+  });
 }
 
 function countSlashes (url) {
