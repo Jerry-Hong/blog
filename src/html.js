@@ -29,12 +29,12 @@ export default class HTML extends React.Component {
                 }
                 var preferredTheme;
                 try {
-                  preferredTheme = localStorage.getItem('mode');
+                  preferredTheme = localStorage.getItem('theme');
                 } catch (err) { }
                 window.__setPreferredTheme = function(newTheme) {
                   setTheme(newTheme);
                   try {
-                    localStorage.setItem('mode', newTheme);
+                    localStorage.setItem('theme', newTheme);
                   } catch (err) {}
                 }
 
