@@ -2,8 +2,8 @@ let proxy = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
-    title: '辰 - Thinking',
-    description: '',
+    title: 'Jerry Blog',
+    description: 'Think how to think, learn how to learn',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

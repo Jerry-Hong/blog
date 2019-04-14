@@ -68,25 +68,18 @@ const Layout = ({ children }) => {
 
               <link
                 rel="apple-touch-icon"
-                sizes="180x180"
-                href="/img/apple-touch-icon.png"
+                sizes="152x152"
+                href="/img/j_logo-152x152.png"
               />
               <link
                 rel="icon"
                 type="image/png"
-                href="/img/favicon-32x32.png"
-                sizes="32x32"
+                href="/img/j_logo-144x144.png"
+                sizes="144x144"
               />
-              <link
-                rel="icon"
-                type="image/png"
-                href="/img/favicon-16x16.png"
-                sizes="16x16"
-              />
-
               <link
                 rel="mask-icon"
-                href="/img/safari-pinned-tab.svg"
+                href="/img/j_logo.svg"
                 color="#ff4400"
               />
               <link
@@ -95,10 +88,10 @@ const Layout = ({ children }) => {
               />
               <meta name="theme-color" content="#fff" />
 
-              <meta property="og:type" content="business.business" />
+              <meta property="og:type" content="article" />
               <meta property="og:title" content={title} />
               <meta property="og:url" content="/" />
-              <meta property="og:image" content="/img/og-image.jpg" />
+              <meta property="og:image" content="/img/j_logo-144x144.png" />
             </Helmet>
             <Header toggleMode={toggleMode} isDarkMode={isDarkMode} />
             <div>{children}</div>
