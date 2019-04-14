@@ -1,3 +1,9 @@
+[[redirects]]
+from = "https://jerry-blog.netlify.com/*"
+to = "https://blog.jerry-hong.com/:splat"
+status = 301
+force = true
+
 [build]
   publish = "public"
   command = "npm run build"
