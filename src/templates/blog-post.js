@@ -8,17 +8,16 @@ import Content, { HTMLContent } from '../components/Content';
 import { darken, rgba } from 'polished';
 
 const Section = styled.section`
-  position: relative;
   padding: 15px;
 
   h1 {
-    color: ${({ theme }) => darken(0.2, theme.textTitle)};
+    color: ${({ theme }) => theme.textTitle};
   }
 
   h2 {
     font-size: 1.6em;
     margin-top: 1em;
-    color: ${({ theme }) => darken(0.1, theme.textTitle)};
+    color: ${({ theme }) => theme.textTitle};
   }
 
   h3 {
@@ -42,8 +41,8 @@ const Section = styled.section`
   }
 
   pre {
-    background-color: #292C34;
-    color: #BBBBBB;
+    background-color: #292c34;
+    color: #bbbbbb;
     padding: 0.5em;
     line-height: 1.5em;
     margin-top: 20px;
@@ -57,8 +56,8 @@ const Section = styled.section`
   samp {
     font-size: 1em;
     padding: 5px;
-    background-color: #292C34;
-    color: #BBBBBB;
+    background-color: #292c34;
+    color: #bbbbbb;
     border-radius: 5px;
   }
 
@@ -66,7 +65,7 @@ const Section = styled.section`
   p {
     line-height: 1.5em;
   }
-  
+
   .token.comment,
   .token.prolog,
   .token.doctype,
@@ -85,10 +84,10 @@ const Section = styled.section`
   .token.constant,
   .token.symbol,
   .token.deleted {
-    color: #C778DD;
+    color: #c778dd;
   }
   .token.tag {
-    color: #61AFEF;
+    color: #61afef;
   }
   .token.selector,
   .token.string,
@@ -96,21 +95,22 @@ const Section = styled.section`
   .token.builtin,
   .token.inserted,
   .token.attr-value {
-    color: #E5C07B;
+    color: #e5c07b;
   }
   .token.operator,
   .token.entity,
   .token.url,
   .language-css .token.string,
-  .style .token.string{
-    color: #E06C74;
+  .style .token.string {
+    color: #e06c74;
   }
   .token.atrule,
   .token.keyword {
-    color: #51B6C3;
+    color: #51b6c3;
   }
-  .token.function, .token.attr-name {
-    color: #98C379;
+  .token.function,
+  .token.attr-name {
+    color: #98c379;
   }
   .token.regex,
   .token.important,
@@ -128,10 +128,11 @@ const Section = styled.section`
     cursor: help;
   }
   .token.parameter {
-    color: #D09966
+    color: #d09966;
   }
 `;
 
+const Title = styled.h1``;
 
 export const BlogPostTemplate = ({
   content,
@@ -145,28 +146,20 @@ export const BlogPostTemplate = ({
   return (
     <Section>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={`${tag}tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <Title>{title}</Title>
+      <PostContent content={content} />
+      {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map(tag => (
+              <li key={`${tag}tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      ) : null}
     </Section>
   );
 };
