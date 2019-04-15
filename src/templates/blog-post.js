@@ -272,7 +272,7 @@ const BlogPost = ({ data }) => {
             />
             {R.pipe(
               R.pathOr([], ['frontmatter', 'tags']),
-              R.map(tag => <meta property="og:article:tag" content={tag} />)
+              R.map(tag => <meta key={tag} property="og:article:tag" content={tag} />)
             )(post)}
           </Helmet>
         }
