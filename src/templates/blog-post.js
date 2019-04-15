@@ -1,12 +1,14 @@
 import React from 'react';
+import * as R from 'ramda';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 import { format } from 'date-fns';
+import { kebabCase } from '../utils/ramdaExtention';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
+import { DOMAIN } from '../constants';
 
 const Section = styled.section`
   padding: 15px;
@@ -225,26 +227,59 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const title = R.pathOr('', ['frontmatter', 'title'], post);
+  const description = R.pathOr('', ['frontmatter', 'description'], post);
 
   return (
     <Layout>
       <BlogPostTemplate
         content={post.htmlAst}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content={title} />
             <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
+              property="og:url"
+              content={R.pipe(
+                R.pathOr('', ['fields', 'slug']),
+                R.concat(DOMAIN)
+              )(post)}
             />
+            <meta
+              property="og:image"
+              content={R.pipe(
+                R.pathOr(null, [
+                  'frontmatter',
+                  'image',
+                  'childImageSharp',
+                  'fluid',
+                  'src',
+                ]),
+                R.ifElse(
+                  R.isNil,
+                  R.identity,
+                  R.concat(DOMAIN)
+                )
+              )(post)}
+            />
+            <meta
+              property="og:article:published_time"
+              content={R.pathOr('', ['frontmatter', 'date'], post)}
+            />
+            {R.pipe(
+              R.pathOr([], ['frontmatter', 'tags']),
+              R.map(tag => <meta property="og:article:tag" content={tag} />)
+            )(post)}
           </Helmet>
         }
-        date={post.frontmatter.date}
-        timeToRead={post.timeToRead}
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        date={R.pathOr('', ['frontmatter', 'date'], post)}
+        timeToRead={R.pathOr('', ['frontmatter', 'timeToRead'], post)}
+        tags={R.pathOr([], ['frontmatter', 'tags'], post)}
+        title={title}
       />
     </Layout>
   );
@@ -263,11 +298,21 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       htmlAst
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
         tags
         description
+        image {
+          childImageSharp {
+            fluid(maxWidth: 240, quality: 64) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

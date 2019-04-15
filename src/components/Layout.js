@@ -1,10 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from './Header';
-import { normalize, rgba } from 'polished';
-import { theme } from '../../theme';
 import { StaticQuery, graphql } from 'gatsby';
+import { normalize, rgba } from 'polished';
+import Header from './Header';
+import { theme } from '../../theme';
+import { DOMAIN } from '../constants/index';
 
 const Continer = styled.div`
   width: 100%;
@@ -143,10 +144,10 @@ class Layout extends React.Component {
                   />
                   <meta name="theme-color" content="#fff" />
 
-                  <meta property="og:type" content="article" />
+                  <meta property="og:type" content="website" />
                   <meta property="og:title" content={title} />
-                  <meta property="og:url" content="/" />
-                  <meta property="og:image" content="/img/j_logo-144x144.png" />
+                  <meta property="og:url" content={DOMAIN} />
+                  <meta property="og:image" content={`${DOMAIN}/img/j_logo-144x144.png`} />
                 </Helmet>
                 <Header toggleMode={this.changeMode} mode={this.state.theme} />
                 <div>{this.props.children}</div>
