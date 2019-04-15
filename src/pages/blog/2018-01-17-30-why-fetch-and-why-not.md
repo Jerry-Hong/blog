@@ -100,7 +100,7 @@ const logoImg = document.getElementById('logo')
 fetch('//avatars1.githubusercontent.com/u/6407041?s=400&v=4')
 .then(res => res.blob())
 .then(blob => {
-	logoImg.src = URL.createObjectURL(blob);
+  logoImg.src = URL.createObjectURL(blob);
 });
 ```
 [jsbin](https://jsbin.com/hayipasiwi/3/edit?html,js,output)

@@ -111,7 +111,7 @@ webpack ./entry.js bundle.js
 ```javascript
 // sum.js
 module.exports = function(a, b) {
-	return a + b;
+  return a + b;
 }
 ```
 

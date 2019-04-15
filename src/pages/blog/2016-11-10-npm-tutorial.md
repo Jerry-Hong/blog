@@ -67,7 +67,7 @@ npm init
   "description": "npm 新手上路範例",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jerry-Hong <s6323859@hotmail.com>",
   "license": "ISC"
@@ -144,7 +144,7 @@ npm install lodash --save
   "description": "npm 新手上路範例",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jerry-Hong <s6323859@hotmail.com>",
   "license": "ISC",
@@ -172,7 +172,7 @@ npm install webpack --save-dev
   "description": "npm 新手上路範例",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jerry-Hong <s6323859@hotmail.com>",
   "license": "ISC",
