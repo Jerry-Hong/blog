@@ -57,6 +57,7 @@ const GlobalStyle = createGlobalStyle`
     --card_bg: ${theme[THEME.LIGHT].COLOR.CARD_BG};
 
     color: var(--text);
+    background-color: var(--bg);
   }
 
   body.dark {
@@ -79,6 +80,7 @@ const GlobalStyle = createGlobalStyle`
     --card_bg: ${theme[THEME.DARK].COLOR.CARD_BG};
     
     color: var(--text);
+    background-color: var(--bg);
   }
 
   a {
