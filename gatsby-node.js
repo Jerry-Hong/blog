@@ -1,7 +1,14 @@
-const _ = require('lodash');
+const R = require('ramda');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+
+const kebabCase = s =>
+  s
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/(\W+)/g, '-')
+    .replace(/^-|-$/g, '')
+    .toLowerCase();
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -46,20 +53,15 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    // Tag pages:
-    let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags);
-      }
-    });
-    // Eliminate duplicate tags
-    tags = _.uniq(tags);
+    const tags = R.pipe(
+      R.map(R.pathOr([], ['node', 'frontmatter', 'tags'])),
+      R.flatten,
+      R.uniq
+    )(posts);
 
     // Make tag pages
     tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`;
+      const tagPath = `/tags/${kebabCase(tag)}/`;
 
       createPage({
         path: tagPath,
