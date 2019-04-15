@@ -59,6 +59,7 @@ const Section = styled.section`
   }
 
   pre {
+    font-family: Lucida Console, Courier, monospace;
     background-color: var(--blockcode_bg);
     color: var(--blockcode);
     padding: 0.5em;
@@ -72,6 +73,7 @@ const Section = styled.section`
   code[class*='language-text'],
   kbd,
   samp {
+    font-family: Lucida Console, Courier, monospace;
     font-size: 1em;
     padding: 3px;
     background-color: var(--inlinecode_bg);
