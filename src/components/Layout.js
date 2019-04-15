@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
     --hr: ${rgba(theme[THEME.LIGHT].COLOR.TITLE, 0.3)};
     --shadow: ${theme[THEME.LIGHT].COLOR.SHADOW};
     --card_bg: ${theme[THEME.LIGHT].COLOR.CARD_BG};
-    --card_spotlight: ${theme[THEME.LIGHT].COLOR.CARD_SPOTLIGHT};
+
     color: var(--text);
   }
 
@@ -77,7 +77,6 @@ const GlobalStyle = createGlobalStyle`
     --hr: ${rgba(theme[THEME.DARK].COLOR.TITLE, 0.3)};
     --shadow: ${theme[THEME.DARK].COLOR.SHADOW};
     --card_bg: ${theme[THEME.DARK].COLOR.CARD_BG};
-    --card_spotlight: ${theme[THEME.DARK].COLOR.CARD_SPOTLIGHT};
     
     color: var(--text);
   }

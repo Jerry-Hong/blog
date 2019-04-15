@@ -21,7 +21,7 @@ const COMMON_COLOR = {
 export const theme = {
   dark: {
     COLOR: {
-      BG: COMMON_COLOR.DARK,
+      BG: COMMON_COLOR.DARK_DARK,
       TEXT: COMMON_COLOR.DARK_LIGHTER,
       LINK: '#FF6200',
       TITLE: COMMON_COLOR.DARK_LIGHTEST,
@@ -32,9 +32,8 @@ export const theme = {
       BLOCKCODE: '#BBBBBB',
       LOGO_EYE: 'rgba(238, 93, 11, 0.45)',
       LOGO_J: 'rgba(191, 153, 129, 0.28)',
-      CARD_BG: COMMON_COLOR.DARK_DARK,
-      CARD_SPOTLIGHT: rgba(COMMON_COLOR.DARK_LIGHT, 0.2),
-      SHADOW: rgba(COMMON_COLOR.DARK_DARKEST, 0.1),
+      CARD_BG: COMMON_COLOR.DARK,
+      SHADOW: rgba(COMMON_COLOR.DARK_DARKEST, 0.2),
     },
   },
   light: {
@@ -51,7 +50,6 @@ export const theme = {
       LOGO_EYE: '#FF6200',
       LOGO_J: '#343E55',
       CARD_BG: COMMON_COLOR.WHITE_LIGHT,
-      CARD_SPOTLIGHT: COMMON_COLOR.WHITE_LIGHT,
       SHADOW: rgba(COMMON_COLOR.WHITE_DARKEST, 0.1),
     },
   },
