@@ -53,6 +53,10 @@ const GlobalStyle = createGlobalStyle`
     --article_title: ${rgba(theme[THEME.LIGHT].COLOR.TITLE, 0.88)};
     --article_blockquote: ${rgba(theme[THEME.LIGHT].COLOR.TEXT, 0.7)};
     --hr: ${rgba(theme[THEME.LIGHT].COLOR.TITLE, 0.3)};
+    --shadow: ${theme[THEME.LIGHT].COLOR.SHADOW};
+    --card_bg: ${theme[THEME.LIGHT].COLOR.CARD_BG};
+    --card_spotlight: ${theme[THEME.LIGHT].COLOR.CARD_SPOTLIGHT};
+    color: var(--text);
   }
 
   body.dark {
@@ -71,6 +75,11 @@ const GlobalStyle = createGlobalStyle`
     --article_title: ${rgba(theme[THEME.DARK].COLOR.TITLE, 0.88)};
     --article_blockquote: ${rgba(theme[THEME.DARK].COLOR.TEXT, 0.7)};
     --hr: ${rgba(theme[THEME.DARK].COLOR.TITLE, 0.3)};
+    --shadow: ${theme[THEME.DARK].COLOR.SHADOW};
+    --card_bg: ${theme[THEME.DARK].COLOR.CARD_BG};
+    --card_spotlight: ${theme[THEME.DARK].COLOR.CARD_SPOTLIGHT};
+    
+    color: var(--text);
   }
 
   a {

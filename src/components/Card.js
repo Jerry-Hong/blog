@@ -10,8 +10,8 @@ const CardLink = styled(Link)`
   max-width: 600px;
   width: 100%;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, var(--card_spotlight), var(--card_bg));
+  box-shadow: 5px 10px 15px var(--shadow), -1px -1px 3px var(--shadow);
   margin-bottom: 20px;
   cursor: pointer;
 `;
@@ -23,21 +23,21 @@ const Content = styled.div`
 `;
 
 const Title = styled.h2`
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--title);
   font-size: 1.4em;
   margin: 0 0 0.5em 0;
 `;
 
 const Desc = styled.p`
   margin: 0;
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--text);
   margin-bottom: 2em;
   line-height: 1.5em;
 `;
 
 const Note = styled.span`
   margin-top: auto;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text);
 `;
 
 const Card = ({ title, desc, note, link, cover }) => {
