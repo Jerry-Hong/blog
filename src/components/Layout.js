@@ -157,7 +157,10 @@ class Layout extends React.Component {
                   <meta property="og:type" content="website" />
                   <meta property="og:title" content={title} />
                   <meta property="og:url" content={DOMAIN} />
-                  <meta property="og:image" content={`${DOMAIN}/img/j_logo-144x144.png`} />
+                  <meta
+                    property="og:image"
+                    content={`${DOMAIN}/img/j_logo-144x144.png`}
+                  />
                 </Helmet>
                 <Header toggleMode={this.changeMode} mode={this.state.theme} />
                 <div>{this.props.children}</div>
