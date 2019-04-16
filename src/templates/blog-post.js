@@ -9,6 +9,7 @@ import { kebabCase } from '../utils/ramdaExtention';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import { DOMAIN } from '../constants';
+import DisqusComment from '../components/DisqusComment';
 
 const Section = styled.section`
   padding: 15px;
@@ -194,6 +195,7 @@ export const BlogPostTemplate = ({
   date,
   timeToRead,
   helmet,
+  slug,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -205,7 +207,6 @@ export const BlogPostTemplate = ({
         {format(new Date(date), 'MMM Do, YYYY')}. {timeToRead} mins read
       </Note>
       <Desc>{description}</Desc>
-
       <PostContent content={content} />
       {tags && tags.length ? (
         <TagList>
@@ -216,6 +217,11 @@ export const BlogPostTemplate = ({
           ))}
         </TagList>
       ) : null}
+      <DisqusComment
+        identifier={slug}
+        shortname="jerry-blog"
+        url={`${DOMAIN}/${slug}`}
+      />
     </Section>
   );
 };
@@ -262,11 +268,7 @@ const BlogPost = ({ data }) => {
                   'fluid',
                   'src',
                 ]),
-                R.ifElse(
-                  R.isNil,
-                  R.identity,
-                  R.concat(DOMAIN)
-                )
+                R.ifElse(R.isNil, R.identity, R.concat(DOMAIN))
               )(post)}
             />
             <meta
@@ -285,6 +287,7 @@ const BlogPost = ({ data }) => {
         timeToRead={R.pathOr('', ['frontmatter', 'timeToRead'], post)}
         tags={R.pathOr([], ['frontmatter', 'tags'], post)}
         title={title}
+        slug={R.pathOr('', ['fields', 'slug'], post)}
       />
     </Layout>
   );
