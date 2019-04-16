@@ -51,6 +51,17 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <script
+            async
+            onLoad={() => {
+              window.WebFont.load({
+                google: {
+                  families: ['Noto Sans TC'],
+                },
+              });
+            }}
+            src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+          />
         </body>
       </html>
     );

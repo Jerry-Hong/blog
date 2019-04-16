@@ -148,10 +148,6 @@ class Layout extends React.Component {
                     href="/img/j_logo.svg"
                     color="#ff4400"
                   />
-                  <link
-                    href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&amp;subset=chinese-traditional"
-                    rel="stylesheet"
-                  />
                   <meta name="theme-color" content="#fff" />
 
                   <meta property="og:type" content="website" />
