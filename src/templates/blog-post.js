@@ -58,7 +58,8 @@ const Section = styled.section`
     border: none;
   }
 
-  pre {
+  pre,
+  code {
     font-family: Lucida Console, Courier, monospace;
     background-color: var(--blockcode_bg);
     color: var(--blockcode);
