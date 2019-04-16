@@ -59,9 +59,7 @@ const Section = styled.section`
     border: none;
   }
 
-  pre,
-  code {
-    font-family: Lucida Console, Courier, monospace;
+  pre {
     background-color: var(--blockcode_bg);
     color: var(--blockcode);
     padding: 0.5em;
@@ -72,10 +70,12 @@ const Section = styled.section`
     word-wrap: normal;
     border-radius: 5px;
   }
+  code {
+    font-family: Lucida Console, Courier, monospace;
+  }
   code[class*='language-text'],
   kbd,
   samp {
-    font-family: Lucida Console, Courier, monospace;
     font-size: 1em;
     padding: 3px;
     background-color: var(--inlinecode_bg);
