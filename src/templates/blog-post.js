@@ -284,7 +284,7 @@ const BlogPost = ({ data }) => {
           </Helmet>
         }
         date={R.pathOr('', ['frontmatter', 'date'], post)}
-        timeToRead={R.pathOr('', ['frontmatter', 'timeToRead'], post)}
+        timeToRead={R.pathOr('', ['timeToRead'], post)}
         tags={R.pathOr([], ['frontmatter', 'tags'], post)}
         title={title}
         slug={R.pathOr('', ['fields', 'slug'], post)}
@@ -306,6 +306,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       htmlAst
+      timeToRead
       fields {
         slug
       }
