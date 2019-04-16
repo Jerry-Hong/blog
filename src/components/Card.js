@@ -11,7 +11,7 @@ const CardLink = styled(Link)`
   width: 100%;
   border-radius: 5px;
   background: var(--card_bg);
-  box-shadow: 5px 10px 15px var(--shadow), -1px -1px 3px var(--shadow);
+  box-shadow: 0px 2px 5px var(--shadow);
   margin-bottom: 20px;
   cursor: pointer;
 `;

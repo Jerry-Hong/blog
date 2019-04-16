@@ -1,30 +1,15 @@
 import { rgba } from 'polished';
 
-const COMMON_COLOR = {
-  DARK_LIGHTEST: '#EDEDEF',
-  DARK_LIGHTER: '#B8B8BF',
-  DARK_LIGHT: '#82838E',
-  DARK: '#4D4E5E',
-  DARK_DARK: '#454655',
-  DARK_DARKER: '#2E2F38',
-  DARK_DARKEST: '#17171C',
-
-  WHITE_LIGHTEST: '#FFFFFF',
-  WHITE_LIGHTER: '#FFFFFF',
-  WHITE_LIGHT: '#FFFFFF',
-  WHITE: '#FFFFFF',
-  WHITE_DARK: '#E6E6E6',
-  WHITE_DARKER: '#999999',
-  WHITE_DARKEST: '#4D4D4D',
-};
+// https://www.colorhexa.com/343e55
+// https://www.colorhexa.com/ff6200
 
 export const theme = {
   dark: {
     COLOR: {
-      BG: COMMON_COLOR.DARK_DARK,
-      TEXT: COMMON_COLOR.DARK_LIGHTER,
+      BG: '#1e2330',
+      TEXT: rgba('#fff3eb', 0.8),
       LINK: '#FF6200',
-      TITLE: COMMON_COLOR.DARK_LIGHTEST,
+      TITLE: '#fff3eb',
       DESC_BG: 'rgba(255, 98, 0, 0.15)',
       INLINECODE_BG: '#292c34',
       INLINECODE: '#e5c07b',
@@ -32,14 +17,14 @@ export const theme = {
       BLOCKCODE: '#BBBBBB',
       LOGO_EYE: 'rgba(238, 93, 11, 0.45)',
       LOGO_J: 'rgba(191, 153, 129, 0.28)',
-      CARD_BG: COMMON_COLOR.DARK,
-      SHADOW: rgba(COMMON_COLOR.DARK_DARKEST, 0.2),
+      CARD_BG: '#252c3d',
+      SHADOW: 'rgba(0, 0, 0, 0.3)',
     },
   },
   light: {
     COLOR: {
-      BG: '#fff',
-      TEXT: '#343E55',
+      BG: '#F6F7F8',
+      TEXT: '#333E55',
       LINK: '#FF6200',
       TITLE: '#343E55',
       DESC_BG: 'rgba(244, 160, 107, 0.22)',
@@ -49,8 +34,8 @@ export const theme = {
       BLOCKCODE: '#BBBBBB',
       LOGO_EYE: '#FF6200',
       LOGO_J: '#343E55',
-      CARD_BG: COMMON_COLOR.WHITE_LIGHT,
-      SHADOW: rgba(COMMON_COLOR.WHITE_DARKEST, 0.1),
+      CARD_BG: '#fff',
+      SHADOW: rgba('#000', 0.1),
     },
   },
 };
