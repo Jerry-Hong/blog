@@ -29,10 +29,8 @@ export default class DisqusComment extends React.Component {
   componentDidMount () {
     this.loadDisqus();
     window.__loadDisqus = () => {
-      console.log('hello 1');
       DISQUS.reset();
       setTimeout(() => {
-        console.log('hello 2');
         this.loadDisqus();
       }, 1000);
     };
