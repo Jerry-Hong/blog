@@ -57,7 +57,7 @@ const Header = ({ mode, toggleMode }) => {
     <Content>
       <StyledLink to="/">
         <Logo />
-        <Title>Jerry Blog</Title>
+        <Title>J.H. Blog</Title>
       </StyledLink>
       <ToggleThemeButton mode={mode} onClick={toggleMode} />
     </Content>
