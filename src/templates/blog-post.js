@@ -28,11 +28,8 @@ const Section = styled.section`
   h2 {
     font-size: 1.6em;
   }
-
   a {
-    color: var(--link);
     margin: 0 3px;
-
     &.anchor {
       margin: 0 0 0 -20px;
 
