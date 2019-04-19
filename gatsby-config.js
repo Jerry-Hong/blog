@@ -2,7 +2,7 @@ let proxy = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
-    title: 'Jerry Blog',
+    title: 'J.H. Blog',
     description: 'Think how to think, learn how to learn',
   },
   plugins: [
