@@ -17,7 +17,7 @@ next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念
 這是【30天精通 RxJS】的 05 篇，如果還沒看過 04 篇可以往這邊走：
 [30 天精通 RxJS (04)： 什麼是 Observable ?](http://ithelp.ithome.com.tw/articles/10186832)
 
-[![Yes](http://img.youtube.com/vi/tTMMLNNJySc/0.jpg)](https://www.youtube.com/watch?v=tTMMLNNJySc)
+[![Yes](https://img.youtube.com/vi/tTMMLNNJySc/0.jpg)](https://www.youtube.com/watch?v=tTMMLNNJySc)
 不想看文章的人，可以直接看影片喔！
 
 > 今天大家看文章一定要分清楚 **Observable** 跟 **Observer**，不要搞混。

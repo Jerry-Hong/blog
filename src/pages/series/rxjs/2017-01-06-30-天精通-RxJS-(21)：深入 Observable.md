@@ -64,7 +64,7 @@ Array.prototype.map = function(callback) {
 
 每一次的 operator 的運算都會建立一個新的陣列，並在每個元素都運算完後返回這個新陣列，我們可以用下面這張動態圖表示運算過程
 
-![](http://i.giphy.com/l0HlPZeB9OvFu7QwE.gif)
+![](https://media.giphy.com/media/l0HlPZeB9OvFu7QwE/giphy.gif)
 
 Observable operator 的運算方式跟陣列的是完全的不同，雖然 Observable 的 operator 也都會回傳一個新的 observable，但因為元素是漸進式取得的關係，所以每次的運算是一個元素運算到底，而不是運算完全部的元素再返回。
 
@@ -119,7 +119,7 @@ newIterator.next(); // { done: false, value: 2 }
 
 雖然上面這段程式碼是一個非常簡單的示範，但可以看得出來每一次 map 雖然都會返回一個新的 oterator，但實際上在做元素運算時，因為漸進式的特性會使一個元素運算到底，Observable 也是相同的概念，我們可以用下面這張動態圖表示運算過程
 
-![](http://i.giphy.com/3o6ZtqrBfUyHvMDQ2c.gif)
+![](https://media.giphy.com/media/3o6ZtqrBfUyHvMDQ2c/giphy.gif)
 
 漸進式取值的觀念在 Observable 中其實非常的重要，這個特性也使得 Observable 相較於 Array 的 operator 在做運算時來的高效很多，尤其是在處理大量資料的時候會非常明顯！
 

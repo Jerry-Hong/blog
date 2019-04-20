@@ -18,7 +18,7 @@ next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念
 [30 天精通 RxJS (07)： Observable Operators & Marble Diagrams](http://ithelp.ithome.com.tw/articles/10187248)
 
 今天建議大家直接看影片
-[![Yes](http://img.youtube.com/vi/bgi3Uaab1ok/0.jpg)](https://www.youtube.com/watch?v=bgi3Uaab1ok)
+[![Yes](https://img.youtube.com/vi/bgi3Uaab1ok/0.jpg)](https://www.youtube.com/watch?v=bgi3Uaab1ok)
 
 我們今天要接著講 take, first, takeUntil, concatAll 這四個 operators，並且實作一個簡易的拖拉功能。
 

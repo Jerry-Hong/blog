@@ -86,7 +86,7 @@ example.subscribe({
 
 > 這裡建議把網速模擬調到最慢
 
-![](http://res.cloudinary.com/dohtkyi84/image/upload/v1483503231/30days/throttle_network.png)
+![](/img/throttle_network)
 
 從 network 的圖形可以看得出來，第二個 request 的發送時間是接在第一個 request 之後的，我們可以確保每一個 request 會等前一個 request 完成才做處理。
 

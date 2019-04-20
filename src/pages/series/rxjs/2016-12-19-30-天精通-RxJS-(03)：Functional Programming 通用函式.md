@@ -20,7 +20,7 @@ next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念
 
 今天的程式碼比較多，大家可以直接看影片！
 
-[![Yes](http://img.youtube.com/vi/BmXgCagaJy0/0.jpg)](https://www.youtube.com/watch?v=BmXgCagaJy0)
+[![Yes](https://img.youtube.com/vi/BmXgCagaJy0/0.jpg)](https://www.youtube.com/watch?v=BmXgCagaJy0)
 
 ## ForEach
 
