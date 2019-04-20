@@ -4,25 +4,26 @@ import { Link } from 'gatsby';
 import { Sunrise, Sunset, Book, Cast, Box } from 'react-feather';
 import Logo from './Logo';
 import { media } from '../utils/mediaQuery';
-import { Menu, MenuLink } from './Menu';
+import { MenuLink } from './Menu';
 
 const Content = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
-  margin-bottom: 25px;
+  padding: 0 20px;
+  background: var(--bg);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
   ${media.mobile`
-    display: none;
+    display: flex;
   `}
 `;
 
 const TitleLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-
   > svg {
     #logo-eye {
       fill: var(--logo_eye);
@@ -33,19 +34,8 @@ const TitleLink = styled(Link)`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 1.3em;
-  color: var(--title);
-  margin: 0 15px;
-`;
-
-const StyledMenuLink = styled(MenuLink)`
-  margin-left: 25px;
-`;
-
 const Button = styled.span`
   color: var(--link);
-  margin-left: 30px;
   cursor: pointer;
 `;
 
@@ -56,31 +46,25 @@ const INVERT_THEME = {
 
 const ToggleThemeButton = ({ mode, onClick }) => (
   <Button onClick={() => onClick(INVERT_THEME[mode])}>
-    {mode === 'dark' ? <Sunrise /> : <Sunset />}
+    {mode === 'dark' ? <Sunrise size={22} /> : <Sunset size={22} />}
   </Button>
 );
 
 const Header = ({ mode, toggleMode }) => {
   return (
     <Content>
+      <MenuLink to="/posts">
+        <Box size={20} />
+      </MenuLink>
+      <MenuLink to="/series">
+        <Book size={20} />
+      </MenuLink>
       <TitleLink to="/">
         <Logo size={30} />
-        <Title>J.H. Blog</Title>
       </TitleLink>
-      <Menu>
-        <StyledMenuLink to="/posts">
-          <Box style={{ marginRight: 10 }} size={20} />
-          Posts
-        </StyledMenuLink>
-        <StyledMenuLink to="/series">
-          <Book style={{ marginRight: 8 }} size={20} />
-          Series
-        </StyledMenuLink>
-        <StyledMenuLink to="/speech">
-          <Cast style={{ marginRight: 10 }} size={21} />
-          Speech
-        </StyledMenuLink>
-      </Menu>
+      <MenuLink to="/speech">
+        <Cast size={21} />
+      </MenuLink>
       <ToggleThemeButton mode={mode} onClick={toggleMode} />
     </Content>
   );

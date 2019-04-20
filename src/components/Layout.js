@@ -4,8 +4,10 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { normalize, rgba } from 'polished';
 import Header from './Header';
-import { theme } from '../../theme';
+import { theme, COMMON_COLORS } from '../constants/theme';
 import { DOMAIN } from '../constants/index';
+import FixedHeader from './FixedHeader';
+import { media } from '../utils/mediaQuery';
 
 const Continer = styled.div`
   width: 100%;
@@ -17,6 +19,11 @@ const Continer = styled.div`
 const Content = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  padding: 15px;
+
+  ${media.mobile`
+    margin-bottom: 50px;
+  `};
 `;
 
 const THEME = {
@@ -55,6 +62,8 @@ const GlobalStyle = createGlobalStyle`
     --hr: ${rgba(theme[THEME.LIGHT].COLOR.TITLE, 0.3)};
     --shadow: ${theme[THEME.LIGHT].COLOR.SHADOW};
     --card_bg: ${theme[THEME.LIGHT].COLOR.CARD_BG};
+    --active: ${theme[THEME.LIGHT].COLOR.ACTIVE};
+    --white: ${COMMON_COLORS.WHITE};
 
     color: var(--text);
     background-color: var(--bg);
@@ -78,6 +87,8 @@ const GlobalStyle = createGlobalStyle`
     --hr: ${rgba(theme[THEME.DARK].COLOR.TITLE, 0.3)};
     --shadow: ${theme[THEME.DARK].COLOR.SHADOW};
     --card_bg: ${theme[THEME.DARK].COLOR.CARD_BG};
+    --active: ${theme[THEME.DARK].COLOR.ACTIVE};
+    --white: ${COMMON_COLORS.WHITE};
     
     color: var(--text);
     background-color: var(--bg);
@@ -126,42 +137,42 @@ class Layout extends React.Component {
         }) => (
           <React.Fragment>
             <GlobalStyle />
+            <Helmet>
+              <html lang="zh" />
+              <title>{title}</title>
+              <meta name="description" content={description} />
+
+              <link
+                rel="apple-touch-icon"
+                sizes="152x152"
+                href="/img/j_logo-152x152.png"
+              />
+              <link
+                rel="icon"
+                type="image/png"
+                href="/img/j_logo-144x144.png"
+                sizes="144x144"
+              />
+              <link rel="mask-icon" href="/img/j_logo.svg" color="#ff4400" />
+              <meta name="theme-color" content="#fff" />
+
+              <meta property="og:type" content="website" />
+              <meta property="og:title" content={title} />
+              <meta property="og:url" content={DOMAIN} />
+              <meta
+                property="og:image"
+                content={`${DOMAIN}/img/j_logo-144x144.png`}
+              />
+            </Helmet>
             <Continer>
               <Content>
-                <Helmet>
-                  <html lang="zh" />
-                  <title>{title}</title>
-                  <meta name="description" content={description} />
-
-                  <link
-                    rel="apple-touch-icon"
-                    sizes="152x152"
-                    href="/img/j_logo-152x152.png"
-                  />
-                  <link
-                    rel="icon"
-                    type="image/png"
-                    href="/img/j_logo-144x144.png"
-                    sizes="144x144"
-                  />
-                  <link
-                    rel="mask-icon"
-                    href="/img/j_logo.svg"
-                    color="#ff4400"
-                  />
-                  <meta name="theme-color" content="#fff" />
-
-                  <meta property="og:type" content="website" />
-                  <meta property="og:title" content={title} />
-                  <meta property="og:url" content={DOMAIN} />
-                  <meta
-                    property="og:image"
-                    content={`${DOMAIN}/img/j_logo-144x144.png`}
-                  />
-                </Helmet>
                 <Header toggleMode={this.changeMode} mode={this.state.theme} />
-                <div>{this.props.children}</div>
+                {this.props.children}
               </Content>
+              <FixedHeader
+                toggleMode={this.changeMode}
+                mode={this.state.theme}
+              />
             </Continer>
           </React.Fragment>
         )}
