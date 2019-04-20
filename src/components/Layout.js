@@ -157,8 +157,14 @@ class Layout extends React.Component {
                 sizes="144x144"
               />
               <link rel="mask-icon" href="/img/j_logo.svg" color="#ff4400" />
-              <meta name="theme-color" content={theme[this.state.theme || 'light'].COLOR.BG} />
-
+              <meta
+                name="theme-color"
+                content={theme[this.state.theme || 'light'].COLOR.BG}
+              />
+              <meta
+                name="apple-mobile-web-app-status-bar-style"
+                content="black-translucent"
+              />
               <meta property="og:type" content="website" />
               <meta property="og:title" content={title} />
               <meta property="og:url" content={DOMAIN} />
