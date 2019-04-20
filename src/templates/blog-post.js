@@ -12,7 +12,6 @@ import { DOMAIN } from '../constants';
 import DisqusComment from '../components/DisqusComment';
 
 const Section = styled.section`
-  padding: 15px;
   color: var(--article_text);
 
   h2,
