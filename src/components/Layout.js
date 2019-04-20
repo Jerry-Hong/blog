@@ -157,7 +157,7 @@ class Layout extends React.Component {
                 sizes="144x144"
               />
               <link rel="mask-icon" href="/img/j_logo.svg" color="#ff4400" />
-              <meta name="theme-color" content={theme[this.state.theme].COLOR.BG} />
+              <meta name="theme-color" content={theme[this.state.theme || 'light'].COLOR.BG} />
 
               <meta property="og:type" content="website" />
               <meta property="og:title" content={title} />
