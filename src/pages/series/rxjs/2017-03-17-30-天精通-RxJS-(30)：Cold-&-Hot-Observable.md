@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: series
 title: 30 天精通 RxJS(30)：Cold & Hot Observable
 date: 2017-03-17T15:04:10.000Z
 description: Hot Observable 跟 Cold Observable 的差別，其實就是 **資料源(Data Source)** 在 Observable 內部建立還是外部建立。
@@ -8,6 +8,9 @@ tags:
   - front-end
   - rxjs
   - observable
+  - rxjs-30-days
+previous: "./2016-12-16-30-天精通-RxJS-(00)：關於本系列文章.md"
+next: "./2017-03-19-30-天精通-RxJS-(31)：如何-Debug.md"
 ---
 
 在 RxJS 中很常會看到 Cold Observable 跟 Hot Observable 這兩個名詞，其實他們是在區分不同行為的 Observable，所謂的 Cold Observable 就是指每次訂閱都是**獨立的執行**，而 Hot Observable 則是**共用的訂閱**。
