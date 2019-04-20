@@ -41,7 +41,7 @@ const Posts = () => {
   );
 
   return (
-    <Layout>
+    <Layout header="Posts">
       <PostList data={allMarkdownRemark.edges} />
     </Layout>
   );

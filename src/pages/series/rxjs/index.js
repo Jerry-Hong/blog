@@ -1,34 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import GatsbyImage from 'gatsby-image';
 import Layout from '../../../components/Layout';
 import PostList from '../../../components/PostList';
 import { media } from '../../../utils/mediaQuery';
 
-const FullImage = styled.div`
-  background-image: url(${({ src }) => src});
+const FullImage = styled(GatsbyImage)`
   max-width: 600px;
   height: 400px;
-  background-size: cover;
-  background-position: top left;
-  background-attachment: fixed;
   margin: 0 auto 30px auto;
   border-radius: 5px;
-
-  ${media.mobile`
-    background-position: bottom;
-  `}
 `;
 const ImageContent = styled.div`
-  display: flex;
-  height: 100%;
-  line-height: 1;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
+  position: relative;
 `;
 
 const ImageTitle = styled.h1`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
   color: var(--white);
 `;
 
@@ -37,7 +33,7 @@ const RxjsPages = () => {
     query {
       file(relativePath: { eq: "rxjs-thirtydays.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600, quality: 100) {
+          fluid(maxWidth: 600, quality: 60) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -75,12 +71,12 @@ const RxjsPages = () => {
   `);
 
   return (
-    <Layout>
-      <FullImage src={file.childImageSharp.fluid.src}>
-        <ImageContent>
-          <ImageTitle>30 天精通 RxJS</ImageTitle>
-        </ImageContent>
-      </FullImage>
+    <Layout header="Series: 30 天精通 RxJS">
+      {/* <FullImage src={file.childImageSharp.fluid.src} /> */}
+      <ImageContent>
+        <ImageTitle>30 天精通 RxJS</ImageTitle>
+        <FullImage fluid={file.childImageSharp.fluid} />
+      </ImageContent>
       <PostList data={allMarkdownRemark.edges} />
     </Layout>
   );

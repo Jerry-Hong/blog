@@ -6,8 +6,9 @@ import { normalize, rgba } from 'polished';
 import Header from './Header';
 import { theme, COMMON_COLORS } from '../constants/theme';
 import { DOMAIN } from '../constants/index';
-import FixedHeader from './FixedHeader';
+import FixedMenu from './FixedMenu';
 import { media } from '../utils/mediaQuery';
+import FixedHeader from './FixedHeader';
 
 const Continer = styled.div`
   width: 100%;
@@ -22,6 +23,7 @@ const Content = styled.div`
   padding: 15px;
 
   ${media.mobile`
+    margin-top: 50px;
     margin-bottom: 50px;
   `};
 `;
@@ -118,6 +120,7 @@ class Layout extends React.Component {
   };
 
   render () {
+    const { header } = this.props;
     return (
       <StaticQuery
         query={graphql`
@@ -165,14 +168,12 @@ class Layout extends React.Component {
               />
             </Helmet>
             <Continer>
+              {header && <FixedHeader title={header} />}
               <Content>
                 <Header toggleMode={this.changeMode} mode={this.state.theme} />
                 {this.props.children}
               </Content>
-              <FixedHeader
-                toggleMode={this.changeMode}
-                mode={this.state.theme}
-              />
+              <FixedMenu toggleMode={this.changeMode} mode={this.state.theme} />
             </Continer>
           </React.Fragment>
         )}

@@ -65,7 +65,7 @@ const IndexPage = () => {
   );
 
   return (
-    <Layout>
+    <Layout header="Home">
       <Content>
         <Title>Hi, I'm Jerry.</Title>
         <Desc>

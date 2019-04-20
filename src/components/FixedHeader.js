@@ -1,73 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { Sunrise, Sunset, Book, Cast, Box } from 'react-feather';
-import Logo from './Logo';
 import { media } from '../utils/mediaQuery';
-import { MenuLink } from './Menu';
 
 const Content = styled.div`
-  position: fixed;
-  bottom: 0;
   display: none;
-  width: 100%;
-  height: 50px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  background: var(--bg);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 
   ${media.mobile`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 10;
   `}
 `;
 
-const TitleLink = styled(Link)`
-  > svg {
-    #logo-eye {
-      fill: var(--logo_eye);
-    }
-    #logo-j {
-      fill: var(--logo_j);
-    }
-  }
+const Title = styled.h4`
+  font-size: 0.9em;
 `;
 
-const Button = styled.span`
-  color: var(--link);
-  cursor: pointer;
-`;
-
-const INVERT_THEME = {
-  dark: 'light',
-  light: 'dark',
-};
-
-const ToggleThemeButton = ({ mode, onClick }) => (
-  <Button onClick={() => onClick(INVERT_THEME[mode])}>
-    {mode === 'dark' ? <Sunrise size={22} /> : <Sunset size={22} />}
-  </Button>
-);
-
-const Header = ({ mode, toggleMode }) => {
+const FixedHeader = ({ title }) => {
   return (
     <Content>
-      <MenuLink to="/posts">
-        <Box size={20} />
-      </MenuLink>
-      <MenuLink to="/series">
-        <Book size={20} />
-      </MenuLink>
-      <TitleLink to="/">
-        <Logo size={30} />
-      </TitleLink>
-      <MenuLink to="/speech">
-        <Cast size={21} />
-      </MenuLink>
-      <ToggleThemeButton mode={mode} onClick={toggleMode} />
+      <Title>{title}</Title>
     </Content>
   );
 };
 
-export default Header;
+export default FixedHeader;
