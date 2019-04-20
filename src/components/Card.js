@@ -40,9 +40,9 @@ const Note = styled.span`
   color: var(--text);
 `;
 
-const Card = ({ title, desc, note, link, cover }) => {
+const Card = ({ title, desc, note, link, cover, style }) => {
   return (
-    <CardLink to={link}>
+    <CardLink to={link} style={style}>
       {cover && (
         <Img
           fluid={cover}
