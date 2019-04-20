@@ -161,6 +161,7 @@ class Layout extends React.Component {
                 name="theme-color"
                 content={theme[this.state.theme || 'light'].COLOR.BG}
               />
+              <meta name="apple-mobile-web-app-capable" content="yes" />
               <meta
                 name="apple-mobile-web-app-status-bar-style"
                 content="black-translucent"
