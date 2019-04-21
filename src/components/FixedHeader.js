@@ -1,4 +1,5 @@
 import React from 'react';
+import * as R from 'ramda';
 import styled from 'styled-components';
 import { media } from '../utils/mediaQuery';
 
@@ -26,7 +27,19 @@ const Title = styled.h4`
 const FixedHeader = ({ title }) => {
   return (
     <Content>
-      <Title>{title}</Title>
+      <Title>
+        {R.ifElse(
+          R.pipe(
+            R.length,
+            R.gt(25)
+          ),
+          R.identity,
+          R.pipe(
+            R.slice(0, 25),
+            R.concat(R.__, '...')
+          )
+        )(title)}
+      </Title>
     </Content>
   );
 };

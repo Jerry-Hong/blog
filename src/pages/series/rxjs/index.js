@@ -71,8 +71,7 @@ const RxjsPages = () => {
   `);
 
   return (
-    <Layout header="Series: 30 天精通 RxJS">
-      {/* <FullImage src={file.childImageSharp.fluid.src} /> */}
+    <Layout header="Series / 30 天精通 RxJS">
       <ImageContent>
         <ImageTitle>30 天精通 RxJS</ImageTitle>
         <FullImage fluid={file.childImageSharp.fluid} />

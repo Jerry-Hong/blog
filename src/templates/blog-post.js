@@ -58,7 +58,7 @@ const BlogPost = ({ data }) => {
   const description = R.pathOr('', ['frontmatter', 'description'], post);
 
   return (
-    <Layout>
+    <Layout header={`Posts / ${title}`}>
       <BlogPostTemplate
         content={post.htmlAst}
         contentComponent={HTMLContent}
