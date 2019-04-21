@@ -18,10 +18,13 @@ const SeriesList = ({ data }) => {
         R.map(R.prop('node')),
         R.map(series => (
           <Card
-            key={R.path(['frontmatter', 'title'], series)}  
+            key={R.path(['frontmatter', 'title'], series)}
             title={R.path(['frontmatter', 'title'], series)}
             link={`/series/${R.path(['frontmatter', 'link'], series)}`}
-            cover={R.path(['frontmatter', 'image', 'childImageSharp', 'fluid'], series)}
+            cover={R.path(
+              ['frontmatter', 'image', 'childImageSharp', 'fluid'],
+              series
+            )}
             desc={R.path(['frontmatter', 'description'], series)}
             note={`共 ${R.path(['fields', 'postsCount'], series)} 篇文章`}
           />
