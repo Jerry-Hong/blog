@@ -40,17 +40,19 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      });
+      if (edge.node.frontmatter.templateKey) {
+        createPage({
+          path: edge.node.fields.slug,
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          ),
+          // additional data can be passed via context
+          context: {
+            id,
+          },
+        });
+      }
     });
 
     const tags = R.pipe(
@@ -86,4 +88,34 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.sourceNodes = ({ actions, getNodes }) => {
+  const { createNodeField } = actions;
+  const nodes = getNodes();
+  const markdownNodes = R.filter(
+    R.pathEq(['internal', 'type'], 'MarkdownRemark')
+  )(nodes);
+
+  const seriesList = R.filter(R.pathEq(['frontmatter', 'type'], 'series-data'))(
+    markdownNodes
+  );
+
+  seriesList.forEach(seriesNode => {
+    const seriesId = R.path(['frontmatter', 'id'], seriesNode);
+    const seriesPosts = R.pipe(
+      R.filter(R.pathEq(['frontmatter', 'series'], seriesId)),
+      R.map(R.path(['frontmatter']))
+    )(markdownNodes);
+    createNodeField({
+      node: seriesNode,
+      name: 'posts',
+      value: seriesPosts,
+    });
+    createNodeField({
+      node: seriesNode,
+      name: 'postsCount',
+      value: seriesPosts.length,
+    });
+  });
 };

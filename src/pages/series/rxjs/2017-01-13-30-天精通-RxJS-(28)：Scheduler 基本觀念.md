@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (28)：Scheduler 基本觀念
 date: 2017-01-13T23:48:28.000Z
 description: 不曉得讀者們還記不記得，我們在前面的文章中有提到 Scheduler 是為了解決 RxJS 衍生的最後一個問題，而我們現在就在揭曉這個謎底。

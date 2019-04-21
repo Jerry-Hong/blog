@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (20)：Observable Operators - window, windowToggle, groupBy
 date: 2017-01-05T23:12:48.000Z
 description: 前幾天我們講完了能把 Higher Order Observable 轉成一般的 Observable 的 operators，今天我們要講能夠把一般的 Observable 轉成 Higher Order Observable 的 operators。其實前端不太有機會用到這類型的 Operators，都是在比較特殊的需求下才會看到，但還是會有遇到的時候。

@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (02)：Functional Programming 基本觀念
 date: 2016-12-18T23:08:47.000Z
 description: Functional Programming 是 Rx 最重要的觀念之一，基本上只要學會 FP 要上手 Rx 就不難了！Functional Programming 可以說是近年來的顯學，各種新的函式編程語言推出之外，其他舊有的語言也都在新版中加強對 FP 的支援！

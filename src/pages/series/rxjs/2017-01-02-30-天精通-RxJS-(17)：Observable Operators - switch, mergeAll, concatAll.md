@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (17)：Observable Operators - switch, mergeAll, concatAll
 date: 2017-01-02T23:47:35.000Z
 description: 今天我們要講三個 operators，這三個 operators 都是用來處理 Higher Order Observable。

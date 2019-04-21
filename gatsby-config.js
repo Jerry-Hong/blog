@@ -5,6 +5,9 @@ module.exports = {
     title: 'J.H. Blog',
     description: 'Think how to think, learn how to learn',
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.series': `MarkdownRemark`,
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',

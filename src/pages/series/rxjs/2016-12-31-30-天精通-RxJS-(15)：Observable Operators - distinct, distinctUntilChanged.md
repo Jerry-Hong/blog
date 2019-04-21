@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (15)：Observable Operators - distinct, distinctUntilChanged
 date: 2016-12-31T23:39:48.000Z
 description: 新的一年馬上就要到了，各位讀者都去哪裡跨年呢？ 筆者很可憐的只能一邊寫文章一邊跨年，今天就簡單看幾個 operators 讓大家好好跨年吧！

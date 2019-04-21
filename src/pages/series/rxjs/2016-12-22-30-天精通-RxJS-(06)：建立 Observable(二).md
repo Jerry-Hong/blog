@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (06)： 建立 Observable(二)
 date: 2016-12-22T23:15:10.000Z
 description: 通常我們會透過 creation operator 來建立 Observable 實例，這篇文章會講解幾個較為常用的 operator！

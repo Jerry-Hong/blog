@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (23)：Subject, BehaviorSubject, ReplaySubject, AsyncSubject
 date: 2017-01-08T23:01:49.000Z
 description: 昨天我們介紹了 Subject 是什麼，今天要講 Subject 一些應用方式，以及 Subject 的另外三種變形。

@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (07)：Observable Operators & Marble Diagrams
 date: 2016-12-23T23:14:14.000Z
 description: Observable 的 Operators 是實務應用上最重要的部份，我們需要了解各種 Operators 的使用方式，才能輕鬆實作各種需求！

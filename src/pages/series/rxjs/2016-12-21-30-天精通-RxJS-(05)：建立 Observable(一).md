@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (05)： 建立 Observable(一)
 date: 2016-12-21T21:28:25.000Z
 description: Observable 是 RxJS 的核心，今天讓我們從如何建立 Observable 開始！

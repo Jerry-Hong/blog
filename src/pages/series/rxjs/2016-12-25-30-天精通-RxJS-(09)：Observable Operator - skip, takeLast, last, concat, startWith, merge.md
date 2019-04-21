@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (09)：Observable Operator - skip, takeLast, last, concat, startWith, merge
 date: 2016-12-25T23:16:13.000Z
 description: "今天是美好的聖誕節，先祝讀者們聖誕快樂！

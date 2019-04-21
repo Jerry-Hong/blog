@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (26)：簡易實作 Observable(一)
 date: 2017-01-11T23:39:24.000Z
 description: 因為實在太多讀者在問要如何實作 Observable，所以特別調整了本系列文章最後幾篇的內容，空出一天的位置來寫如何簡易實作 Observable。

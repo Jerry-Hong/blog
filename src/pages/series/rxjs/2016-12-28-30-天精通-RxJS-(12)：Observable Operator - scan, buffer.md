@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (12)：Observable Operator - scan, buffer
 date: 2016-12-28T23:11:24.000Z
 description: 今天要繼續講兩個簡單的 transformation operators 並帶一些小範例，這兩個 operators 都是實務上很常會用到的方法。

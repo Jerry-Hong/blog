@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (16)：Observable Operators - catch, retry, retryWhen, repeat
 date: 2017-01-01T23:46:55.000Z
 description: "我們已經快把所有基本的轉換(Transformation)、過濾(Filter)和合并(Combination)的 operators 講完了。今天要講錯誤處理(Error Handling)的 operators，錯誤處理是非同步行為中的一大難題，尤其有多個交錯的非同步行為時，更容易凸顯錯誤處理的困難。

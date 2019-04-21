@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (19)：實務範例 - 簡易 Auto Complete 實作
 date: 2017-01-04T23:51:58.000Z
 description: "今天我們要做一個 RxJS 的經典範例 - 自動完成 (Auto Complete)，自動完成在實務上的應用非常廣泛，幾乎隨處可見這樣的功能，只要是跟表單、搜尋相關的都會看到。

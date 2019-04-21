@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (10)：Observable Operator - combineLatest, withLatestFrom, zip
 date: 2016-12-26T23:11:24.000Z
 description: "昨天我們最後講到了 `merge` 的用法，它的邏輯就像是 OR(||)一樣，可以把多個 observable 合併且同時處理，當其中任合一個 observable 送出元素時，我們都做相同的處理。

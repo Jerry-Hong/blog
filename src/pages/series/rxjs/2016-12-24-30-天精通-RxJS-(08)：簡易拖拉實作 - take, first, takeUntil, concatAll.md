@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (08)：簡易拖拉實作 - take, first, takeUntil, concatAll
 date: 2016-12-24T23:23:27.000Z
 description: 如果是你會如何實作拖拉的功能？

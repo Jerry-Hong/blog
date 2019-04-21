@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS(21)：深入 Observable
 date: 2017-01-06T21:07:32.000Z
 description: 我們已經把絕大部分的 operators 都介紹完了，但一直沒有機會好好的解釋 Observable 的 operators 運作方式。

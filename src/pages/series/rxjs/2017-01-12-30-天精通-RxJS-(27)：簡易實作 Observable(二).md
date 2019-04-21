@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (27)：簡易實作 Observable(二)
 date: 2017-01-12T23:43:17.000Z
 description: 前一篇文章我們已經完成了基本的 observable 以及 Observer 的簡易實作，這篇文章我們會接續上一篇的內容實作簡易的 Observable 類別，以及一個 creation operator 和一個  transform operator。

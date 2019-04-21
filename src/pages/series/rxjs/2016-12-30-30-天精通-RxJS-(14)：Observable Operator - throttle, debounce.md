@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (14)：Observable Operator - throttle, debounce
 date: 2016-12-30T23:46:30.000Z
 description: 昨天講到了在 UI 操作上很常用的 delay，今天我們接著要來講另外兩個也非常實用 operators，尤其在做效能優化時更是不可或缺的好工具！

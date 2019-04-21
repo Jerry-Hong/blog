@@ -1,5 +1,6 @@
 ---
 templateKey: series
+series: 30 天精通 RxJS
 title: 30 天精通 RxJS (03)：Functional Programming 通用函式
 date: 2016-12-19T23:04:41.000Z
 description: 了解 Functional Programming 的通用函式，能讓我們寫出更簡潔的程式碼，也能幫助我們學習 RxJS。
