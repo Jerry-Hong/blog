@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Content = styled.div`
   position: relative;
-  max-width: 600px;
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
