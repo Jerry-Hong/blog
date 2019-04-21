@@ -23,7 +23,7 @@ const Content = styled.div`
   padding: 15px;
 
   ${media.mobile`
-    margin-top: 50px;
+    margin-top: ${({ hasHeader }) => (hasHeader ? '50px' : 0)};
     margin-bottom: 50px;
   `};
 `;
@@ -176,7 +176,7 @@ class Layout extends React.Component {
             </Helmet>
             <Continer>
               {header && <FixedHeader title={header} />}
-              <Content>
+              <Content hasHeader={!!header}>
                 <Header toggleMode={this.changeMode} mode={this.state.theme} />
                 {this.props.children}
               </Content>
