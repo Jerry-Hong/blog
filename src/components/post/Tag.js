@@ -12,19 +12,18 @@ const Content = styled.div`
   margin-bottom: 2.5em;
 `;
 
-const TagListContent = styled.ul`
+const TagContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
+  margin-top: 1em;
 `;
 
-const Tag = styled.li`
+const Tag = styled.span`
   border: 1px solid var(--link);
   border-radius: 3px;
+  padding: 3px 5px;
   margin-bottom: 1em;
   margin-right: 1em;
-  padding: 0 3px;
 `;
 
 const Title = styled.span`
@@ -42,12 +41,12 @@ export const TagList = ({ tags }) =>
         <TagIcon size={20} style={{ marginRight: 5 }} />
         Tags
       </Title>
-      <TagListContent>
+      <TagContent>
         {tags.map(tag => (
           <Tag key={`${tag}tag`}>
             <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
           </Tag>
         ))}
-      </TagListContent>
+      </TagContent>
     </Content>
   );
