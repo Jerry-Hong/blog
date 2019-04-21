@@ -61,7 +61,7 @@ const FixedMenu = ({ mode, toggleMode }) => {
       <TitleLink to="/">
         <Logo size={30} />
       </TitleLink>
-      <MenuLink to="/speech">
+      <MenuLink to="/speaking">
         <Cast size={21} />
       </MenuLink>
       <ToggleThemeButton mode={mode} onClick={toggleMode} />

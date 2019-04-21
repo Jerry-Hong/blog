@@ -76,9 +76,9 @@ const Header = ({ mode, toggleMode }) => {
           <Book style={{ marginRight: 8 }} size={20} />
           Series
         </StyledMenuLink>
-        <StyledMenuLink to="/speech">
+        <StyledMenuLink to="/speaking">
           <Cast style={{ marginRight: 10 }} size={21} />
-          Speech
+          Speaking
         </StyledMenuLink>
       </Menu>
       <ToggleThemeButton mode={mode} onClick={toggleMode} />
