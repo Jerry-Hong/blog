@@ -42,7 +42,7 @@ const SpeakingPage = () => {
     `
   );
   return (
-    <Layout header="Speech">
+    <Layout header="Speaking">
       <SpeakingList data={allMarkdownRemark.edges} />
     </Layout>
   );
