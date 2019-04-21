@@ -31,11 +31,11 @@ const FixedHeader = ({ title }) => {
         {R.ifElse(
           R.pipe(
             R.length,
-            R.gt(25)
+            R.gt(30)
           ),
           R.identity,
           R.pipe(
-            R.slice(0, 25),
+            R.slice(0, 30),
             R.concat(R.__, '...')
           )
         )(title)}
