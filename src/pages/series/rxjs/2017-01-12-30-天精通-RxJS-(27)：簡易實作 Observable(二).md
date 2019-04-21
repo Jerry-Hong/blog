@@ -10,8 +10,8 @@ tags:
   - observable
   - observer
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-11-30-天精通-RxJS-(26)：簡易實作 Observable(一).md"
+next: "2017-01-13-30-天精通-RxJS-(28)：Scheduler 基本觀念.md"
 --- 
 
 ## 建立簡易 Observable 類別

@@ -10,8 +10,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-30-30-天精通-RxJS-(14)：Observable Operator - throttle, debounce.md"
+next: "2017-01-01-30-天精通-RxJS-(16)：Observable Operators - catch, retry, retryWhen, repeat.md"
 ---
 
 昨天我們講到了 throttle 跟 debounce 兩個方法來做效能優化，其實還有另一個方法可以做效能的優化處理，那就是 distinct。

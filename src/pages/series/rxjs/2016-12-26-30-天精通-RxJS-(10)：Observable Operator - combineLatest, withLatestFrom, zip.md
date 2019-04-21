@@ -12,8 +12,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-25-30-天精通-RxJS-(09)：Observable Operator - skip, takeLast, last, concat, startWith, merge.md"
+next: "2016-12-27-30-天精通-RxJS-(11)：實務範例 - 完整拖拉應用.md"
 ---
 
 Operators

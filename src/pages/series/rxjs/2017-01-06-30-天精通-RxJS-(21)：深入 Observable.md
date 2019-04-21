@@ -10,8 +10,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-05-30-天精通-RxJS-(20)：Observable Operators - window, windowToggle, groupBy.md"
+next: "2017-01-07-30-天精通-RxJS-(22)：Subject 基本觀念.md"
 ---
 
 在系列文章的一開頭是以陣列(Array)的 operators(map, filter, concatAll) 作為切入點，讓讀者們在學習 observable 時會更容易接受跟理解，但實際上 observable 的 operators 跟陣列的有很大的不同，主要差異有兩點

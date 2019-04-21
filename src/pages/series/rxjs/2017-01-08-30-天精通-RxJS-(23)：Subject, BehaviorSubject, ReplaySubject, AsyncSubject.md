@@ -10,8 +10,8 @@ tags:
   - observable
   - subject
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-07-30-天精通-RxJS-(22)：Subject 基本觀念.md"
+next: "2017-01-09-30-天精通-RxJS-(24)：Observable operators - multicast, refCount, publish, share.md"
 ---
 
 Subject

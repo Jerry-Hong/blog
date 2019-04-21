@@ -10,8 +10,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-04-30-天精通-RxJS-(19)：實務範例 - 簡易 Auto Complete 實作.md"
+next: "2017-01-06-30-天精通-RxJS-(21)：深入 Observable.md"
 ---
 
 ## Operators

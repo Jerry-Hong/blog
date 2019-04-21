@@ -10,8 +10,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-01-30-天精通-RxJS-(16)：Observable Operators - catch, retry, retryWhen, repeat.md"
+next: "2017-01-03-30-天精通-RxJS-(18)：Observable Operators - switchMap, mergeMap, concatMap.md"
 ---
 
 所謂的 Higher Order Observable 就是指一個 Observable 送出的元素還是一個 Observable，就像是二維陣列一樣，一個陣列中的每個元素都是陣列。如果用泛型來表達就像是

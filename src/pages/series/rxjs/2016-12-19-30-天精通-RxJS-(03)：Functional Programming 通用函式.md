@@ -9,8 +9,8 @@ tags:
   - rxjs
   - functional
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+next: "2016-12-20-30-天精通-RxJS-(04)：什麼是 Observable.md"
 ---
 
 這是【30天精通 RxJS】的 03 篇，如果還沒看過 02 篇可以往這邊走：

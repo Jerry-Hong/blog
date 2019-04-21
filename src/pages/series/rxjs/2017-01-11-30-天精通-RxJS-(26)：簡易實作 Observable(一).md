@@ -10,8 +10,8 @@ tags:
   - observable
   - observer
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-10-30-天精通-RxJS-(25)：Subject 總結.md"
+next: "2017-01-12-30-天精通-RxJS-(27)：簡易實作 Observable(二).md"
 --- 
 
 為什麼是簡易實作而不完整實作呢？ 當然這個系列的文章是希望讀者能學會如何使用 RxJS，而 實作 Observable 其實只是幫助我們理解 Observable 的運作方式，所以這篇文章會盡可能地簡單，一來讓讀者容易理解及吸收，二來有興趣的讀者可以再沿著這篇文章的內容去完整的實作。

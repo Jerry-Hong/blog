@@ -10,8 +10,8 @@ tags:
   - observable
   - observer
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-20-30-天精通-RxJS-(04)：什麼是 Observable.md"
+next: "2016-12-22-30-天精通-RxJS-(06)：建立 Observable(二).md"
 ---
 
 這是【30天精通 RxJS】的 05 篇，如果還沒看過 04 篇可以往這邊走：

@@ -11,8 +11,8 @@ tags:
   - iterator
   - observer
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-19-30-天精通-RxJS-(03)：Functional Programming 通用函式.md"
+next: "2016-12-21-30-天精通-RxJS-(05)：建立 Observable(一).md"
 ---
 
 這是【30天精通 RxJS】的 04 篇，如果還沒看過 03 篇可以往這邊走：

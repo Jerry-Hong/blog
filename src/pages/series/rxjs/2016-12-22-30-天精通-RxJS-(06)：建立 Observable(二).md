@@ -9,8 +9,8 @@ tags:
   - rxjs
   - observable
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-21-30-天精通-RxJS-(05)：建立 Observable(一).md"
+next: "2016-12-23-30-天精通-RxJS-(07)：Observable Operators & Marble Diagrams.md"
 ---
 
 這是【30天精通 RxJS】的 06 篇，如果還沒看過 05 篇可以往這邊走：

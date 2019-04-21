@@ -11,8 +11,8 @@ tags:
   - subject
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2017-01-08-30-天精通-RxJS-(23)：Subject, BehaviorSubject, ReplaySubject, AsyncSubject.md"
+next: "2017-01-10-30-天精通-RxJS-(25)：Subject 總結.md"
 ---
 
 如下面的例子

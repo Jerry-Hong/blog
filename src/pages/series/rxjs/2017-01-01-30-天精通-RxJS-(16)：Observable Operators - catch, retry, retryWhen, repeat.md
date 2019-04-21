@@ -12,8 +12,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: null
-next: "./2016-12-18-30-天精通-RxJS-(02)：Functional Programming 基本觀念.md"
+previous: "2016-12-31-30-天精通-RxJS-(15)：Observable Operators - distinct, distinctUntilChanged.md"
+next: "2017-01-02-30-天精通-RxJS-(17)：Observable Operators - switch, mergeAll, concatAll.md"
 ---
 
 Operators

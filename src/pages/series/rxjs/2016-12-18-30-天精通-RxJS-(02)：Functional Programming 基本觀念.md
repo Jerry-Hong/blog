@@ -9,8 +9,8 @@ tags:
   - rxjs
   - functional-programming
   - rxjs-30-days
-previous: "./2016-12-17-30-天精通-RxJS-(01)：認識 RxJS.md"
-next: "./2017-03-17-30-天精通-RxJS-(30)：Cold-&-Hot-Observable.md"
+previous: "2016-12-17-30-天精通-RxJS-(01)：認識 RxJS.md"
+next: "2016-12-19-30-天精通-RxJS-(03)：Functional Programming 通用函式.md"
 ---
 
 這是【30天精通 RxJS】的 02 篇，如果還沒看過 01 篇可以往這邊走：
