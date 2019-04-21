@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import PostList from '../components/PostList';
 import Layout from '../components/Layout';
 import SeriesList from '../components/SeriesList';
+import SpeakingList from '../components/SpeakingList';
 import { media } from '../utils/mediaQuery';
 
 const Content = styled.div`
@@ -28,7 +29,7 @@ const SubTitle = styled.h2`
 `;
 
 const IndexPage = () => {
-  const { posts } = useStaticQuery(
+  const { posts, speakings } = useStaticQuery(
     graphql`
       query {
         posts: allMarkdownRemark(
@@ -60,6 +61,38 @@ const IndexPage = () => {
             }
           }
         }
+
+        speakings: allMarkdownRemark(
+          limit: 3
+          sort: { fields: frontmatter___date, order: DESC }
+          filter: { frontmatter: { templateKey: { eq: "speaking" } } }
+        ) {
+          edges {
+            node {
+              id
+              timeToRead
+              fields {
+                slug
+              }
+              frontmatter {
+                tags
+                templateKey
+                title
+                description
+                date
+                time
+                event
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 240, quality: 64) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `
   );
@@ -76,8 +109,10 @@ const IndexPage = () => {
         <Desc>Welcome to my Blog!</Desc>
         <SubTitle>Latest Posts</SubTitle>
         <PostList data={posts.edges} />
-        <SubTitle>Latest Series</SubTitle>
+        <SubTitle>Series</SubTitle>
         <SeriesList />
+        <SubTitle>Speaking</SubTitle>
+        <SpeakingList data={speakings.edges} />
       </Content>
     </Layout>
   );
