@@ -11,7 +11,7 @@ const Content = styled.div`
   margin: 0 auto;
 `;
 
-const SeriesList = ({ data }) => {
+const SeriesList = ({ data = [] }) => {
   return (
     <Content>
       {R.pipe(

@@ -29,7 +29,7 @@ const SubTitle = styled.h2`
 `;
 
 const IndexPage = () => {
-  const { posts, speakings } = useStaticQuery(
+  const { posts, speakings, series } = useStaticQuery(
     graphql`
       query {
         posts: allMarkdownRemark(
@@ -57,6 +57,34 @@ const IndexPage = () => {
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+
+        series: allMarkdownRemark(
+          limit: 1000
+          sort: { fields: frontmatter___date, order: DESC }
+          filter: { frontmatter: { type: { eq: "series-data" } } }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                postsCount
+              }
+              frontmatter {
+                type
+                title
+                description
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 240, quality: 64) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                link
               }
             }
           }
@@ -110,7 +138,7 @@ const IndexPage = () => {
         <SubTitle>Latest Posts</SubTitle>
         <PostList data={posts.edges} />
         <SubTitle>Series</SubTitle>
-        <SeriesList />
+        <SeriesList data={series.edges}/>
         <SubTitle>Speaking</SubTitle>
         <SpeakingList data={speakings.edges} />
       </Content>
