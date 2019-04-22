@@ -61,7 +61,7 @@ exports.createPages = ({ actions, graphql }) => {
       {
         allMarkdownRemark(
           filter: { frontmatter: { templateKey: { eq: "series" } } }
-          sort: { fields: frontmatter___date, order: DESC }
+          sort: { fields: frontmatter___date, order: ASC }
         ) {
           edges {
             node {
