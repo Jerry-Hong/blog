@@ -34,8 +34,7 @@ const Title = styled.span`
 `;
 
 export const TagList = ({ tags }) =>
-  tags &&
-  tags.length && (
+  tags && tags.length ? (
     <Content>
       <Title>
         <TagIcon size={20} style={{ marginRight: 5 }} />
@@ -49,4 +48,4 @@ export const TagList = ({ tags }) =>
         ))}
       </TagContent>
     </Content>
-  );
+  ) : null;
