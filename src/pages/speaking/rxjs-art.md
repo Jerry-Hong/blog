@@ -1,5 +1,6 @@
 ---
 templateKey: speaking
+slug: rxjs-art
 title: RxJS - 封裝程式的藝術
 date: 2017-11-04T15:04:10.000Z
 event: JSDC 2017

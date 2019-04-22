@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+slug: webpack-for-beginner
 title: Webpack for beginner
 date: 2016-11-06T15:04:10.000Z
 description: Webpack是 JS 模組化的工具同時也能很好的整合其他工具像是 babel, css-module 等，也因為如此使她成為目前前端必學的工具之一。
