@@ -60,6 +60,13 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noopener',
+            },
+          },
         ],
       },
     },
@@ -79,6 +86,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
