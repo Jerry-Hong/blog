@@ -11,8 +11,8 @@ tags:
   - operator
   - observable
   - rxjs-30-days
-previous: "./thirty-days-RxJS-06.md"
-next: "./thirty-days-RxJS-08.md"
+previous: ./thirty-days-RxJS-06.md
+next: ./thirty-days-RxJS-08.md
 ---
 
 這是【30天精通 RxJS】的 07 篇，如果還沒看過 06 篇可以往這邊走：

@@ -10,7 +10,7 @@ tags:
   - rxjs
   - debug
   - rxjs-30-days
-previous: "./thirty-days-RxJS-30.md"
+previous: ./thirty-days-RxJS-30.md
 next: null
 ---
 

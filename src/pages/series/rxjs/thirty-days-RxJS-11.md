@@ -11,8 +11,8 @@ tags:
   - observable
   - drag
   - rxjs-30-days
-previous: "./thirty-days-RxJS-10.md"
-next: "./thirty-days-RxJS-12.md"
+previous: ./thirty-days-RxJS-10.md
+next: ./thirty-days-RxJS-12.md
 ---
 
 一樣建議大家可以直接看影片

@@ -8,8 +8,8 @@ image: null
 tags:
   - rxjs
   - rxjs-30-days
-previous: "./thirty-days-RxJS-28.md"
-next: "./thirty-days-RxJS-30.md"
+previous: ./thirty-days-RxJS-28.md
+next: ./thirty-days-RxJS-30.md
 --- 
 
 這 30 天真的是每天都像是在打仗一樣，要強迫自己從腦袋中組織文字真的是一件很痛苦的事，好險最後還是撐過來了，雖然中間生了一個禮拜的病，有些文章是隔了幾天才補上的，但最後仍及時的完成了全部文章真的很開心！

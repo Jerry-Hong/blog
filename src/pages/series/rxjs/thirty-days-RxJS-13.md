@@ -11,8 +11,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-12.md"
-next: "./thirty-days-RxJS-14.md"
+previous: ./thirty-days-RxJS-12.md
+next: ./thirty-days-RxJS-14.md
 ---
 
 UI 大概是所有非同步行為中最不好處理的，不只是因為它直接影響了用戶體驗，更大的問題是 UI 互動常常是高頻率觸發的事件，而且多個元件間的時間序需要不一致，要做到這樣的 UI 互動就不太可能用 Promise 或 async/await，但是用 RxJS 仍然能輕易地處理！

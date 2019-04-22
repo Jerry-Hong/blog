@@ -11,7 +11,7 @@ tags:
   - observable
   - rxjs-30-days
 previous: null
-next: "./thirty-days-RxJS-01.md"
+next: ./thirty-days-RxJS-01.md
 ---
 
 ![RxJS Logo](/img/Rx_Logo.png)

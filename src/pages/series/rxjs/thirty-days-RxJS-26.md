@@ -11,8 +11,8 @@ tags:
   - observable
   - observer
   - rxjs-30-days
-previous: "./thirty-days-RxJS-25.md"
-next: "./thirty-days-RxJS-27.md"
+previous: ./thirty-days-RxJS-25.md
+next: ./thirty-days-RxJS-27.md
 --- 
 
 為什麼是簡易實作而不完整實作呢？ 當然這個系列的文章是希望讀者能學會如何使用 RxJS，而 實作 Observable 其實只是幫助我們理解 Observable 的運作方式，所以這篇文章會盡可能地簡單，一來讓讀者容易理解及吸收，二來有興趣的讀者可以再沿著這篇文章的內容去完整的實作。

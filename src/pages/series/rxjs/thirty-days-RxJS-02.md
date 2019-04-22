@@ -10,8 +10,8 @@ tags:
   - rxjs
   - functional-programming
   - rxjs-30-days
-previous: "./thirty-days-RxJS-01.md"
-next: "./thirty-days-RxJS-03.md"
+previous: ./thirty-days-RxJS-01.md
+next: ./thirty-days-RxJS-03.md
 ---
 
 這是【30天精通 RxJS】的 02 篇，如果還沒看過 01 篇可以往這邊走：

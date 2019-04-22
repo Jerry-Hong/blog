@@ -12,8 +12,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-18.md"
-next: "./thirty-days-RxJS-20.md"
+previous: ./thirty-days-RxJS-18.md
+next: ./thirty-days-RxJS-20.md
 ---
 
 如果有自己實作過 Auto Complete 功能的工程師，應該就會知道這個功能在實作的過程中很多細節會讓程式碼變的非常複雜，像是要如何取消上一次發送出去的 request、要如何優化請求次數... 等等，這些小細節都會讓程式碼變的非常複雜且很難維護。

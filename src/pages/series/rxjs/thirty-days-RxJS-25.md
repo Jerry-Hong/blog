@@ -12,8 +12,8 @@ tags:
   - subject
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-24.md"
-next: "./thirty-days-RxJS-26.md"
+previous: ./thirty-days-RxJS-24.md
+next: ./thirty-days-RxJS-26.md
 ---
 
 很多人會直接把 Subject 拿來用在 **不知道如何建立 Observable 的狀況**，比如我們在 [30 天精通 RxJS(23)](/series/rxjs/thirty-days-RxJS-23) 中提到的可以用在 ReactJS 的 Event 中，來建立 event 的 observable 

@@ -12,8 +12,8 @@ tags:
   - subject
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-23.md"
-next: "./thirty-days-RxJS-25.md"
+previous: ./thirty-days-RxJS-23.md
+next: ./thirty-days-RxJS-25.md
 ---
 
 如下面的例子

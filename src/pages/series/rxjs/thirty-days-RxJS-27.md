@@ -11,8 +11,8 @@ tags:
   - observable
   - observer
   - rxjs-30-days
-previous: "./thirty-days-RxJS-26.md"
-next: "./thirty-days-RxJS-28.md"
+previous: ./thirty-days-RxJS-26.md
+next: ./thirty-days-RxJS-28.md
 --- 
 
 ## 建立簡易 Observable 類別

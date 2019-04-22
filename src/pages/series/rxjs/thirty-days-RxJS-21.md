@@ -11,8 +11,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-20.md"
-next: "./thirty-days-RxJS-22.md"
+previous: ./thirty-days-RxJS-20.md
+next: ./thirty-days-RxJS-22.md
 ---
 
 在系列文章的一開頭是以陣列(Array)的 operators(map, filter, concatAll) 作為切入點，讓讀者們在學習 observable 時會更容易接受跟理解，但實際上 observable 的 operators 跟陣列的有很大的不同，主要差異有兩點

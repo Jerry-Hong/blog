@@ -11,8 +11,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-14.md"
-next: "./thirty-days-RxJS-16.md"
+previous: ./thirty-days-RxJS-14.md
+next: ./thirty-days-RxJS-16.md
 ---
 
 昨天我們講到了 throttle 跟 debounce 兩個方法來做效能優化，其實還有另一個方法可以做效能的優化處理，那就是 distinct。

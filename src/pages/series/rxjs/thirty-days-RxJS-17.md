@@ -11,8 +11,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-16.md"
-next: "./thirty-days-RxJS-18.md"
+previous: ./thirty-days-RxJS-16.md
+next: ./thirty-days-RxJS-18.md
 ---
 
 所謂的 Higher Order Observable 就是指一個 Observable 送出的元素還是一個 Observable，就像是二維陣列一樣，一個陣列中的每個元素都是陣列。如果用泛型來表達就像是

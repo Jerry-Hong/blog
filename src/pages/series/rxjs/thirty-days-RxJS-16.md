@@ -11,8 +11,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-15.md"
-next: "./thirty-days-RxJS-17.md"
+previous: ./thirty-days-RxJS-15.md
+next: ./thirty-days-RxJS-17.md
 ---
 
 Operators

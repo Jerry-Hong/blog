@@ -11,8 +11,8 @@ tags:
   - observable
   - subject
   - rxjs-30-days
-previous: "./thirty-days-RxJS-22.md"
-next: "./thirty-days-RxJS-24.md"
+previous: ./thirty-days-RxJS-22.md
+next: ./thirty-days-RxJS-24.md
 ---
 
 Subject

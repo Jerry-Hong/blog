@@ -11,8 +11,8 @@ tags:
   - observable
   - drag
   - rxjs-30-days
-previous: "./thirty-days-RxJS-07.md"
-next: "./thirty-days-RxJS-09.md"
+previous: ./thirty-days-RxJS-07.md
+next: ./thirty-days-RxJS-09.md
 ---
 
 這是【30天精通 RxJS】的 08 篇，如果還沒看過 07 篇可以往這邊走：

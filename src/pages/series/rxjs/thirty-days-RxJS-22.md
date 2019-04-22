@@ -11,8 +11,8 @@ tags:
   - observable
   - operator
   - rxjs-30-days
-previous: "./thirty-days-RxJS-21.md"
-next: "./thirty-days-RxJS-23.md"
+previous: ./thirty-days-RxJS-21.md
+next: ./thirty-days-RxJS-23.md
 ---
 
 ## Multiple subscriptions

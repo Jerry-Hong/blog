@@ -11,8 +11,8 @@ tags:
   - observable
   - scheduler
   - rxjs-30-days
-previous: "./thirty-days-RxJS-27.md"
-next: "./thirty-days-RxJS-29.md"
+previous: ./thirty-days-RxJS-27.md
+next: ./thirty-days-RxJS-29.md
 --- 
 
 其實 RxJS 用久了之後就會發現 Observable 有一個優勢是可以同時處理同步和非同步行為，但這個優勢也帶來了一個問題，就是我們常常會搞不清處現在的 observable 執行方式是同步的還是非同步的。換句話說，我們很容易搞不清楚 observable 到底什麼時候開始發送元素！
