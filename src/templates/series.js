@@ -63,21 +63,11 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const SeriesPost = ({ data }) => {
+const SeriesPost = ({ data, pageContext: { next, previous } }) => {
   const { markdownRemark: post } = data;
   const title = R.pathOr('', ['frontmatter', 'title'], post);
   const series = R.pathOr('', ['frontmatter', 'series'], post);
   const description = R.pathOr('', ['frontmatter', 'description'], post);
-  const previousLink = R.pathOr(
-    null,
-    ['frontmatter', 'previous', 'childMarkdownRemark', 'fields', 'slug'],
-    post
-  );
-  const nextLink = R.pathOr(
-    null,
-    ['frontmatter', 'next', 'childMarkdownRemark', 'fields', 'slug'],
-    post
-  );
   return (
     <Layout header={`Series / ${series}`}>
       <BlogPostTemplate
@@ -128,8 +118,8 @@ const SeriesPost = ({ data }) => {
         tags={R.pathOr([], ['frontmatter', 'tags'], post)}
         title={title}
         slug={R.pathOr('', ['fields', 'slug'], post)}
-        previousLink={previousLink}
-        nextLink={nextLink}
+        previousLink={previous}
+        nextLink={next}
       />
     </Layout>
   );

@@ -15,7 +15,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { ne: "series" } } }
+      ) {
         edges {
           node {
             id
@@ -23,8 +25,9 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
+              series
               templateKey
+              tags
             }
           }
         }
@@ -54,23 +57,73 @@ exports.createPages = ({ actions, graphql }) => {
         });
       }
     });
+    return graphql(`
+      {
+        allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "series" } } }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                series
+                templateKey
+                tags
+              }
+            }
+            previous {
+              fields {
+                slug
+              }
+            }
+            next {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      const series = result.data.allMarkdownRemark.edges;
+      series.forEach(edge => {
+        const id = edge.node.id;
+        if (edge.node.frontmatter.templateKey) {
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            component: path.resolve(
+              `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+            ),
+            // additional data can be passed via context
+            context: {
+              previous: edge.previous && edge.previous.fields.slug,
+              next: edge.next && edge.next.fields.slug,
+              id,
+            },
+          });
+        }
+      });
+      const tags = R.pipe(
+        R.map(R.pathOr([], ['node', 'frontmatter', 'tags'])),
+        R.flatten,
+        R.uniq
+      )(posts.concat(series));
 
-    const tags = R.pipe(
-      R.map(R.pathOr([], ['node', 'frontmatter', 'tags'])),
-      R.flatten,
-      R.uniq
-    )(posts);
+      // Make tag pages
+      tags.forEach(tag => {
+        const tagPath = `/tags/${kebabCase(tag)}/`;
 
-    // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/tags/${kebabCase(tag)}/`;
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
+        createPage({
+          path: tagPath,
+          component: path.resolve(`src/templates/tags.js`),
+          context: {
+            tag,
+          },
+        });
       });
     });
   });

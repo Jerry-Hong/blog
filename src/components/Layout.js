@@ -65,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
     --shadow: ${theme[THEME.LIGHT].COLOR.SHADOW};
     --card_bg: ${theme[THEME.LIGHT].COLOR.CARD_BG};
     --active: ${theme[THEME.LIGHT].COLOR.ACTIVE};
+    --disabled: ${theme[THEME.LIGHT].COLOR.DISABLED};
     --white: ${COMMON_COLORS.WHITE};
 
     color: var(--text);
@@ -90,6 +91,7 @@ const GlobalStyle = createGlobalStyle`
     --shadow: ${theme[THEME.DARK].COLOR.SHADOW};
     --card_bg: ${theme[THEME.DARK].COLOR.CARD_BG};
     --active: ${theme[THEME.DARK].COLOR.ACTIVE};
+    --disabled: ${theme[THEME.DARK].COLOR.DISABLED};
     --white: ${COMMON_COLORS.WHITE};
     
     color: var(--text);

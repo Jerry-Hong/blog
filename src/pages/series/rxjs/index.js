@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import Layout from '../../../components/Layout';
 import PostList from '../../../components/PostList';
-import { media } from '../../../utils/mediaQuery';
 
 const FullImage = styled(GatsbyImage)`
   max-width: 600px;

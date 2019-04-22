@@ -24,6 +24,7 @@ export const theme = {
       CARD_BG: '#252c3d',
       SHADOW: 'rgba(0, 0, 0, 0.3)',
       ACTIVE: 'rgb(0, 164, 128)',
+      DISABLED: '#343e55',
     },
   },
   light: {
@@ -42,6 +43,7 @@ export const theme = {
       CARD_BG: '#fff',
       SHADOW: rgba('#000', 0.1),
       ACTIVE: 'rgb(0, 164, 128)',
+      DISABLED: '#ced4e1',
     },
   },
 };

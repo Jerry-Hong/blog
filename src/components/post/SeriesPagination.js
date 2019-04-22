@@ -30,7 +30,8 @@ const SeriesTitleContent = styled.span`
 const SeriesLink = styled(Link)`
   display: flex;
   align-items: center;
-  color: var(--text);
+  color: ${({ to }) => (to ? `var(--text)` : `var(--disabled)`)};
+  cursor: ${({ to }) => (to ? `pointer` : `not-allowed`)};
 `;
 
 const SeriesLinkText = styled.span`
@@ -39,9 +40,12 @@ const SeriesLinkText = styled.span`
   margin: 0 5px;
 `;
 
-export const SeriesPagination = ({ previousLink, series, nextLink  }) => (
+export const SeriesPagination = ({ previousLink, series, nextLink }) => (
   <SeriesContent>
-    <SeriesLink to={previousLink}>
+    <SeriesLink
+      to={previousLink}
+      onClick={event => !previousLink && event.preventDefault()}
+    >
       <ArrowLeftCircle size={20} />
       <SeriesLinkText>Prev</SeriesLinkText>
     </SeriesLink>
@@ -49,9 +53,16 @@ export const SeriesPagination = ({ previousLink, series, nextLink  }) => (
       <Book size={20} />
       <SeriesTitle>{series}</SeriesTitle>
     </SeriesTitleContent>
-    <SeriesLink to={nextLink}>
-      <SeriesLinkText>Next</SeriesLinkText>
-      <ArrowRightCircle size={20} />
-    </SeriesLink>
+    {nextLink ? (
+      <SeriesLink
+        to={nextLink}
+        onClick={event => !nextLink && event.preventDefault()}
+      >
+        <SeriesLinkText>Next</SeriesLinkText>
+        <ArrowRightCircle size={20} />
+      </SeriesLink>
+    ) : (
+      <span />
+    )}
   </SeriesContent>
 );
