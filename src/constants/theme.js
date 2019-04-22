@@ -3,6 +3,10 @@ import { rgba } from 'polished';
 // https://www.colorhexa.com/343e55
 // https://www.colorhexa.com/ff6200
 
+export const COMMON_COLORS = {
+  WHITE: '#fff3eb',
+};
+
 export const theme = {
   dark: {
     COLOR: {
@@ -19,6 +23,8 @@ export const theme = {
       LOGO_J: 'rgba(191, 153, 129, 0.28)',
       CARD_BG: '#252c3d',
       SHADOW: 'rgba(0, 0, 0, 0.3)',
+      ACTIVE: 'rgb(0, 164, 128)',
+      DISABLED: '#343e55',
     },
   },
   light: {
@@ -36,6 +42,8 @@ export const theme = {
       LOGO_J: '#343E55',
       CARD_BG: '#fff',
       SHADOW: rgba('#000', 0.1),
+      ACTIVE: 'rgb(0, 164, 128)',
+      DISABLED: '#ced4e1',
     },
   },
 };

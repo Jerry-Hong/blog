@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+slug: javascript-module-history
 title: JavaScript 模組化歷程
 date: 2016-11-06T15:04:10.000Z
 description: 這篇文章會著重在帶大家了解 JavaScript 模組大致的發展歷程，而不會放在各個模組化機制的使用方式，希望能在這前端渾沌的時代，留下一點紀錄。

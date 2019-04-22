@@ -15,7 +15,9 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { ne: "series" } } }
+      ) {
         edges {
           node {
             id
@@ -23,8 +25,9 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
+              series
               templateKey
+              tags
             }
           }
         }
@@ -40,35 +43,88 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      });
+      if (edge.node.frontmatter.templateKey) {
+        createPage({
+          path: edge.node.fields.slug,
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          ),
+          // additional data can be passed via context
+          context: {
+            id,
+          },
+        });
+      }
     });
+    return graphql(`
+      {
+        allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "series" } } }
+          sort: { fields: frontmatter___date, order: ASC }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                series
+                templateKey
+                tags
+              }
+            }
+            previous {
+              fields {
+                slug
+              }
+            }
+            next {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      const series = result.data.allMarkdownRemark.edges;
+      series.forEach(edge => {
+        const id = edge.node.id;
+        if (edge.node.frontmatter.templateKey) {
+          createPage({
+            path: edge.node.fields.slug,
+            tags: edge.node.frontmatter.tags,
+            component: path.resolve(
+              `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+            ),
+            // additional data can be passed via context
+            context: {
+              previous: edge.previous && edge.previous.fields.slug,
+              next: edge.next && edge.next.fields.slug,
+              id,
+            },
+          });
+        }
+      });
+      const tags = R.pipe(
+        R.map(R.pathOr([], ['node', 'frontmatter', 'tags'])),
+        R.flatten,
+        R.uniq
+      )(posts.concat(series));
 
-    const tags = R.pipe(
-      R.map(R.pathOr([], ['node', 'frontmatter', 'tags'])),
-      R.flatten,
-      R.uniq
-    )(posts);
+      // Make tag pages
+      tags.forEach(tag => {
+        const tagPath = `/tags/${kebabCase(tag)}/`;
 
-    // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/tags/${kebabCase(tag)}/`;
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
+        createPage({
+          path: tagPath,
+          component: path.resolve(`src/templates/tags.js`),
+          context: {
+            tag,
+          },
+        });
       });
     });
   });
@@ -86,4 +142,34 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+exports.sourceNodes = ({ actions, getNodes }) => {
+  const { createNodeField } = actions;
+  const nodes = getNodes();
+  const markdownNodes = R.filter(
+    R.pathEq(['internal', 'type'], 'MarkdownRemark')
+  )(nodes);
+
+  const seriesList = R.filter(R.pathEq(['frontmatter', 'type'], 'series-data'))(
+    markdownNodes
+  );
+
+  seriesList.forEach(seriesNode => {
+    const seriesId = R.path(['frontmatter', 'id'], seriesNode);
+    const seriesPosts = R.pipe(
+      R.filter(R.pathEq(['frontmatter', 'series'], seriesId)),
+      R.map(R.path(['frontmatter']))
+    )(markdownNodes);
+    createNodeField({
+      node: seriesNode,
+      name: 'posts',
+      value: seriesPosts,
+    });
+    createNodeField({
+      node: seriesNode,
+      name: 'postsCount',
+      value: seriesPosts.length,
+    });
+  });
 };

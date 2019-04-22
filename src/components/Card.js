@@ -9,6 +9,7 @@ const CardLink = styled(Link)`
   min-height: 100px;
   max-width: 600px;
   width: 100%;
+  color: var(--text);
   border-radius: 5px;
   background: var(--card_bg);
   box-shadow: 0px 2px 5px var(--shadow);
@@ -19,7 +20,7 @@ const CardLink = styled(Link)`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 15px 15px;
+  padding: 15px;
 `;
 
 const Title = styled.h2`
@@ -30,19 +31,17 @@ const Title = styled.h2`
 
 const Desc = styled.p`
   margin: 0;
-  color: var(--text);
   margin-bottom: 2em;
   line-height: 1.5em;
 `;
 
 const Note = styled.span`
   margin-top: auto;
-  color: var(--text);
 `;
 
-const Card = ({ title, desc, note, link, cover }) => {
+const Card = ({ title, desc, note, link, cover, style }) => {
   return (
-    <CardLink to={link}>
+    <CardLink to={link} style={style}>
       {cover && (
         <Img
           fluid={cover}

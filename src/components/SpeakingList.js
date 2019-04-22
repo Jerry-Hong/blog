@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
-import { format } from 'date-fns';
 
 const Content = styled.div`
   display: flex;
@@ -11,7 +10,7 @@ const Content = styled.div`
   margin: 0 auto;
 `;
 
-const PostList = ({ data = [] }) => {
+const SpeakList = ({ data = [] }) => {
   return (
     <Content>
       {data
@@ -22,10 +21,7 @@ const PostList = ({ data = [] }) => {
             link={post.fields.slug}
             title={post.frontmatter.title}
             desc={post.frontmatter.description}
-            note={`${format(
-              new Date(post.frontmatter.date),
-              'MMM Do, YYYY'
-            )}. ${post.timeToRead} mins read`}
+            note={`${post.frontmatter.event}. ${post.frontmatter.time}`}
             cover={
               post.frontmatter.image
                 ? post.frontmatter.image.childImageSharp.fluid
@@ -37,4 +33,4 @@ const PostList = ({ data = [] }) => {
   );
 };
 
-export default PostList;
+export default SpeakList;

@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: v2
 
 media_folder: static/img
 public_folder: /img
@@ -10,11 +10,28 @@ collections:
     label: "Blog"
     folder: "src/pages/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{fields.slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Slug", name: "slug", widget: "string", default: ""}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: Image, name: image, widget: image}
+      - {label: Image, name: image, widget: image, default: null, required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+  - name: "speaking"
+    label: "Speaking"
+    folder: "src/pages/speaking"
+    create: true
+    slug: "{{fields.slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "speaking"}
+      - {label: "Slug", name: "slug", widget: "string", default: ""}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: Image, name: image, widget: image, default: null, required: false}
+      - {label: Event, name: event, widget: string}
+      - {label: Time, name: time, widget: string}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}

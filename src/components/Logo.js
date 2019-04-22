@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-const Logo = () => (
+const Logo = ({ size = 40 }) => (
   <svg
-    width="40px"
-    height="42px"
+    width={`${size}px`}
     viewBox="0 0 40 42"
     version="1.1"
     preserveAspectRatio="xMidYMin slice"

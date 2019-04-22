@@ -19,7 +19,8 @@ export const BlogPostTemplate = ({
   title,
   description,
   date,
-  timeToRead,
+  time,
+  event,
   helmet,
   slug,
 }) => {
@@ -30,7 +31,7 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <Title>{title}</Title>
       <Note>
-        {format(new Date(date), 'MMM Do, YYYY')}. {timeToRead} mins read
+        {event}. {format(new Date(date), 'MMM Do')}. {time}
       </Note>
       <Desc>{description}</Desc>
       <PostContent content={content} />
@@ -52,13 +53,13 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const BlogPost = ({ data }) => {
+const SpeechPost = ({ data }) => {
   const { markdownRemark: post } = data;
   const title = R.pathOr('', ['frontmatter', 'title'], post);
   const description = R.pathOr('', ['frontmatter', 'description'], post);
 
   return (
-    <Layout header={`Posts / ${title}`}>
+    <Layout header={`Speaking / ${title}`}>
       <BlogPostTemplate
         content={post.htmlAst}
         contentComponent={HTMLContent}
@@ -102,7 +103,8 @@ const BlogPost = ({ data }) => {
           </Helmet>
         }
         date={R.pathOr('', ['frontmatter', 'date'], post)}
-        timeToRead={R.pathOr('', ['timeToRead'], post)}
+        time={R.pathOr('', ['frontmatter', 'time'], post)}
+        event={R.pathOr('', ['frontmatter', 'event'], post)}
         tags={R.pathOr([], ['frontmatter', 'tags'], post)}
         title={title}
         slug={R.pathOr('', ['fields', 'slug'], post)}
@@ -111,25 +113,20 @@ const BlogPost = ({ data }) => {
   );
 };
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-};
-
-export default BlogPost;
+export default SpeechPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query SpeechPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       htmlAst
-      timeToRead
       fields {
         slug
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        event
+        time
         title
         tags
         description

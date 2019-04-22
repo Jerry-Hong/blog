@@ -9,7 +9,7 @@ const StyledFrame = styled.span`
   right: 0;
   bottom: 0;
   display: none;
-  background: white;
+  background: var(--bg);
   transform: translateZ(0);
   z-index: ${({ isZoomed }) => (isZoomed ? 1 : 'auto')};
 `;
@@ -74,7 +74,7 @@ class ZoomImg extends React.Component {
 
   render () {
     const { isZoomed } = this.state;
-    const { style: _, ...props } = this.props;
+    const { style, ...props } = this.props;
     const pose = isZoomed ? 'zoom' : 'init';
 
     return (

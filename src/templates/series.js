@@ -11,6 +11,7 @@ import DisqusComment from '../components/DisqusComment';
 import { Title, Desc, Note } from '../components/post/Title';
 import { Section } from '../components/post/Section';
 import { TagList } from '../components/post/Tag';
+import { SeriesPagination } from '../components/post/SeriesPagination.js';
 
 export const BlogPostTemplate = ({
   content,
@@ -22,25 +23,35 @@ export const BlogPostTemplate = ({
   timeToRead,
   helmet,
   slug,
+  previousLink,
+  nextLink,
+  series = '',
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <Section>
-      {helmet || ''}
-      <Title>{title}</Title>
-      <Note>
-        {format(new Date(date), 'MMM Do, YYYY')}. {timeToRead} mins read
-      </Note>
-      <Desc>{description}</Desc>
-      <PostContent content={content} />
+    <React.Fragment>
+      <Section>
+        {helmet || ''}
+        <Title>{title}</Title>
+        <Note>
+          {format(new Date(date), 'MMM Do, YYYY')}. {timeToRead} mins read
+        </Note>
+        <Desc>{description}</Desc>
+        <PostContent content={content} />
+      </Section>
       <TagList tags={tags} />
+      <SeriesPagination
+        previousLink={previousLink}
+        nextLink={nextLink}
+        series={series}
+      />
       <DisqusComment
         identifier={slug}
         shortname="jerry-blog"
         url={`${DOMAIN}/${slug}`}
       />
-    </Section>
+    </React.Fragment>
   );
 };
 
@@ -52,17 +63,18 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const BlogPost = ({ data }) => {
+const SeriesPost = ({ data, pageContext: { next, previous } }) => {
   const { markdownRemark: post } = data;
   const title = R.pathOr('', ['frontmatter', 'title'], post);
+  const series = R.pathOr('', ['frontmatter', 'series'], post);
   const description = R.pathOr('', ['frontmatter', 'description'], post);
-
   return (
-    <Layout header={`Posts / ${title}`}>
+    <Layout header={`Series / ${series}`}>
       <BlogPostTemplate
         content={post.htmlAst}
         contentComponent={HTMLContent}
         description={description}
+        series={series}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{title}</title>
@@ -106,21 +118,17 @@ const BlogPost = ({ data }) => {
         tags={R.pathOr([], ['frontmatter', 'tags'], post)}
         title={title}
         slug={R.pathOr('', ['fields', 'slug'], post)}
+        previousLink={previous}
+        nextLink={next}
       />
     </Layout>
   );
 };
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-};
-
-export default BlogPost;
+export default SeriesPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query SeriesPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       htmlAst
@@ -131,12 +139,27 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        series
         tags
         description
         image {
           childImageSharp {
             fluid(maxWidth: 240, quality: 64) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        previous {
+          childMarkdownRemark {
+            fields {
+              slug
+            }
+          }
+        }
+        next {
+          childMarkdownRemark {
+            fields {
+              slug
             }
           }
         }
