@@ -173,7 +173,7 @@ class Layout extends React.Component {
               <meta property="og:url" content={DOMAIN} />
               <meta
                 property="og:image"
-                content={`${DOMAIN}/img/j_logo-144x144.png`}
+                content={`${DOMAIN}/img/cover.png`}
               />
             </Helmet>
             <Continer>
