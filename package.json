@@ -10,6 +10,7 @@
     "gatsby": "^2.3.14",
     "gatsby-image": "^2.0.23",
     "gatsby-plugin-catch-links": "^2.0.13",
+    "gatsby-plugin-feed": "^2.1.1",
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-netlify-cms": "^3.0.15",
     "gatsby-plugin-purgecss": "^3.1.0",
