@@ -5,6 +5,7 @@ module.exports = {
   siteMetadata: {
     title: 'J.H. Blog',
     description: 'Think how to think, learn how to learn',
+    siteUrl: 'https://blog.jerry-hong.com/',
   },
   plugins: [
     'gatsby-plugin-sitemap',
