@@ -7,6 +7,7 @@ module.exports = {
     description: 'Think how to think, learn how to learn',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
