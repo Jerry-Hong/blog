@@ -6,7 +6,6 @@ import Img from 'gatsby-image';
 const CardLink = styled(Link)`
   display: flex;
   flex-direction: column;
-  min-height: 100px;
   max-width: 600px;
   width: 100%;
   color: var(--text);
@@ -50,8 +49,8 @@ const Card = ({ title, desc, note, link, cover, style }) => {
       )}
       <Content>
         <Title>{title}</Title>
-        <Desc>{desc}</Desc>
-        <Note>{note}</Note>
+        {desc && <Desc>{desc}</Desc>}
+        {note && <Note>{note}</Note>}
       </Content>
     </CardLink>
   );
