@@ -23,4 +23,4 @@ tags:
 
 ## Slide
 
-<iframe src="//speakerdeck.com/player/0531acb58d9b40dba0412767010ea601">
+<iframe style="border:0; padding:0; margin:0; background:transparent;" src="//speakerdeck.com/player/0531acb58d9b40dba0412767010ea601" allowfullscreen="allowfullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
