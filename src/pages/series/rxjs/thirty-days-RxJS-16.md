@@ -6,11 +6,11 @@ date: 2017-01-01T23:46:55.000Z
 description: "我們已經快把所有基本的轉換(Transformation)、過濾(Filter)和合并(Combination)的 operators 講完了。今天要講錯誤處理(Error Handling)的 operators，錯誤處理是非同步行為中的一大難題，尤其有多個交錯的非同步行為時，更容易凸顯錯誤處理的困難。就讓我們一起來看看在 RxJS 中能如何處理錯誤吧！"
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-15.md
 next: ./thirty-days-RxJS-17.md
 ---

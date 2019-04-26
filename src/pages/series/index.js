@@ -1,12 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import SeriesList from '../../components/SeriesList';
 import Layout from '../../components/Layout';
 
 const SeriesPage = () => {
-  const { series } = useStaticQuery(
+  const { series, site } = useStaticQuery(
     graphql`
       query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
         series: allMarkdownRemark(
           limit: 1000
           sort: { fields: frontmatter___date, order: DESC }
@@ -39,7 +45,8 @@ const SeriesPage = () => {
   );
   return (
     <Layout header="Series">
-      <SeriesList data={series.edges}/>
+      <Helmet title={`Series | ${site.siteMetadata.title}`} />
+      <SeriesList data={series.edges} />
     </Layout>
   );
 };

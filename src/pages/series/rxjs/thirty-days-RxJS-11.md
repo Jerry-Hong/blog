@@ -6,11 +6,11 @@ date: 2016-12-27T23:11:24.000Z
 description: 有次不小心進到了優酷，發現優酷有個不錯的功能，能大大的提升用戶體驗，就讓我們一起來實作這個效果吧！
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - drag
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Drag&Drop
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-10.md
 next: ./thirty-days-RxJS-12.md
 ---

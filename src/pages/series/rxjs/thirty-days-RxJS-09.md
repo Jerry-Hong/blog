@@ -7,11 +7,11 @@ description: "今天是美好的聖誕節，先祝讀者們聖誕快樂！
 為了讓大家在聖誕節好好的陪家人，所以今天的文章內容就輕鬆點，讓我們簡單介紹幾個的 operators 就好了。"
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-08.md
 next: ./thirty-days-RxJS-10.md
 ---

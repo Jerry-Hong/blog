@@ -64,7 +64,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | J.H. Blog">
             <title>{title}</title>
             <meta name="description" content={description} />
             <meta property="og:type" content="article" />

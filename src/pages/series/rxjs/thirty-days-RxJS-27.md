@@ -6,11 +6,11 @@ date: 2017-01-12T23:43:17.000Z
 description: 前一篇文章我們已經完成了基本的 observable 以及 Observer 的簡易實作，這篇文章我們會接續上一篇的內容實作簡易的 Observable 類別，以及一個 creation operator 和一個  transform operator。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - observer
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Observer
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-26.md
 next: ./thirty-days-RxJS-28.md
 --- 

@@ -6,11 +6,11 @@ date: 2017-01-13T23:48:28.000Z
 description: 不曉得讀者們還記不記得，我們在前面的文章中有提到 Scheduler 是為了解決 RxJS 衍生的最後一個問題，而我們現在就在揭曉這個謎底。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - scheduler
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Scheduler
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-27.md
 next: ./thirty-days-RxJS-29.md
 --- 

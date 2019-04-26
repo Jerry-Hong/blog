@@ -13,9 +13,9 @@ description: >-
 
   本次分享會說明如何用 Marble Diagram 來撰寫 Observable 的測試，以及使用 Marble Testing 所帶來的好處。
 tags:
-  - rxjs
-  - marble diagram
-  - unit test
+  - RxJS
+  - Marble Diagram
+  - Unit Test
 ---
 ## Video
 

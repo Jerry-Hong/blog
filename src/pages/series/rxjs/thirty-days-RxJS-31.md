@@ -6,10 +6,10 @@ date: 2017-03-19T15:04:10.000Z
 description: Debug 一直是 RxJS 的難題，原因是當我們使用 RxJS 後，程式碼就會變得高度 **抽象化**；實際上抽象並不是什麼壞事，抽象會讓程式碼顯得簡潔、乾淨，但同時也帶來了除錯上的困難。
 image: null
 tags:
-  - front-end
-  - rxjs
-  - debug
-  - rxjs-30-days
+  - Front End
+  - RxJS
+  - Debug
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-30.md
 next: null
 ---

@@ -6,12 +6,12 @@ date: 2016-12-20T22:13:19.000Z
 description: 整個 RxJS 的基礎就是 Observable，只要弄懂 Observable 就算是學會一半的 RxJS 了，剩下的就只是一些方法的練習跟熟悉；但到底什麼是 Observable 呢？
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - iterator
-  - observer
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Iterator
+  - Observer
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-03.md
 next: ./thirty-days-RxJS-05.md
 ---

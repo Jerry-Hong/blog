@@ -6,11 +6,11 @@ date: 2016-12-21T21:28:25.000Z
 description: Observable 是 RxJS 的核心，今天讓我們從如何建立 Observable 開始！
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - observer
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Observer
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-04.md
 next: ./thirty-days-RxJS-06.md
 ---
@@ -126,7 +126,7 @@ var observable = Rx.Observable
 		observer.next('Anna');
 		
 		setTimeout(() => {
-			observer.next('RxJS 30 days!');
+			observer.next('RxJS 30 Days!');
 		}, 30)
 	})
 	
@@ -145,7 +145,7 @@ start
 Jerry
 Anna
 end
-RxJS 30 days!
+RxJS 30 Days!
 ```
 
 從上述的程式碼能看得出來

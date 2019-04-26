@@ -6,10 +6,10 @@ date: 2017-03-17T15:04:10.000Z
 description: Hot Observable 跟 Cold Observable 的差別，其實就是 **資料源(Data Source)** 在 Observable 內部建立還是外部建立。
 image: null
 tags:
-  - front-end
-  - rxjs
-  - observable
-  - rxjs-30-days
+  - Front End
+  - RxJS
+  - Observable
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-29.md
 next: ./thirty-days-RxJS-31.md
 ---

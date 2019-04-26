@@ -6,11 +6,11 @@ date: 2017-01-02T23:47:35.000Z
 description: 今天我們要講三個 operators，這三個 operators 都是用來處理 Higher Order Observable。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-16.md
 next: ./thirty-days-RxJS-18.md
 ---

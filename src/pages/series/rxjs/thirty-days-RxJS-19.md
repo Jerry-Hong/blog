@@ -7,11 +7,11 @@ description: "今天我們要做一個 RxJS 的經典範例 - 自動完成 (Auto
 雖然是個很常見的功能，但多數的工程師都只是直接套套件來完成，很少有人會自己從頭到尾把完整的邏輯寫一次。"
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-18.md
 next: ./thirty-days-RxJS-20.md
 ---

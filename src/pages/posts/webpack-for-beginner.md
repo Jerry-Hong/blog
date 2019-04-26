@@ -6,9 +6,9 @@ date: 2016-11-06T15:04:10.000Z
 description: Webpack是 JS 模組化的工具同時也能很好的整合其他工具像是 babel, css-module 等，也因為如此使她成為目前前端必學的工具之一。
 image: "/img/webpack_cover.jpg"
 tags:
-  - front-end
-  - webpack
-  - javascript
+  - Front End
+  - Webpack
+  - JavaScript
 ---
 
 > 隨著網頁的應用程式化，我們對於JS的要求越來越高，原生的JS已經漸漸的無法滿足我們的需求，需要許多額外的工具來補足原生的JS。

@@ -8,11 +8,11 @@ description: "昨天我們最後講到了 `merge` 的用法，它的邏輯就像
 今天我們要講的三個 operators 則像是 AND(&&) 邏輯，它們都是在多個元素送進來時，只輸出一個新元素，但各自的行為上仍有差異，需要讀者花點時間思考，建議在頭腦清醒時閱讀本篇文章。"
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-09.md
 next: ./thirty-days-RxJS-11.md
 ---

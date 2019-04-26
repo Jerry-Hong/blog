@@ -6,11 +6,11 @@ date: 2017-01-08T23:01:49.000Z
 description: 昨天我們介紹了 Subject 是什麼，今天要講 Subject 一些應用方式，以及 Subject 的另外三種變形。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - subject
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Subject
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-22.md
 next: ./thirty-days-RxJS-24.md
 ---

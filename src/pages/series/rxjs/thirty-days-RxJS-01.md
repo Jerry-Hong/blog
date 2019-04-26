@@ -6,12 +6,12 @@ date: 2016-12-17T22:03:43.000Z
 description: RxJS 是筆者認為未來幾年內會非常紅的 Library，RxJS 提供了一套完整的非同步解決方案，讓我們在面對各種非同步行為，不管是 Event, AJAX, 還是 Animation 等，我們都可以使用相同的 API (Application Programming Interface) 做開發。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - reactive-programming
-  - functional-programming
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Reactive Programming
+  - Functional Programming
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-00.md
 next: ./thirty-days-RxJS-02.md
 ---
@@ -51,7 +51,7 @@ JavaScript 的 try/catch 可以捕捉同步的例外，但非同步的程式就�
 
 - DOM Events
 - XMLHttpRequest
-- fetch
+- Fetch
 - WebSockets
 - Server Send Events
 - Service Worker
@@ -112,7 +112,7 @@ RxJS 是一套藉由 **Observable sequences** 來組合**非同步行為**和**�
 
 > [André Staltz](https://medium.com/@andrestaltz/why-i-cannot-say-frp-but-i-just-did-d5ffaa23973b#.dhmsyic9w)：Rx 著名的推廣者，也是 RxJS 5 主要貢獻者之一，同時是 Cycle.js 的作者。Staltz 特別寫了一篇[文章](https://medium.com/@andrestaltz/why-i-cannot-say-frp-but-i-just-did-d5ffaa23973b#.dhmsyic9w)解釋為什麼 Rx 不能說是 FRP 但他仍然稱其為 FRP。
 
-> [Juan Gomez](https://twitter.com/_juandg)：曾在 Netflix 工作，目前任職於 Fitbit，經常出現在國外演討會，主要寫 Android。Juan Gomez 在 [Droidcon NYC 2015 的演講](https://realm.io/news/droidcon-gomez-functional-reactive-programming/)中特別提出他堅持稱 Rx 為 FRP。
+> [Juan Gomez](https://twitter.com/_juandg)：曾在 Netflix 工作，目前任職於 Fitbit，經常出現在國外演討會，主要寫 Android。Juan Gomez 在 [Droidcon NYC 2015 的演講](https://realm.io/news/droidcon-gomez-functional-reactive programming/)中特別提出他堅持稱 Rx 為 FRP。
 
 > [Evan Czaplicki](https://twitter.com/czaplic)：任職於 NoRedInk，Elm 的作者。Evan 在 [StrangeLoop 2014 的演講](https://www.youtube.com/watch?v=Agu6jipKfYw)中，特別為現在各種 FRP 的不同解釋做分類。
 

@@ -6,11 +6,11 @@ date: 2016-12-28T23:11:24.000Z
 description: 今天要繼續講兩個簡單的 transformation operators 並帶一些小範例，這兩個 operators 都是實務上很常會用到的方法。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-11.md
 next: ./thirty-days-RxJS-13.md
 ---

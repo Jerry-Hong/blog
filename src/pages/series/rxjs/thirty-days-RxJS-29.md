@@ -6,8 +6,8 @@ date: 2017-01-14T23:49:21.000Z
 description: 30 天悄悄的就過了，這 30 篇的文章基本上已經把 RxJS 一個核心三個重點(Observable + Observer + Subject + Scheduler)以及各個 operators 幾乎也都有寫到。最開始寫這個系列的文章是希望能讓 RxJS 的學習曲線降低，所以文章的前後順序及內容都是特別規劃過的，不知道我到底是不是真的做到了。
 image: null
 tags:
-  - rxjs
-  - rxjs-30-days
+  - RxJS
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-28.md
 next: ./thirty-days-RxJS-30.md
 --- 

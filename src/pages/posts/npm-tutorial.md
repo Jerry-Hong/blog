@@ -6,9 +6,9 @@ date: 2016-11-10T15:04:10.000Z
 description: 由於 JavaScript 是前端的語言，所以近年來 Node.js 逐漸成為前端的開發必備環境，許多前端開發工具都是跑在 Node.js 之上，像是 Gulp, Grunt, Webpack。因此 NPM 也成為前端必會的基礎工具之一！
 image: "../../../static/img/1280px-Npm-logo.png"
 tags:
-  - npm
-  - front-end
-  - javascript
+  - NPM
+  - Front End
+  - JavaScript
 ---
 
 ![](../../../static/img/1280px-Npm-logo.png)

@@ -6,10 +6,10 @@ date: 2016-12-22T23:15:10.000Z
 description: 通常我們會透過 creation operator 來建立 Observable 實例，這篇文章會講解幾個較為常用的 operator！
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-05.md
 next: ./thirty-days-RxJS-07.md
 ---

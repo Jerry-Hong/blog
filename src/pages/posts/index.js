@@ -1,12 +1,18 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import PostList from '../../components/PostList';
 import Layout from '../../components/Layout';
 
 const Posts = () => {
-  const { allMarkdownRemark } = useStaticQuery(
+  const { allMarkdownRemark, site } = useStaticQuery(
     graphql`
       query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
         allMarkdownRemark(
           limit: 1000
           sort: { fields: frontmatter___date, order: DESC }
@@ -42,6 +48,7 @@ const Posts = () => {
 
   return (
     <Layout header="Posts">
+      <Helmet title={`Posts | ${site.siteMetadata.title}`} />
       <PostList data={allMarkdownRemark.edges} />
     </Layout>
   );

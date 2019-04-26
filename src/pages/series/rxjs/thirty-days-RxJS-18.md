@@ -6,11 +6,11 @@ date: 2017-01-03T23:47:35.000Z
 description: 今天我們要講三個非常重要的 operators，這三個 operators 在很多的 RxJS 相關的 library 的使用範例上都會看到。很多初學者在使用這些 library 時，看到這三個 operators 很可能就放棄了，但其實如果有把這個系列的文章完整看過的話，現在應該就能很好接受跟理解。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-17.md
 next: ./thirty-days-RxJS-19.md
 ---

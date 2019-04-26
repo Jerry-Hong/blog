@@ -6,11 +6,11 @@ date: 2016-12-24T23:23:27.000Z
 description: 如果是你會如何實作拖拉的功能？
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - drag
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Drag&Drop
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-07.md
 next: ./thirty-days-RxJS-09.md
 ---

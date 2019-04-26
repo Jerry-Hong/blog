@@ -6,11 +6,11 @@ date: 2018-01-17T15:04:10.000Z
 description: 今天(1/16) 在 Facebook 社團上看到網友提問為什麼要用 fetch，在我們已經有 jQuery ajax 的情況下，fetch 能取代 jQuery 的 ajax 嗎？
 image: null
 tags:
-  - front-end
-  - javascript
-  - fetch
-  - rxjs
-  - service-worker
+  - Front End
+  - JavaScript
+  - Fetch
+  - RxJS
+  - Service Worker
 ---
 
 ## 為什麼我們應該學 fetch ?

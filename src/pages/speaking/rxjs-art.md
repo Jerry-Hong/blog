@@ -8,9 +8,9 @@ time: 40 mins
 description: 這幾年來 JavaScript 有越來越多的語法糖(syntax sugar)像是 async/await, generator 等等，但我們實際上在處理非同步行為時，仍然要透過各種不同的方式；這使我們必須學習越來越多的語法，但程式碼卻更加難以閱讀。本次演講將會說明 RxJS 如何使用相同的方式處理各種非同步行為，以及我們要如何運用 Functional Programming 的觀念把複雜的非同步行為封裝成簡單可讀的程式碼。
 image: "/img/rxjs_art.png"
 tags:
-  - javascript
-  - front-end
-  - rxjs
+  - JavaScript
+  - Front End
+  - RxJS
 ---
 
 ## Video

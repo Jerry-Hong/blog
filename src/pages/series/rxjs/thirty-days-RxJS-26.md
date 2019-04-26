@@ -6,11 +6,11 @@ date: 2017-01-11T23:39:24.000Z
 description: 因為實在太多讀者在問要如何實作 Observable，所以特別調整了本系列文章最後幾篇的內容，空出一天的位置來寫如何簡易實作 Observable。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - observer
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Observer
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-25.md
 next: ./thirty-days-RxJS-27.md
 --- 

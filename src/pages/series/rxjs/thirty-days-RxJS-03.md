@@ -6,10 +6,10 @@ date: 2016-12-19T23:04:41.000Z
 description: 了解 Functional Programming 的通用函式，能讓我們寫出更簡潔的程式碼，也能幫助我們學習 RxJS。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - functional
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Functional Programming
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-02.md
 next: ./thirty-days-RxJS-04.md
 ---

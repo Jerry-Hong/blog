@@ -6,11 +6,11 @@ date: 2017-01-06T21:07:32.000Z
 description: 我們已經把絕大部分的 operators 都介紹完了，但一直沒有機會好好的解釋 Observable 的 operators 運作方式。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-20.md
 next: ./thirty-days-RxJS-22.md
 ---

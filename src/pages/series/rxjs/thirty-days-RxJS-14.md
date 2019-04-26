@@ -6,11 +6,11 @@ date: 2016-12-30T23:46:30.000Z
 description: 昨天講到了在 UI 操作上很常用的 delay，今天我們接著要來講另外兩個也非常實用 operators，尤其在做效能優化時更是不可或缺的好工具！
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-13.md
 next: ./thirty-days-RxJS-15.md
 ---

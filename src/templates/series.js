@@ -76,7 +76,7 @@ const SeriesPost = ({ data, pageContext: { next, previous } }) => {
         description={description}
         series={series}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | J.H. Blog">
             <title>{title}</title>
             <meta name="description" content={description} />
             <meta property="og:type" content="article" />

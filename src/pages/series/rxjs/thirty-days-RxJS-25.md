@@ -6,12 +6,12 @@ date: 2017-01-10T23:23:02.000Z
 description: Subject 其實在 RxJS 中最常被誤解的一部份，因為 Subject 可以讓你用命令式的方式雖送值到一個 observable 的串流中。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - subject
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Subject
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-24.md
 next: ./thirty-days-RxJS-26.md
 ---

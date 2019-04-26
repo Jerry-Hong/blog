@@ -6,11 +6,11 @@ date: 2016-12-29T23:47:00.000Z
 description: 在所有非同步中行為中，最麻煩的大概就是 UI 操作了，因為 UI 是直接影響使用者的感受，如果處理的不好對使用體驗會大大的扣分！
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-12.md
 next: ./thirty-days-RxJS-14.md
 ---

@@ -6,11 +6,11 @@ date: 2017-01-07T23:47:09.000Z
 description: 終於進到了 RxJS 的第二個重點 Subject，不知道讀者們有沒有發現？ 我們在這篇文章之前的範例，每個 observable 都只訂閱了一次，而實際上 observable 是可以多次訂閱的。
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-21.md
 next: ./thirty-days-RxJS-23.md
 ---

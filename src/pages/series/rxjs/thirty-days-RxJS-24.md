@@ -6,12 +6,12 @@ date: 2017-01-09T23:42:11.000Z
 description: "昨天我們介紹完了各種 Subject，不曉得各位讀者還記不記得在一開始講到 Subject 時，是希望能夠讓 Observable 有新訂閱時，可以共用前一個訂閱的執行而不要從頭開始"
 image: null
 tags:
-  - javascript
-  - rxjs
-  - observable
-  - subject
-  - operator
-  - rxjs-30-days
+  - JavaScript
+  - RxJS
+  - Observable
+  - Subject
+  - Operator
+  - RxJS 30 Days
 previous: ./thirty-days-RxJS-23.md
 next: ./thirty-days-RxJS-25.md
 ---
