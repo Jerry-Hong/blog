@@ -24,10 +24,10 @@ const Content = styled.div`
 
 const TitleLink = styled(Link)`
   > svg {
-    #logo-eye {
+    .logo-eye {
       fill: var(--logo_eye);
     }
-    #logo-j {
+    .logo-j {
       fill: var(--logo_j);
     }
   }
