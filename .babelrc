@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "ramda",
+        "libraryDirectory": "es",
+        "camel2DashComponentName": false
+      },
+      "ramda"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "react-feather",
+        "libraryDirectory": "dist/icons"
+      },
+      "react-feather"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "date-fns",
+        "libraryDirectory": "",
+        "camel2UnderlineComponentName": true
+      },
+      "date-fns"
+    ]
+  ],
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [
+            ">0.25%",
+            "not dead"
+          ]
+        }
+      }
+    ]
+  ]
+}
