@@ -63,21 +63,25 @@ const ToggleThemeButton = ({ mode, onClick }) => (
 const Header = ({ mode, toggleMode }) => {
   return (
     <Content>
-      <TitleLink to="/">
+      <TitleLink to="/" ariaLabel="Go to home page">
         <Logo size={30} />
         <Title>J.H. Blog</Title>
       </TitleLink>
       <Menu>
-        <StyledMenuLink to="/posts">
+        <StyledMenuLink to="/posts" ariaLabel="Go to posts page">
           <Box style={{ marginRight: 10 }} size={20} />
           Posts
         </StyledMenuLink>
-        <StyledMenuLink to="/series">
+        <StyledMenuLink to="/series" ariaLabel="Go to series page">
           <Book style={{ marginRight: 8 }} size={20} />
           Series
         </StyledMenuLink>
         <StyledMenuLink to="/speaking">
-          <Cast style={{ marginRight: 10 }} size={21} />
+          <Cast
+            style={{ marginRight: 10 }}
+            size={21}
+            ariaLabel="Go to speaking page"
+          />
           Speaking
         </StyledMenuLink>
       </Menu>
