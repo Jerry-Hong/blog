@@ -52,16 +52,16 @@ const ToggleThemeButton = ({ mode, onClick }) => (
 const FixedMenu = ({ mode, toggleMode }) => {
   return (
     <Content>
-      <MenuLink to="/posts" ariaLabel="Go to posts page">
+      <MenuLink to="/posts" aria-label="Go to posts page">
         <Box size={20} />
       </MenuLink>
-      <MenuLink to="/series" ariaLabel="Go to series page">
+      <MenuLink to="/series" aria-label="Go to series page">
         <Book size={20} />
       </MenuLink>
-      <TitleLink to="/" ariaLabel="Go to home page">
+      <TitleLink to="/" aria-label="Go to home page">
         <Logo size={30} />
       </TitleLink>
-      <MenuLink to="/speaking" ariaLabel="Go to speaking page">
+      <MenuLink to="/speaking" aria-label="Go to speaking page">
         <Cast size={21} />
       </MenuLink>
       <ToggleThemeButton mode={mode} onClick={toggleMode} />
