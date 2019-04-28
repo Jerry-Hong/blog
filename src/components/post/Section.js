@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   color: var(--article_text);
+  /* background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/7QA2UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAABkcAmcAFEtCVXBVcEpWYmw5SlRwM0pOSW82AP/iAhxJQ0NfUFJPRklMRQABAQAAAgxsY21zAhAAAG1udHJSR0IgWFlaIAfcAAEAGQADACkAOWFjc3BBUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtbGNtcwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmRlc2MAAAD8AAAAXmNwcnQAAAFcAAAAC3d0cHQAAAFoAAAAFGJrcHQAAAF8AAAAFHJYWVoAAAGQAAAAFGdYWVoAAAGkAAAAFGJYWVoAAAG4AAAAFHJUUkMAAAHMAAAAQGdUUkMAAAHMAAAAQGJUUkMAAAHMAAAAQGRlc2MAAAAAAAAAA2MyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHRleHQAAAAARkIAAFhZWiAAAAAAAAD21gABAAAAANMtWFlaIAAAAAAAAAMWAAADMwAAAqRYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9jdXJ2AAAAAAAAABoAAADLAckDYwWSCGsL9hA/FVEbNCHxKZAyGDuSRgVRd13ta3B6BYmxmnysab9908PpMP///9sAQwAGBAUFBQQGBQUFBwYGBwkPCgkICAkTDQ4LDxYTFxcWExUVGBsjHhgaIRoVFR4pHyEkJScoJxgdKy4rJi4jJicm/9sAQwEGBwcJCAkSCgoSJhkVGSYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYm/8IAEQgAGAAEAwAiAAERAQIRAf/EABcAAQEBAQAAAAAAAAAAAAAAAAABAwf/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAAABEQIRAAAB6WCXAf/EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQAAAQUCf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIRAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQERAT8BP//EABUQAQEAAAAAAAAAAAAAAAAAAAAx/9oACAEAAAY/Aqqv/8QAGhAAAgMBAQAAAAAAAAAAAAAAAREAQXFRgf/aAAgBAAABPyFqg2NUGwHgez//2gAMAwAAARECEQAAEAIP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAhEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAREBPxA//8QAGxAAAQQDAAAAAAAAAAAAAAAAAQAxYXERIVH/2gAIAQAAAT8Qse+zLqx77Mug4yCDYmXX/9k=); */
 
   h2,
   h3,
@@ -9,12 +10,12 @@ export const Section = styled.section`
   h5,
   h6 {
     color: var(--article_title);
-    margin-top: 2.5em;
-    margin-bottom: 1.5em;
+    margin: 3rem 0 0 0;
   }
 
   h2 {
-    font-size: 1.6em;
+    font-size: 1.6rem;
+    line-height: 3rem;
   }
   a {
     margin: 0 3px;
@@ -29,8 +30,8 @@ export const Section = styled.section`
 
   blockquote {
     border-left: 3px solid var(--article_blockquote);
-    padding: 0 0 0 0.5em;
-    margin: 1.5em 0 2em 1em;
+    padding: 0 0 0 0.5rem;
+    margin: 1.5rem 0 1.5rem 1rem;
     color: var(--article_blockquote);
   }
 
@@ -47,10 +48,9 @@ export const Section = styled.section`
   pre {
     background-color: var(--blockcode_bg);
     color: var(--blockcode);
-    padding: 0.5em;
-    line-height: 1.5em;
-    margin-top: 20px;
-    margin-bottom: 0;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    margin: 1.5rem 0 0 0;
     overflow: auto;
     word-wrap: normal;
     border-radius: 5px;
@@ -61,7 +61,7 @@ export const Section = styled.section`
   code[class*='language-text'],
   kbd,
   samp {
-    font-size: 1em;
+    font-size: 1rem;
     padding: 3px;
     background-color: var(--inlinecode_bg);
     color: var(--inlinecode);
@@ -70,7 +70,8 @@ export const Section = styled.section`
 
   li,
   p {
-    line-height: 1.5em;
+    margin: 0.75rem 0;
+    line-height: 1.5rem;
   }
 
   .token.comment,
