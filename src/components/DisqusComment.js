@@ -67,6 +67,14 @@ export default class DisqusComment extends React.Component {
     __disqusAdded = true;
   }
 
+  componentDidUpdate () {
+    this.loadDisqus();
+  }
+
+  shouldComponentUpdate (nextProps) {
+    return nextProps.identifier !== this.props.identifier;
+  }
+
   loadDisqus () {
     const props = {};
 
