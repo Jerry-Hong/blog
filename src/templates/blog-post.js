@@ -38,7 +38,7 @@ export const BlogPostTemplate = ({
       <DisqusComment
         identifier={slug}
         shortname="jerry-blog"
-        url={`${DOMAIN}/${slug}`}
+        url={DOMAIN + slug}
       />
     </Section>
   );
