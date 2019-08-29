@@ -27,3 +27,7 @@ tags:
 ### PDF
 
 <iframe width="560" height="315" src="//speakerdeck.com/player/76db376d206c49d1be59e8ce8bf70a05"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### HTML
+
+[HTML Version](https://jerry-hong.github.io/abstract-thinking/)
