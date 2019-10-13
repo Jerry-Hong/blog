@@ -76,11 +76,17 @@ exports.createPages = ({ actions, graphql }) => {
               }
             }
             previous {
+              frontmatter {
+                series
+              }
               fields {
                 slug
               }
             }
             next {
+              frontmatter {
+                series
+              }
               fields {
                 slug
               }
@@ -101,8 +107,8 @@ exports.createPages = ({ actions, graphql }) => {
             ),
             // additional data can be passed via context
             context: {
-              previous: edge.previous && edge.previous.fields.slug,
-              next: edge.next && edge.next.fields.slug,
+              // previous: edge.previous && edge.previous.fields.slug,
+              // next: edge.next && edge.next.fields.slug,
               id,
             },
           });

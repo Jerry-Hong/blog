@@ -30,7 +30,7 @@ const ImageTitle = styled.h1`
 const RxjsPages = () => {
   const { allMarkdownRemark, file } = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "rxjs-thirtydays.png" }) {
+      file(relativePath: { eq: "think-in-fp.png" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 60) {
             ...GatsbyImageSharpFluid
@@ -40,7 +40,7 @@ const RxjsPages = () => {
       allMarkdownRemark(
         limit: 1000
         sort: { fields: frontmatter___date, order: ASC }
-        filter: { frontmatter: { templateKey: { eq: "series" }, series: { eq: "30 天精通 RxJS" } } }
+        filter: { frontmatter: { templateKey: { eq: "series" }, series: { eq: "Think In FP" } } }
       ) {
         edges {
           node {
@@ -70,9 +70,9 @@ const RxjsPages = () => {
   `);
 
   return (
-    <Layout header="Series / 30 天精通 RxJS">
+    <Layout header="Series / Think In FP">
       <ImageContent>
-        <ImageTitle>30 天精通 RxJS</ImageTitle>
+        <ImageTitle>Think In FP</ImageTitle>
         <FullImage fluid={file.childImageSharp.fluid} />
       </ImageContent>
       <PostList data={allMarkdownRemark.edges} />

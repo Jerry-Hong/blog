@@ -53,16 +53,13 @@ export const SeriesPagination = ({ previousLink, series, nextLink }) => (
       <Book size={20} />
       <SeriesTitle>{series}</SeriesTitle>
     </SeriesTitleContent>
-    {nextLink ? (
-      <SeriesLink
-        to={nextLink}
-        onClick={event => !nextLink && event.preventDefault()}
-      >
-        <SeriesLinkText>Next</SeriesLinkText>
-        <ArrowRightCircle size={20} />
-      </SeriesLink>
-    ) : (
-      <span />
-    )}
+
+    <SeriesLink
+      to={nextLink}
+      onClick={event => !nextLink && event.preventDefault()}
+    >
+      <SeriesLinkText>Next</SeriesLinkText>
+      <ArrowRightCircle size={20} />
+    </SeriesLink>
   </SeriesContent>
 );
