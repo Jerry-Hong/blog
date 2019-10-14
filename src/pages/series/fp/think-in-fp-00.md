@@ -13,7 +13,7 @@ tags:
 ---
 ## 前言
 
-自從去年 2018 換了工作後，已經有一段時間沒有對外分享技術跟文章了。雖然這段時間對於技術的收穫頗豐，但一直沒有時間靜下心來整理。直到報名了今年 [Modern Web](https://modernweb.tw/)，分享了 [Abstract Thinking](https://blog.jerry-hong.com/speaking/abstract-thinking-from-fp/) 才重新回到技術社群。希望藉由這次的演講，能夠重新整理自己過去還沒機會分享的主題。
+自從去年 2018 換了工作後，已經有一段時間沒有對外分享技術跟文章了。雖然這段時間對於技術的收穫頗豐，但一直沒有時間靜下心來整理。直到今年去 [Modern Web](https://modernweb.tw/) 分享了 [Abstract Thinking](https://blog.jerry-hong.com/speaking/abstract-thinking-from-fp/) 才重新回到技術社群。希望藉由這次的演講，能夠重新整理自己過去還沒機會分享的主題。
 
 ## 為什麼寫 [Functional Programming](https://en.wikipedia.org/wiki/Functional_programming) ?
 
