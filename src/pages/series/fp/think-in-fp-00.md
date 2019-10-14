@@ -21,7 +21,7 @@ tags:
 
 ### Funtional Programming 崛起
 
-Functional Programming(FP) 從 [Lisp](https://zh.wikipedia.org/zh-tw/LISP) 開始算起也將近 60 幾年了，但直到近 10 幾年來才越來越受到重視，不但新的 Functional Programming Languages（如 [Clojure](https://clojure.org/), [Elm](https://elm-lang.org/), [Elixir](https://elixir-lang.org)）不斷的出現。主流的語言（如 [JavaScript](https://zh.wikipedia.org/zh-tw/JavaScript), [Python](https://www.python.org/), [Swift](https://developer.apple.com/swift/)）也都具備支援 FP 的特性，連老牌語言如 Java, PHP 也都相繼加入支持 FP 的語言特性。FP 的思想不只是影響程式語言設計上，軟體架構也都受到了 FP 的影響， 例如 Google 提出的 [MapReduce](https://zh.wikipedia.org/zh-tw/MapReduce) 用來處理大量資料的並行運算。如今 Functional Programming 的重要性已經不言可喻，幾乎可以說是軟體工程師必備的知識。
+Functional Programming(FP) 從 [Lisp](https://zh.wikipedia.org/zh-tw/LISP) 開始算起也將近 60 幾年了，但直到近 10 幾年來才越來越受到重視，不但新的 Functional Programming Languages（如 [Clojure](https://clojure.org/), [Elm](https://elm-lang.org/), [Elixir](https://elixir-lang.org)）不斷的出現。主流的語言（如 [JavaScript](https://zh.wikipedia.org/zh-tw/JavaScript), [Python](https://www.python.org/), [Swift](https://developer.apple.com/swift/)）也都具備支援 FP 的特性，連老牌語言如 [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), [PHP](https://zh.wikipedia.org/zh-tw/PHP) 也都相繼加入支持 FP 的語言特性。FP 的思想不只是影響程式語言設計上，軟體架構也都受到了 FP 的影響， 例如 Google 提出的 [MapReduce](https://zh.wikipedia.org/zh-tw/MapReduce) 用來處理大量資料的並行運算。如今 Functional Programming 的重要性已經不言可喻，幾乎可以說是軟體工程師必備的知識。
 
 ### 跨領域語言
 
