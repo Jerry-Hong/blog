@@ -74,7 +74,7 @@ FP 究竟帶給我們什麼優勢，又為什麼 FP 會越來越流行呢？
 
 FP 的世界裡只要學會 Function，不用再學各種 pattern，我們透過 Function 的組合以及好的命名，就能讓程式碼更可讀也更具有彈性。
 
-![](/img/all-funtions.png)
+![](/img/all-functions.png)
 
 [Functional Programming Design Patterns](https://vimeo.com/113588389) 
 
