@@ -1,6 +1,6 @@
+import * as R from 'ramda';
 import React from 'react';
 import styled from 'styled-components';
-import * as R from 'ramda';
 import Card from './Card';
 
 const Content = styled.div`
