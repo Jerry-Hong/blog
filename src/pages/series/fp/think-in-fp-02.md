@@ -2,7 +2,7 @@
 templateKey: series
 series: Think In FP
 title: "Think in FP (02): All You Need Is Function"
-date: 2019-10-12T18:05:00.000Z
+date: 2019-11-04T12:30:00.000Z
 description: 這篇文章介紹了什麼是 Functional Programming 以及在 FP 世界裡 function 的定義，還有 function 具有哪些特性，最後用集合抽象的來看 function 所代表的意義，希望讀者們都能有所收穫。
 image: null
 tags:
