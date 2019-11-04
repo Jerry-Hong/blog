@@ -110,7 +110,7 @@ $$$
 
 ![invalid function mapping two to one](/img/invalid-function-set.png)
 
-因為同樣的 f function 傳入 `1` 但回傳值確有時候是 `A` 也有時是 `B` ，這就是不可預測且不合法的 function。
+因為同樣的 f function 傳入 `1` 但回傳值卻有時候是 `A` 也有時是 `B` ，這就是不可預測且不合法的 function。
 
 如果是不同的輸入相同的輸出，則是合法的，如下
 
