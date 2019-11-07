@@ -80,7 +80,7 @@ XState 在這方面也提供了 [xstate-test](https://github.com/davidkpiano/xst
 
 ### 更快速的路徑優化
 
-當我們完成一個應用程式時，最需要做的通常就是\[使用者體驗(User Experience)](https://en.wikipedia.org/wiki/User_experience#:~:text=In%20commerce%2C%20user%20experience%20(UX,computer%20interaction%20and%20product%20ownership.)的優化，我們常常需要利用各種服務來收集各個頁面間的轉化率或是哪些狀態讓使用者最快跳過等等的數據。透過這些數據來優化我們應用程式的流程，讓使用者體驗進一步的提升。而如果使用了 XState 我們就可以在各個狀態轉換之間送 log 到數據收集的服務(如 GA, MIXpanel 等等)，就可以進一步分析哪些狀態可能是不必要的，來優化我們的 User Flow。
+當我們完成一個應用程式時，最需要做的通常就是[使用者體驗(User Experience)](https://en.wikipedia.org/wiki/User_experience)的優化，我們常常需要利用各種服務來收集各個頁面間的轉化率或是哪些狀態讓使用者最快跳過等等的數據。透過這些數據來優化我們應用程式的流程，讓使用者體驗進一步的提升。而如果使用了 XState 我們就可以在各個狀態轉換之間送 log 到數據收集的服務(如 GA, MIXpanel 等等)，就可以進一步分析哪些狀態可能是不必要的，來優化我們的 User Flow。
 
 XState 在這方面也已經釋出了 [xstate-analytics](https://github.com/davidkpiano/xstate/tree/master/packages/xstate-analytics)，只是目前還不穩定，應該過一陣子後就能使用了！
 
