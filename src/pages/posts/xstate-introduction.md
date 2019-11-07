@@ -74,7 +74,7 @@ if (isLogin && isYYY && isXXX)
 
 ### 寫更少的測試
 
-由於我們已經明確定義出各個狀態以及每個狀態之間的關係，這讓我們可以更輕鬆的撰寫測試，也不需要測試那些根本不可能出現的狀態，並透過 [Model-based Testing](https://en.wikipedia.org/wiki/Model-based_testing) 我們只需要寫狀態下會的斷言(assertion)就可以自動把各種狀態切換的路徑都測試完！
+由於我們已經明確定義出各個狀態以及每個狀態之間的關係，這讓我們可以更輕鬆的撰寫測試，也不需要測試那些根本不可能出現的狀態，並透過 [Model-based Testing](https://en.wikipedia.org/wiki/Model-based_testing) 我們只需要寫各個狀態下的斷言(assertion)就可以自動把各種狀態切換的路徑都測試完！
 
 XState 在這方面也提供了 [xstate-test](https://github.com/davidkpiano/xstate/tree/master/packages/xstate-test) 有完整的範例跟教學，讀者們也可以去看看 [David Khourshid](https://twitter.com/DavidKPiano) 今年在 React Rally 2019 的[演講](https://www.youtube.com/watch?v=tpNmPKjPSFQ)。
 
