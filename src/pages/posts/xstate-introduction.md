@@ -2,7 +2,7 @@
 templateKey: blog-post
 slug: xstate-introduction
 title: XState 簡介
-image: /img/fshbfov.png
+image: ''
 date: 2019-11-07T04:30:00.000Z
 description: >-
   前端技術這幾年來變化速度非常的快，框架從 Angular.js 到 React，工具從 Grunt/Gulp 到 Webpack/Babel，還有各種
