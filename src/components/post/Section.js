@@ -32,7 +32,7 @@ export const Section = styled.section`
   blockquote {
     border-left: 3px solid var(--article_blockquote);
     padding: 0 0 0 0.5rem;
-    margin: 1.5rem 0 1.5rem 1rem;
+    margin: 1.5rem 0 1.5rem 0;
     color: var(--article_blockquote);
   }
 

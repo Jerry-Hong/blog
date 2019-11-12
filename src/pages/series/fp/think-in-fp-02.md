@@ -12,8 +12,6 @@ tags:
   - Function
 ---
 
-> 雖然在寫 [30天精通 RxJS](https://blog.jerry-hong.com/series/rxjs) 時，已經[提到過 Functional Programming](https://blog.jerry-hong.com/series/rxjs/thirty-days-RxJS-02/)，但那時對於 FP 的著墨甚少。這篇文章會更深入的說明 FP。
-
 ## Functional Programming 是什麼?
 
 Functional Programming(FP) 是一種編程範式(programming paradigm)，FP 的核心思想就是透過 **function** 來解決各種問題，並且所有的 **function** 都是以「**數學函數**」為模型。在 Functional Programming 裡 function 是有更明確的定義的：
@@ -23,6 +21,8 @@ Functional Programming(FP) 是一種編程範式(programming paradigm)，FP 的�
 ```javascript
 add(1)(2) // 可以被簡化成 3
 ```
+
+> 雖然在寫 [30天精通 RxJS](https://blog.jerry-hong.com/series/rxjs) 時，已經[提到過 Functional Programming](https://blog.jerry-hong.com/series/rxjs/thirty-days-RxJS-02/)，但那時對於 FP 的著墨甚少。這篇文章會更深入的說明 FP。
 
 > 所有 Pure Functional Programming Languages 都是由表達式 (expression) 所組成的，這跟其他大多數語言不同，大多數程式語言由表達式(expression) 和語句 (statement) 組成。
 

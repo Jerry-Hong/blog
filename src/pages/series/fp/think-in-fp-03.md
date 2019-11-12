@@ -13,13 +13,13 @@ tags:
   - Immutable
 ---
 
-> 我們上禮拜講了 All You Need Is Function，還沒看過的讀者可以先往這邊走 [Think in FP (02): All You Need Is Function](https://blog.jerry-hong.com/series/fp/think-in-fp-02/)
-
 ## 雖然都叫 Function 但不一樣
 
 在 Pure Functional Programming Language 的世界裡，所有 Function 都是 Pure Function，不會也不能有任何**副作用 (Side Effect)**。但在 Imperative Languages (如 JavaScript)的世界裡 Function 幾乎不可避免地會有**副作用 (Side Effect)**，也因此雖然都叫 Function 但本質上是不一樣的。
 
 從 FP 的角度來說，[Imperative languages](https://zh.wikipedia.org/zh-tw/%E6%8C%87%E4%BB%A4%E5%BC%8F%E7%B7%A8%E7%A8%8B) 裡的 Function 應該稱為 **[Procedure](https://zh.wikipedia.org/wiki/%E5%AD%90%E7%A8%8B%E5%BA%8F#%E7%A8%8B%E5%BA%8F)**，因為我們可以在 Function 裡做任何事而不是單純的運算返回值。
+
+> 我們上禮拜講了 All You Need Is Function，還沒看過的讀者可以先往這邊走 [Think in FP (02): All You Need Is Function](https://blog.jerry-hong.com/series/fp/think-in-fp-02/)
 
 ## 什麼是副作用(Side Effect)?
 

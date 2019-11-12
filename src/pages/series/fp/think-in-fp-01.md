@@ -13,13 +13,13 @@ tags:
   - Lisp
 ---
 
-> 我們上禮拜講了 關於這個系列，還沒看過的讀者可以先往這邊走 [Think in FP (00): 關於本系列文章](https://blog.jerry-hong.com/series/fp/think-in-fp-00/)
-
 ## 糟了，是世界奇觀！
 
 相信不少人應該都看過世界奇觀，當我們接手或開發一個無比龐大又極度不穩定的系統時，可能會發出這樣的感嘆。最常遇到的麻煩是，當我們修改 A 組件(Component) 時，我們已經確認所有使用 A 組件的地方也都跟著修改，但修改完後仍然造成 B、C 壞掉，當我們再去把 B、C 修好時，可能 D、E 又壞了。最後不得不把整個系統打掉重寫。
 
 ![](/img/terrible-world.gif)
+
+> 我們上禮拜講了 關於這個系列，還沒看過的讀者可以先往這邊走 [Think in FP (00): 關於本系列文章](https://blog.jerry-hong.com/series/fp/think-in-fp-00/)
 
 ### 系統難以維護的原因
 
