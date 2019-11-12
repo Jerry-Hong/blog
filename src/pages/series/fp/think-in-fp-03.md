@@ -51,25 +51,25 @@ Side Effect 是造成 Bug 的主要來源之一，所以我們應該要盡可能
     - 有回傳值，同時有 Side Effect
 
 ```javascript
-    // Pure function
-    const add = (x, y) => x + y; 
-    add(1, 2) // 3
-    
-    // -- Impure function --
-    // 只有 Effect 沒有回傳值
-    const hello = () => {
-    	console.log('Hello World!');
-    }
-    
-    // 有回傳值，同時有 Side Effect
-    let isRequesting = false;
-    
-    const getData = () => {
-    	if (!isRequesting) {
-    		isRequesting = true;
-    		return fetch('url...')
-    	} 
-    }
+// Pure function
+const add = (x, y) => x + y; 
+add(1, 2) // 3
+
+// -- Impure function --
+// 只有 Effect 沒有回傳值
+const hello = () => {
+  console.log('Hello World!');
+}
+
+// 有回傳值，同時有 Side Effect
+let isRequesting = false;
+
+const getData = () => {
+  if (!isRequesting) {
+    isRequesting = true;
+    return fetch('url...')
+  } 
+}
 ```
 
 儘管 JavaScript 世界中，我們無法完全避免掉 Side Effect，但我們可以透過一些手法來控管 Side Effect，讓 Side Effect 只作用在一定的範圍內，以確保我們的程式碼能順利運行！在我們學到如何處理 Side Effect 之前，先讓我們盡量避開這些具有 Side Effect 的 Function，並盡可能地保持 Function Pure。
@@ -79,18 +79,18 @@ Side Effect 是造成 Bug 的主要來源之一，所以我們應該要盡可能
 所有講 Functional Programming 的文章或書籍都會提到 Immutable Data Structure，所謂的 immutable data 就是一旦建立後就不會再改變的資料，所有對於 immutable data 的操作都只是回傳一個新的 immutable data，但很可惜的是 JavaScript 原生的資料結構都是 mutable 的，如下
 
 ```javascript
-    var a = {
-    	name: 'Jerry',
-      age: 18
-    };
-    
-    var b = a;
-    b.age = 19;
-    
-    console.log(a); // { name: 'Jerry', age: 19 }
-    console.log(a === b); // true
-    // 修改 b 的數據其實同時修改了 a
-    // `b.age = 19` 是一個 mutable 的操作
+var a = {
+  name: 'Jerry',
+  age: 18
+};
+
+var b = a;
+b.age = 19;
+
+console.log(a); // { name: 'Jerry', age: 19 }
+console.log(a === b); // true
+// 修改 b 的數據其實同時修改了 a
+// `b.age = 19` 是一個 mutable 的操作
 ```
 
 從上面這段程式碼可以看得出來，當我們今天使用 mutable 操作改變某個變數的資料時，同時可能造成別的變數也跟著變動，這也是 bug 最可能產生的來源之一。
@@ -98,14 +98,14 @@ Side Effect 是造成 Bug 的主要來源之一，所以我們應該要盡可能
 那我們要如何讓 JS 的數據結構變成 immutable 的呢？大多數的文章會推薦大家使用 [immutable.js](https://github.com/immutable-js/immutable-js)，寫法會像下面這樣
 
 ```javascript
-    import { Map } from 'immutable'
-    const a = Map({ a: 1, b: 2, c: 3 });
-    const b = a.set('b', 50);
-    
-    console.log(a.toJS()) // { a: 1, b: 2, c: 3 }
-    console.log(a === b) // false
-    // 修改了 b 不會影養 a
-    // map1.set('b', 50); 實際上只是回傳一個新的物件給 b 
+import { Map } from 'immutable'
+const a = Map({ a: 1, b: 2, c: 3 });
+const b = a.set('b', 50);
+
+console.log(a.toJS()) // { a: 1, b: 2, c: 3 }
+console.log(a === b) // false
+// 修改了 b 不會影養 a
+// map1.set('b', 50); 實際上只是回傳一個新的物件給 b 
 ```
 
 像上面這段程式碼，我們對變數 `a` 的操作，實際上只是回傳了一個新的物件，原本的物件 `a` 是完全不受影響的，這就是 immutable data！
@@ -119,18 +119,18 @@ Side Effect 是造成 Bug 的主要來源之一，所以我們應該要盡可能
 ### 1. 使用原生 Immutable 的資料操作
 
 ```javascript
-    var a = {
-    	name: 'Jerry',
-      age: 18
-    };
-    
-    // ES6
-    var b = { ...a, age: 19 };
-    // ES5
-    // var b = Object.assign({}, a, { age: 19 });
-    
-    console.log(a); // { name: 'Jerry', age: 18 }
-    console.log(a === b); // false
+var a = {
+  name: 'Jerry',
+  age: 18
+};
+
+// ES6
+var b = { ...a, age: 19 };
+// ES5
+// var b = Object.assign({}, a, { age: 19 });
+
+console.log(a); // { name: 'Jerry', age: 18 }
+console.log(a === b); // false
 ```
 
 如上，JavaScript 仍然有提供一些 immutable 的資料操作方式，我們只要確保所有**對資料的操作是 immutable** 的就可以了！
@@ -140,28 +140,28 @@ Side Effect 是造成 Bug 的主要來源之一，所以我們應該要盡可能
 如果是較複雜的資料結構，可以改用 Ramda 的 `assocPath` 或是 `dissocPath` 來操作，例如
 
 ```javascript
-    import * as R from 'ramda';
-    
-    var a = {
-    	name: 'Jerry',
-      age: 18,
-      job: {
-        company: 'Branch8',
-        title: 'RD'
-      }
-    };
-    
-    // 較複雜的資料結構用 spread operator 會有點麻煩
-    var b = {
-      ...a,
-      job: {
-        ...a.job,
-        title: 'Tech Lead',
-      }
-    };
-    
-    // 可以改用 Ramda 的 assocPath
-    var b = R.assocPath(['job', 'title'], 'Tech Lead', a);
+import * as R from 'ramda';
+
+var a = {
+  name: 'Jerry',
+  age: 18,
+  job: {
+    company: 'Branch8',
+    title: 'RD'
+  }
+};
+
+// 較複雜的資料結構用 spread operator 會有點麻煩
+var b = {
+  ...a,
+  job: {
+    ...a.job,
+    title: 'Tech Lead',
+  }
+};
+
+// 可以改用 Ramda 的 assocPath
+var b = R.assocPath(['job', 'title'], 'Tech Lead', a);
 ```
 [Demo](https://ramdajs.com/repl/?v=0.26.1#?var%20a%20%3D%20%7B%0A%09name%3A%20%27Jerry%27%2C%0A%20%20age%3A%2018%2C%0A%20%20job%3A%20%7B%0A%20%20%20%20company%3A%20%27Branch8%27%2C%0A%20%20%20%20title%3A%20%27RD%27%0A%20%20%7D%0A%7D%3B%0A%0Avar%20b%20%3D%20R.assocPath%28%5B%27job%27%2C%20%27title%27%5D%2C%20%27Tech%20Lead%27%2C%20a%29%3B%0A)
 
