@@ -230,7 +230,7 @@ example.subscribe({
 var source = Rx.Observable.from(['a','b','c'])
             .zip(Rx.Observable.interval(500), (x,y) => x);
 
-var example = source.repeat(1);
+var example = source.repeat(2);
 
 example.subscribe({
     next: (value) => { console.log(value); },
@@ -252,7 +252,7 @@ example.subscribe({
 
 ```bash
 source : ----a----b----c|
-            repeat(1)
+            repeat(2)
 example: ----a----b----c----a----b----c|
 ```
 
