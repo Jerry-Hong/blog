@@ -55,7 +55,7 @@ export const tagPageQuery = graphql`
             templateKey
             title
             description
-            date
+            date(formatString: "MMM Do, YYYY")
             image {
               childImageSharp {
                 fluid(maxWidth: 240, quality: 64) {

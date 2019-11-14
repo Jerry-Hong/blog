@@ -3,7 +3,6 @@ import * as R from 'ramda';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import { format } from 'date-fns';
 import Content, { HTMLContent } from '../components/Content';
 import Layout from '../components/Layout';
 import { DOMAIN } from '../constants';
@@ -35,7 +34,7 @@ export const BlogPostTemplate = ({
         {helmet || ''}
         <Title>{title}</Title>
         <Note>
-          {format(new Date(date), 'MMM Do, YYYY')}. {timeToRead} mins read
+          {date}. {timeToRead} mins read
         </Note>
         <Desc>{description}</Desc>
         <PostContent content={content} />
@@ -138,7 +137,7 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM Do, YYYY")
         title
         series
         tags

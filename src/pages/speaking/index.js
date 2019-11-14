@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
@@ -30,7 +30,7 @@ const SpeakingPage = () => {
                 templateKey
                 title
                 description
-                date
+                date(formatString: "MMM Do, YYYY")
                 time
                 event
                 image {

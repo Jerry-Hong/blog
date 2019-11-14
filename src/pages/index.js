@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import PostList from '../components/PostList';
@@ -49,7 +49,7 @@ const IndexPage = () => {
                 templateKey
                 title
                 description
-                date
+                date(formatString: "MMM Do, YYYY")
                 image {
                   childImageSharp {
                     fluid(maxWidth: 240, quality: 64) {

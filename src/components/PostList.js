@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
-import { format } from 'date-fns';
 
 const Content = styled.div`
   display: flex;
@@ -22,10 +21,7 @@ const PostList = ({ data = [] }) => {
             link={post.fields.slug}
             title={post.frontmatter.title}
             desc={post.frontmatter.description}
-            note={`${format(
-              new Date(post.frontmatter.date),
-              'MMM Do, YYYY'
-            )}. ${post.timeToRead} mins read`}
+            note={`${post.frontmatter.date}. ${post.timeToRead} mins read`}
             cover={
               post.frontmatter.image
                 ? post.frontmatter.image.childImageSharp.fluid
