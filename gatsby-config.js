@@ -58,8 +58,10 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048,
+              maxWidth: 770,
               linkImagesToOriginal: false,
+              withWebp: true,
+              tracedSVG: true,
             },
           },
           'gatsby-remark-autolink-headers',

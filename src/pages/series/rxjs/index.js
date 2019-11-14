@@ -57,7 +57,7 @@ const RxjsPages = () => {
               date(formatString: "MMM Do, YYYY")
               image {
                 childImageSharp {
-                  fluid(maxWidth: 240, quality: 64) {
+                  fluid(maxWidth: 770, quality: 64) {
                     ...GatsbyImageSharpFluid
                   }
                 }
