@@ -254,7 +254,7 @@ var observer = {
 
 我們也可以直接把 next, error, complete 三個 function 依序傳入 `observable.subscribe`，如下：
 
-```
+```javascript
 observable.subscribe(
     value => { console.log(value); },
     error => { console.log('Error: ', error); },
@@ -271,7 +271,7 @@ observable.subscribe(
 
 addEventListener 本質上就是 Observer Pattern 的實作，在內部會有一份訂閱清單，像是我們昨天實作的 Producer
 
-```
+```javascript
 class Producer {
 	constructor() {
 		this.listeners = [];

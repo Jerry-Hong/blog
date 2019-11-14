@@ -76,7 +76,7 @@ next() {
 
 這會衍伸一個大問題，就是在某個 observer 發生錯誤卻沒有做錯誤處理時，就會影響到別的訂閱，看下面這個例子
 
-```
+```javascript
 const source = Rx.Observable.interval(1000);
 const subject = new Rx.Subject();
 
@@ -100,7 +100,7 @@ source.subscribe(subject);
 
 那要如何解決這個問題呢？ 目前最簡單的方式當然是盡可能地把所有 observer 的錯誤處理加進去，這樣一來就不會有例外發生
 
-```
+```javascript
 const source = Rx.Observable.interval(1000);
 const subject = new Rx.Subject();
 

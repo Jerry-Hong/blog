@@ -196,7 +196,7 @@ mouseDown
 
 這個要怎麼做呢？ 很簡單，我們在昨天講了一個 operator 叫做 withLatestFrom，我們可以用它來把 mousedown 與 mousemove 兩個 Event 的值同時傳入 callback。
 
-```
+```javascript
 mouseDown
     .filter(e => video.classList.contains('video-fixed'))
     .map(e => mouseMove.takeUntil(mouseUp))

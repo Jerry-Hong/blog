@@ -66,7 +66,7 @@ fetch('www.google.com')
 
 **函式能被當作回傳值**
 
-```
+```javascript
 var a = function(a) {
 	return function(b) {
 	  return a + b;

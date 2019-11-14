@@ -184,7 +184,7 @@ var ratingIsFive = newCourseList
 
 假如我們要取出 courseLists 中所有 rating 為 5 的課程，這時可能就會用到兩個 forEach
 
-```
+```javascript
 var user = {
   id: 888,
   name: 'JerryHong',

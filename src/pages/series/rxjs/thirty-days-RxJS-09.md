@@ -159,7 +159,7 @@ example.subscribe({
 
 `startWith` 可以在 observable 的一開始塞要發送的元素，有點像 `concat` 但參數不是 observable 而是要發送的元素，使用範例如下
 
-```
+```javascript
 var source = Rx.Observable.interval(1000);
 var example = source.startWith(0);
 

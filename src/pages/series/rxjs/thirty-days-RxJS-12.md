@@ -194,7 +194,7 @@ example.subscribe({
 [JSBin](https://jsbin.com/guyaki/10/edit?html,js,console,output) | [JSFiddle](https://jsfiddle.net/s6323859/brkztLLw/4/)
 在實務上，我們可以用 buffer 來做某個事件的過濾，例如像是滑鼠連點才能真的執行，這裡我們一樣寫了一個小範例
 
-```
+```javascript
 const button = document.getElementById('demo');
 const click = Rx.Observable.fromEvent(button, 'click')
 const example = click
