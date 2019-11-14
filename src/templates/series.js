@@ -63,13 +63,11 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const SeriesPost = ({ data }) => {
+const SeriesPost = ({ data, pageContext: { next, previous } }) => {
   const { markdownRemark: post } = data;
   const title = R.pathOr('', ['frontmatter', 'title'], post);
   const series = R.pathOr('', ['frontmatter', 'series'], post);
   const description = R.pathOr('', ['frontmatter', 'description'], post);
-  const previousLink = R.pathOr(null, ['frontmatter', 'previous', 'childMarkdownRemark', 'fields', 'slug'], post);
-  const nextLink = R.pathOr(null, ['frontmatter', 'next', 'childMarkdownRemark', 'fields', 'slug'], post);
 
   return (
     <Layout header={`Series / ${series}`}>
@@ -121,8 +119,8 @@ const SeriesPost = ({ data }) => {
         tags={R.pathOr([], ['frontmatter', 'tags'], post)}
         title={title}
         slug={R.pathOr('', ['fields', 'slug'], post)}
-        previousLink={previousLink}
-        nextLink={nextLink}
+        previousLink={previous}
+        nextLink={next}
       />
     </Layout>
   );
@@ -147,21 +145,9 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 240, quality: 64) {
+            fluid(maxWidth: 770, quality: 64) {
               ...GatsbyImageSharpFluid
             }
-          }
-        }
-        previous {
-          childMarkdownRemark {
-            id
-            fields {slug}
-          }
-        }
-        next {
-          childMarkdownRemark {
-            id
-            fields {slug}
           }
         }
       }

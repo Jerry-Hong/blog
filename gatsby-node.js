@@ -99,6 +99,7 @@ exports.createPages = ({ actions, graphql }) => {
       series.forEach(edge => {
         const id = edge.node.id;
         if (edge.node.frontmatter.templateKey) {
+          const series = R.pathOr('', ['node', 'frontmatter', 'series'], edge);
           createPage({
             path: edge.node.fields.slug,
             tags: edge.node.frontmatter.tags,
@@ -107,8 +108,8 @@ exports.createPages = ({ actions, graphql }) => {
             ),
             // additional data can be passed via context
             context: {
-              // previous: edge.previous && edge.previous.fields.slug,
-              // next: edge.next && edge.next.fields.slug,
+              previous: R.pathEq(['previous', 'frontmatter', 'series'], series, edge) && edge.previous.fields.slug,
+              next: R.pathEq(['next', 'frontmatter', 'series'], series, edge) && edge.next.fields.slug,
               id,
             },
           });
