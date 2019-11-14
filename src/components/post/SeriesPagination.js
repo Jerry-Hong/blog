@@ -43,7 +43,8 @@ const SeriesLinkText = styled.span`
 export const SeriesPagination = ({ previousLink, series, nextLink }) => (
   <SeriesContent>
     <SeriesLink
-      to={previousLink}
+      as={previousLink ? Link : 'div'}
+      to={previousLink ? previousLink : undefined}
       onClick={event => !previousLink && event.preventDefault()}
     >
       <ArrowLeftCircle size={20} />
@@ -55,7 +56,8 @@ export const SeriesPagination = ({ previousLink, series, nextLink }) => (
     </SeriesTitleContent>
 
     <SeriesLink
-      to={nextLink}
+      as={nextLink ? Link : 'div'}
+      to={nextLink ? nextLink : undefined}
       onClick={event => !nextLink && event.preventDefault()}
     >
       <SeriesLinkText>Next</SeriesLinkText>
