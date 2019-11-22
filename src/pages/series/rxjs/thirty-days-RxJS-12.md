@@ -207,7 +207,7 @@ example.subscribe({
     complete: () => { console.log('complete'); }
 });
 ```
-[JSBin](https://jsbin.com/guyaki/edit?js,console,output) | [JSFiddle](https://jsfiddle.net/s6323859/brkztLLw/5/)
+[JSBin](https://jsbin.com/sudepabiji/1/edit?html,js,console,output) | [JSFiddle](https://jsfiddle.net/s6323859/brkztLLw/5/)
 
 這裡我們只有在 500 毫秒內連點兩下，才能成功印出 `'success'`，這個功能在某些特殊的需求中非常的好用，也能用在批次處理來降低 request 傳送的次數！
 
