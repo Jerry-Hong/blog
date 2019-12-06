@@ -4,7 +4,7 @@ series: Think In FP
 title: "Think in FP (04): 為什麼「純」？"
 date: 2019-12-06T16:30:00.000Z
 description: 在前幾篇文章中介紹了什麼是 Pure Function 以及保持 Function Pure 的第一步，今天要介紹為什麼我們推崇 Pure Function 以及 Pure Function 帶來了什麼好處！
-image: null
+image: /img/why-pure-function.png
 tags:
   - Functional Programming
   - FP
