@@ -16,7 +16,7 @@ tags:
 
 ![why pure function](/img/why-pure-function.png)
 
-我們在前幾篇文章中已經提到 impure function 容易產生未知的 Bug，但我們都還沒深入地講述，為什麼要 Pure Function。
+我們在前幾篇文章中已經提到 impure function 容易產生未知的 Bug，但我們都還沒深入地講述，為什麼要 Pure Function？
 
 ### 可預期 (確定性)
 如 Think in FP (02) 所提，所有 Pure Function 的運作都是確定的，只要相同的輸入就能得到固定的輸出，不管執行幾次在什麼時間點執行都一樣，這奠定了 Pure Function 為我們帶來的各種好處！
