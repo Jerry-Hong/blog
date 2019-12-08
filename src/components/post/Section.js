@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-require('katex/dist/katex.min.css')
+require('katex/dist/katex.min.css');
 
 export const Section = styled.section`
   color: var(--article_text);
@@ -87,10 +87,10 @@ export const Section = styled.section`
   .namespace {
     opacity: 0.7;
   }
+  
   .token.property,
   .token.boolean,
   .token.number,
-  .token.constant,
   .token.symbol,
   .token.deleted {
     color: #c778dd;
@@ -138,5 +138,15 @@ export const Section = styled.section`
   }
   .token.parameter {
     color: #d09966;
+  }
+
+  .gatsby-highlight-code-line {
+    background-color: #000;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #f99;
   }
 `;
