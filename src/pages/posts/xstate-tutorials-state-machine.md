@@ -17,7 +17,7 @@ tags:
 
 ![state machine image](/img/state-machine.001.png)
 
-如果還不知道什麼是 XState 的讀者可以先看上一篇文章 [XState 簡介](/xstate-introduction.md)。如果想要開始上手 XState 的讀者，那一定要先知道是什麼**有限狀態機**！
+如果還不知道什麼是 XState 的讀者可以先看上一篇文章 [XState 簡介](/posts/xstate-introduction)。如果想要開始上手 XState 的讀者，那一定要先知道是什麼**有限狀態機**！
 
 ## [有限狀態機 (Finite State Machine)](https://zh.wikipedia.org/zh-tw/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA)
 
