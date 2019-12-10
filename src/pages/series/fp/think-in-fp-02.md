@@ -90,7 +90,7 @@ $$$
 f(3) = C
 $$$
 
-![valid function mapping one to one](/img/fp_valid_function_set.png)
+![valid function mapping one to one](/img/合法_function_1.png)
 
 其實就是 `{ 1, 2, 3 }` 的集合透過 function f 轉換成了 `{ A, B, C }` 的集合，其中的重點在於當我們今天傳給 function f `1`  的時候，function f 永遠都會回傳 `A`！
 
