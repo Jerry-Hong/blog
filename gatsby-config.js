@@ -8,6 +8,15 @@ module.exports = {
     siteUrl: 'https://blog.jerry-hong.com/',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-74509098-3',
+        head: false,
+        exclude: ['/admin/**'],
+        pageTransitionDelay: 300,
+      },
+    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
