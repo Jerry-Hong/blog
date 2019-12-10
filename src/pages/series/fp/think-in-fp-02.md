@@ -126,7 +126,7 @@ $$$
 f(3) = A
 $$$
 
-![valid function mapping three to one](/img/fp_valid_function_set_2.png)
+![valid function mapping three to one](/img/合法_function_2.png)
 
 這裡 f 不管是傳入 `1`、`2` 還是 `3` 都會回傳 A，這是合法的，我們只要確保如果傳入相同的參數，永遠會回傳相同的值。
 
