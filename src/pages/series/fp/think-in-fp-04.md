@@ -21,7 +21,7 @@ tags:
 ### 可預期 (確定性)
 如 Think in FP (02) 所提，所有 Pure Function 的運作都是確定的，只要相同的輸入就能得到固定的輸出，不管執行幾次在什麼時間點執行都一樣，這奠定了 Pure Function 為我們帶來的各種好處！
 
-![valid function mapping one to one](/img/valid-function-set.png)
+![valid function mapping one to one](/img/fp_valid_function_set.png)
 
 ### 容易理解
 
