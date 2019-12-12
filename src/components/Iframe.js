@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazyload';
 
 const Content = styled.div`
   position: relative;
@@ -18,9 +19,11 @@ const StyledIframe = styled.iframe`
 
 const Iframe = props => {
   return (
-    <Content>
-      <StyledIframe {...props}/>
-    </Content>
+    <LazyLoad once height={150}>
+      <Content>
+        <StyledIframe {...props} />
+      </Content>
+    </LazyLoad>
   );
 };
 
