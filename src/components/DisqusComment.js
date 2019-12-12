@@ -1,12 +1,6 @@
 import React from 'react';
-const DISQUS_CONFIG = [
-  'shortname',
-  'identifier',
-  'title',
-  'url',
-  'category_id',
-  'onNewComment',
-];
+
+const DISQUS_CONFIG = ['shortname', 'identifier', 'title', 'url', 'category_id', 'onNewComment'];
 let __disqusAdded = false;
 
 function copyProps (context, props, prefix = '') {
@@ -55,9 +49,7 @@ export default class DisqusComment extends React.Component {
     }
 
     const child = (this.disqus = document.createElement('script'));
-    const parent =
-      document.getElementsByTagName('head')[0] ||
-      document.getElementsByTagName('body')[0];
+    const parent = document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0];
 
     child.async = true;
     child.type = 'text/javascript';

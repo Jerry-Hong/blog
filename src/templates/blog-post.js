@@ -38,6 +38,7 @@ export const BlogPostTemplate = ({
         identifier={slug}
         shortname="jerry-blog"
         url={DOMAIN + slug}
+        title={title}
       />
     </Section>
   );
