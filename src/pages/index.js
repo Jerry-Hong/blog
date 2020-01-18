@@ -52,7 +52,7 @@ const IndexPage = () => {
                 date(formatString: "MMM Do, YYYY")
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 240, quality: 64) {
+                    fluid(maxWidth: 600, quality: 64) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -79,7 +79,7 @@ const IndexPage = () => {
                 description
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 240, quality: 64) {
+                    fluid(maxWidth: 600, quality: 64) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -112,7 +112,7 @@ const IndexPage = () => {
                 event
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 240, quality: 64) {
+                    fluid(maxWidth: 600, quality: 64) {
                       ...GatsbyImageSharpFluid
                     }
                   }

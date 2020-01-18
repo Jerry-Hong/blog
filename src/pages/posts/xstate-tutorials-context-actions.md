@@ -2,7 +2,7 @@
 templateKey: blog-post
 slug: xstate-tutorials-context-actions
 title: XState 新手教學 - Context & Actions
-image: "../../../static/img/state-machine.001.png"
+image: "../../../static/img/counter-machine.png"
 date: 2020-01-18T20:30:00.000Z
 description: >-
   上一篇文章中介紹了如何定義狀態，但我們還沒講到 XState 如何處理可變的資料，這篇文章會講解 XState 如何儲存可變資料以及如何改變這些資料。
