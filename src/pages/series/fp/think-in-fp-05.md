@@ -233,8 +233,8 @@ const arr2 = arr.concat(4); // 取代 push
 const arr3 = [0].concat(arr); // 取代 unshift
 // ES6
 const arr4 = [0, ...arr, 4]; // 取代 push 跟 unshift
-const [head, ...rest] = arr; // 取代 pop
-const [...rest, last] = arr; // 取代 shift
+const [head, ...rest] = arr; // 取代 shift
+const { [arr.length - 1]: last  } = arr; // 取代 pop
 ```
 
 也可以限制 mutation 的操作在一個 function 內，如下
