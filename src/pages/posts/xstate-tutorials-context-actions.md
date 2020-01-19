@@ -81,6 +81,7 @@ service.state.context;
 這篇文章會先介紹實務上較最常用的 Actions 個，剩下的有機會在之後的文章中介紹。
 
 > 關於什麼是 Side Effect 可以參考本站的 [Think in FP(03): 我們的 Function 不一樣](/series/fp/think-in-fp-03)
+
 > 關於什麼是 Observalbe 可以參考本站的 [30 天精通 RxJS (04)：什麼是 Observable ?](/series/rxjs/thirty-days-RxJS-04/)
 
 ## Actions
