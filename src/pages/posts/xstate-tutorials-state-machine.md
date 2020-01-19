@@ -357,4 +357,6 @@ function App() {
 
 ## 小結
 
-這篇文章我們講了什麼是 State Machine 以及 XState 的基本用法，下一篇文章我們會講 XState 的 invoke 以及抓取資料的範例！
+這篇文章我們講了什麼是 State Machine 以及 XState 的基本用法，下一篇文章我們會講 XState 如何處理可變的資料！
+
+> 下一篇文章： [XState 新手教學 - Context & Actions](/posts/xstate-tutorials-context-actions/)

@@ -91,3 +91,5 @@ XState 在這方面也已經釋出了 [xstate-analytics](https://github.com/davi
 XState 在推出後已經有許多知名專案使用，包括了前面提到的 Vault 以及 Gatsby 都用了 XState！除非是寫非常小型的網頁應用程式，否則我會推薦讀者嘗試導入 XState，他能讓我們更好的管理狀態甚至改善工作流程，而且 XState 是不管用哪個前端框架都可以搭配使用的，也可以應用在遊戲或手機 App 上。
 
 讓我們期待下一篇文章 - XState 新手入門，如果有任何疑問也歡迎在下方留言給我，謝謝。
+
+> 下一篇文章： [XState 新手教學 - Finite State Machine](/posts/xstate-tutorials-state-machine/)

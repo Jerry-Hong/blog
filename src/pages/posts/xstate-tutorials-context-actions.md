@@ -15,7 +15,7 @@ tags:
 
 ## Context
 
-在上一篇文章中我們有介紹到一個 Machine 的**狀態(state)** 是有限的，例如水的狀態 (固、液、氣、等離子)，但我們仍然會需要儲存非定性的可變**資料(data)**，這些資料我們會儲存在 context 中，如下
+在[上一篇文章](https://blog.jerry-hong.com/posts/xstate-tutorials-state-machine/)中我們有介紹到一個 Machine 的**狀態(state)** 是有限的，例如水的狀態 (固、液、氣、等離子)，但我們仍然會需要儲存非定性的可變**資料(data)**，這些資料我們會儲存在 context 中，如下
 
 ```js
 const machine = Machine({
@@ -55,16 +55,16 @@ const service = interpret(machine.withContext({
 });
 service.start();
 service.state.context;
-// { user: { name: 'Jerry' }, count: 0 }
+// { user: { name: 'Jerry' }, count: 10 }
 ```
 
-至於要如何在特定的狀態中改變 machine 內的 context 呢？我們會需要用到 **Assign** **Actions**。A**ctions** 是一種處**理射後不理 (Fire-and-forget)的** **Effect**，專門用來處理單一次的作用，另外在 XState 中還有許多不同種類的 Effect。
+至於要如何在特定的狀態中改變 machine 內的 context 呢？我們會需要用到 **Assign** **Actions**。**Actions** 是一種 **理射後不理 (Fire-and-forget)的** **Effect**，專門用來處理單一次的作用，另外在 XState 中還有許多不同種類的 Effects。
 
 ## Effects
 
 在 Statecharts 的世界裡，Side Effect 可以依行為區分為兩類
 
-- **Fire-and-forget effects** - 指執行 Side Effect 後不會另外送任何 event 回到 statechart 的 effect。
+- **Fire-and-forget effects** - 指執行 Side Effect 後不會另外送任何 event 回 statechart 的 effect。
 - **Invoked effects -** 指除了可執行 Side Effect 之外還能發送和接收 events 的 effect。
 
 這兩類 Effect 在 XState 中依據不同的使用方式，又可以分為
@@ -79,6 +79,9 @@ service.state.context;
   - invoked Machines
 
 這篇文章會先介紹實務上較最常用的 Actions 個，剩下的有機會在之後的文章中介紹。
+
+> 關於什麼是 Side Effect 可以參考本站的 [Think in FP(03): 我們的 Function 不一樣](/series/fp/think-in-fp-03)
+> 關於什麼是 Observalbe 可以參考本站的 [30 天精通 RxJS (04)：什麼是 Observable ?](/series/rxjs/thirty-days-RxJS-04/)
 
 ## Actions
 
@@ -334,7 +337,7 @@ const counterMachine = Machine(
   sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
 ></iframe>
 
-從上面這個範例，可以看出使用 XState 能夠很清楚的定義出什麼狀態下可以接收哪些 event，例如在 `DISABLED` 的狀態下就只會對 `ENABLE` 的 event 會有反應，對於 `INC`, `RESET` 等事件就不會有反應。
+從上面這個範例，可以看出使用 XState 能夠很清楚的定義出什麼狀態下可以接收哪些 event，例如在 **DISABLED** 的**狀態**下就只會對 `ENABLE` 的 event 會有反應，對於 `INC`, `RESET` 等事件就不會有反應。
 
 另外從 `DYNAMIC_INC` 事件可以看出如何根據外部傳入的參數控制增長數值，詳細可以參考以下這段程式碼
 
