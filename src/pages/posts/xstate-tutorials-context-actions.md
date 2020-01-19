@@ -377,4 +377,6 @@ actions: {
 
 ## 小結
 
-原本這篇文章要接著 Invoked Promise 一起介紹，但礙於篇幅的長度只好拆成兩篇文章。這篇文章介紹了 XState 如何處理可變資料，以及要如何操作 machine 內部的 context，如果有任何問題歡迎在下方留言給我喔！
+原本這篇文章要接著 Invoked Promise 一起介紹，但礙於篇幅的長度只好拆成兩篇文章。這篇文章介紹了 XState 如何處理可變資料，以及要如何操作 machine 內部的 context，如果有任何問題歡迎在下方留言給我喔。
+
+下一篇文章我們會介紹 Invoked Promise 以及 Transition State！
