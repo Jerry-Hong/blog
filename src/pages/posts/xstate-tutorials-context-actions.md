@@ -2,10 +2,11 @@
 templateKey: blog-post
 slug: xstate-tutorials-context-actions
 title: XState 新手教學 - Context & Actions
-image: "../../../static/img/counter-machine.png"
+image: '../../../static/img/counter-machine.png'
 date: 2020-01-18T20:30:00.000Z
 description: >-
   上一篇文章中介紹了如何定義狀態，但我們還沒講到 XState 如何處理可變的資料，這篇文章會講解 XState 如何儲存可變資料以及如何改變這些資料。
+
 tags:
   - XState
   - State Management
@@ -18,14 +19,14 @@ tags:
 
 ```js
 const machine = Machine({
-	context: { 
+  context: {
     // 資料 (data) 存在 context 裡，key 可以自己訂
     count: 0,
     user: null,
   },
   states: {
     //...
-  }
+  },
 });
 ```
 
@@ -35,7 +36,7 @@ const machine = Machine({
 const myMachine = machine.withContext({
   count: 10,
   user: {
-    name: 'Jerry'
+    name: 'Jerry',
   },
 });
 ```
@@ -43,7 +44,7 @@ const myMachine = machine.withContext({
 在任何狀態下，我們都可以拿到 context 的值
 
 ```js
-machine.initialState.context; 
+machine.initialState.context;
 // { user: null, count: 0 }
 
 const service = interpret(machine.withContext({
@@ -53,7 +54,7 @@ const service = interpret(machine.withContext({
   },
 });
 service.start();
-service.state.context; 
+service.state.context;
 // { user: { name: 'Jerry' }, count: 0 }
 ```
 
@@ -86,24 +87,24 @@ Action 本身就是一個 function，接收三個參數分別是 context, event 
 ```js
 const action = (context, event, actionMeta) => {
   // do something...
-}
+};
 ```
 
 我們可以把 actions 寫在任何 State 的任何事件裡，如下
 
 ```js
 const lightMachine = Machine({
-  initial: 'red', 
+  initial: 'red',
   states: {
     red: {
       on: {
         CLICK: {
           // 轉換到 green 的狀態
-          target: 'green', 
+          target: 'green',
           // transition actions
           actions: (context, event) => console.log('hello green'),
         },
-      }
+      },
     },
     green: {
       on: {
@@ -111,10 +112,10 @@ const lightMachine = Machine({
           target: 'red',
           // transition actions
           actions: (context, event) => console.log('hello red'),
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });
 ```
 
@@ -124,7 +125,7 @@ const lightMachine = Machine({
 
 ```js
 const lightMachine = Machine({
-  initial: 'red', 
+  initial: 'red',
   states: {
     red: {
       // entry actions
@@ -135,10 +136,10 @@ const lightMachine = Machine({
         CLICK: {
           target: 'green',
         },
-      }
+      },
     },
     //...
-  }
+  },
 });
 ```
 
@@ -148,7 +149,7 @@ const lightMachine = Machine({
 
 ```js
 const lightMachine = Machine({
-  initial: 'red', 
+  initial: 'red',
   states: {
     red: {
       // entry actions
@@ -157,7 +158,7 @@ const lightMachine = Machine({
       exit: 'exitRed',
       on: {
         CLICK: {
-          target: 'green', 
+          target: 'green',
           // transition actions
           actions: 'redClick',
         },
@@ -167,7 +168,7 @@ const lightMachine = Machine({
   }
 }, {
   actions: {
-    entryRed: (context, event) => console.log('entry red'), 
+    entryRed: (context, event) => console.log('entry red'),
     exitRed: (context, event) => console.log('exit red'),
     redClick: (context, event) => console.log('hello green'),
   },
@@ -177,32 +178,35 @@ const lightMachine = Machine({
 所有設定 actions 的地方都可以是一個 array，依序執行多個 actions，如下
 
 ```js
-const lightMachine = Machine({
-  initial: 'red', 
-  states: {
-    red: {
-      // entry actions
-      entry: ['entryRed', 'temp'],
-      // exit actions
-      exit: ['exitRed', 'temp'],
-      on: {
-        CLICK: {
-          target: 'green', 
-          // transition actions
-          actions: ['redClick', 'temp'],
+const lightMachine = Machine(
+  {
+    initial: 'red',
+    states: {
+      red: {
+        // entry actions
+        entry: ['entryRed', 'temp'],
+        // exit actions
+        exit: ['exitRed', 'temp'],
+        on: {
+          CLICK: {
+            target: 'green',
+            // transition actions
+            actions: ['redClick', 'temp'],
+          },
         },
-      }
+      },
+      //...
     },
-    //...
-  }
-}, {
-  actions: {
-    entryRed: (context, event) => console.log('entry red'), 
-    exitRed: (context, event) => console.log('exit red'),
-    redClick: (context, event) => console.log('hello green'),
-    temp: (context, event) => console.log('temp'),
   },
-});
+  {
+    actions: {
+      entryRed: (context, event) => console.log('entry red'),
+      exitRed: (context, event) => console.log('exit red'),
+      redClick: (context, event) => console.log('hello green'),
+      temp: (context, event) => console.log('temp'),
+    },
+  }
+);
 ```
 
 可以到 [這裡](https://xstate.js.org/viz/?gist=4a28a80b653a0fd1f0babea3fc0c6b42) 開啟 console 看看，如果是 array 的話會依序執行 array 內的 actions。
@@ -219,22 +223,25 @@ const lightMachine = Machine({
 > 建議統一把 actions 放在 machine options 內，如下
 >
 > ```js
-> const lightMachine = Machine({
->   initial: 'red', 
->   states: {
->     red: {
->       // entry actions
->       entry: ['entryRed', 'temp'],
+> const lightMachine = Machine(
+>   {
+>     initial: 'red',
+>     states: {
+>       red: {
+>         // entry actions
+>         entry: ['entryRed', 'temp'],
+>         //...
+>       },
 >       //...
 >     },
->     //...
->   }
-> }, {
->   actions: {
->     entryRed: (context, event) => console.log('entry red'),
->     temp: (context, event) => console.log('temp'),
 >   },
-> });
+>   {
+>     actions: {
+>       entryRed: (context, event) => console.log('entry red'),
+>       temp: (context, event) => console.log('temp'),
+>     },
+>   }
+> );
 > ```
 
 ## Assign Action
@@ -247,15 +254,16 @@ const lightMachine = Machine({
 import { Machine, assign } from 'xstate';
 
 // ...
-	actions: assign({
-    // 透過外部傳進來的 event 來改變 count
-    count: (context, event) => context.count + event.value,
-    message: 'value 也可以直接是 static value'
-  })
+actions: assign({
+  // 透過外部傳進來的 event 來改變 count
+  count: (context, event) => context.count + event.value,
+  message: 'value 也可以直接是 static value',
+});
 // ...
 ```
 
 **assigner** 也可以是一個 function，用法如下
+
 ```js
 // ...
   // 他會 partial update context
@@ -267,49 +275,53 @@ import { Machine, assign } from 'xstate';
   }),
 // ...
 ```
+
 讓我們直接來看一個簡單的例子吧
 
 ```js
-const counterMachine = Machine({
-	id: 'counter',
-  initial: 'ENABLED',
-  context: {
-    count: 0,
-  },
-  states: {
-    ENABLED: {
-      on: {
-        INC: {
-          actions: ['increment'],
-        },
-        DYNAMIC_INC: {
-					actions: ['dynamic_increment'],
-        },
-        RESET: {
-          actions: ['reset'],
-        },
-        DISABLE: 'DISABLED',
-      }
+const counterMachine = Machine(
+  {
+    id: 'counter',
+    initial: 'ENABLED',
+    context: {
+      count: 0,
     },
-    DISABLED: {
-      on: {
-	      ENABLE: 'ENABLED',
+    states: {
+      ENABLED: {
+        on: {
+          INC: {
+            actions: ['increment'],
+          },
+          DYNAMIC_INC: {
+            actions: ['dynamic_increment'],
+          },
+          RESET: {
+            actions: ['reset'],
+          },
+          DISABLE: 'DISABLED',
+        },
       },
-    }
+      DISABLED: {
+        on: {
+          ENABLE: 'ENABLED',
+        },
+      },
+    },
+  },
+  {
+    actions: {
+      increment: assign({
+        count: context => context.count + 1,
+      }),
+      dynamic_increment: assign({
+        count: (context, event) => context.count + (event.value || 0),
+      }),
+      reset: assign({
+        count: 0,
+      }),
+    },
   }
-}, {
-	actions: {
-		increment: assign({
-	    count: context => context.count + 1
-	  }),
-	  dynamic_increment: assign({
-	    count: (context, event) => context.count + (event.value || 0)
-	  }),
-	  reset: assign({
-	    count: 0
-	  }),
-  }
-})
+);
 ```
 
 搭配畫面會長像這樣
@@ -336,7 +348,7 @@ on: {
 //...
 actions: {
   dynamic_increment: assign({
-    count: (context, event) => context.count + (event.value || 0) 
+    count: (context, event) => context.count + (event.value || 0)
     // event 除了 type 這個屬性之外有什麼 property 是外部決定的
   }),
 },
@@ -345,12 +357,12 @@ actions: {
 <Button
   label="Increment"
   onClick={() =>
-    // 這裡傳入 DYNAMIC_INC event 同時要給 value 
+    // 這裡傳入 DYNAMIC_INC event 同時要給 value
     send({ type: COUNTER_EVENTS.DYNAMIC_INC, value: Number(value) })
   }
 />
 //...
-```    
+```
 
 ### 注意事項
 
