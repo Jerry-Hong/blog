@@ -78,7 +78,7 @@ service.state.context;
   - Invoked Observables
   - invoked Machines
 
-這篇文章會先介紹實務上較最常用的 Actions 個，剩下的有機會在之後的文章中介紹。
+這篇文章會先介紹實務上較最常用的 Actions，剩下的有機會在之後的文章中介紹。
 
 > 關於什麼是 Side Effect 可以參考本站的 [Think in FP(03): 我們的 Function 不一樣](/series/fp/think-in-fp-03)
 
