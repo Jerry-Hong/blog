@@ -143,7 +143,6 @@ export const Section = styled.section`
   .gatsby-highlight-code-line {
     background-color: #000;
     display: block;
-    margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;
