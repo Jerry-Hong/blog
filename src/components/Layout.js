@@ -9,6 +9,7 @@ import { DOMAIN } from '../constants/index';
 import FixedMenu from './FixedMenu';
 import { media } from '../utils/mediaQuery';
 import FixedHeader from './FixedHeader';
+import 'katex/dist/katex.min.css';
 
 const Continer = styled.div`
   width: 100%;
@@ -40,6 +41,12 @@ const GlobalStyle = createGlobalStyle`
 
   ${normalize()}
 
+
+  @font-face {
+    font-family: "PragmataPro";
+    src: url("/fonts/PragmataPro_Mono_R_0828.ttf") format("ttf");
+  }
+
   html {
     font-family: 'Noto Sans TC', sans-serif;
     box-sizing: border-box;
@@ -67,6 +74,7 @@ const GlobalStyle = createGlobalStyle`
     --active: ${theme[THEME.LIGHT].COLOR.ACTIVE};
     --disabled: ${theme[THEME.LIGHT].COLOR.DISABLED};
     --white: ${COMMON_COLORS.WHITE};
+    --code-line-highlighted: ${rgba(COMMON_COLORS.WHITE, 0.2)};
 
     color: var(--text);
     background-color: var(--bg);
@@ -93,6 +101,7 @@ const GlobalStyle = createGlobalStyle`
     --active: ${theme[THEME.DARK].COLOR.ACTIVE};
     --disabled: ${theme[THEME.DARK].COLOR.DISABLED};
     --white: ${COMMON_COLORS.WHITE};
+    --code-line-highlighted: ${rgba(COMMON_COLORS.WHITE, 0.2)};
     
     color: var(--text);
     background-color: var(--bg);

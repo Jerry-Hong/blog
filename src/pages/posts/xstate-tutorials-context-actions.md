@@ -342,7 +342,7 @@ const counterMachine = Machine(
 
 另外從 `DYNAMIC_INC` 事件可以看出如何根據外部傳入的參數控制增長數值，詳細可以參考以下這段程式碼
 
-```jsx
+```js
 //...
 on: {
   [COUNTER_EVENTS.DYNAMIC_INC]: {

@@ -1,6 +1,8 @@
+const path = require('path');
 let proxy = require('http-proxy-middleware');
 const DOMAIN = 'https://blog.jerry-hong.com';
 
+console.log(path.resolve('extensions'));
 module.exports = {
   siteMetadata: {
     title: 'J.H. Blog',
@@ -56,6 +58,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-code-titles',
+          },
+          {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',
@@ -74,7 +79,21 @@ module.exports = {
             },
           },
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
+          {
+            resolve: `gatsby-remark-vscode`,
+            // All options are optional. Defaults shown here.
+            options: {
+              theme: 'One Monokai',
+              wrapperClassName: '', // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
+              injectStyles: false, // Injects (minimal) additional CSS for layout and scrolling
+              extensions: [`${__dirname}/extensions/one-monokai-0.4.6.vsix`], // Extensions to download from the marketplace to provide more languages and themes
+              languageAliases: {
+                env: 'bash',
+              }, // Map of custom/unknown language codes to standard/known language codes
+              replaceColor: x => x, // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
+              logLevel: 'warn', // Set to 'warn' to debug if something looks wrong
+            },
+          },
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {

@@ -2,10 +2,9 @@
 templateKey: blog-post
 slug: xstate-tutorials-state-machine
 title: XState 新手教學 - Finite State Machine
-image: "../../../static/img/state-machine.001.png"
+image: '../../../static/img/state-machine.001.png'
 date: 2019-12-08T15:30:00.000Z
-description: >-
-  我們上一篇文章介紹了什麼是 XState 以及為什麼推薦使用 XState，接下來幾篇文章會講解 XState 基本用法，希望能幫助大家快速地上手 XState！
+description: 我們上一篇文章介紹了什麼是 XState 以及為什麼推薦使用 XState，接下來幾篇文章會講解 XState 基本用法，希望能幫助大家快速地上手 XState！
 tags:
   - XState
   - State Management
@@ -21,7 +20,7 @@ tags:
 
 ## [有限狀態機 (Finite State Machine)](https://zh.wikipedia.org/zh-tw/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA)
 
-有限狀態機 (Finite State Machine, FSM) 是一種數學模型用來描述系統的行為，這個系統在**任何時間點**上都只會存在於**一個狀態**。舉例來說，紅綠燈就有 `紅燈`、`綠燈`、`黃燈`  三種狀態，在任何時間點上一定是這三種狀態的其中一種，不可能在一個時間點上存在兩種或兩種以上的狀態。
+有限狀態機 (Finite State Machine, FSM) 是一種數學模型用來描述系統的行為，這個系統在**任何時間點**上都只會存在於**一個狀態**。舉例來說，紅綠燈就有 `紅燈`、`綠燈`、`黃燈` 三種狀態，在任何時間點上一定是這三種狀態的其中一種，不可能在一個時間點上存在兩種或兩種以上的狀態。
 
 一個正式的**有限狀態機**包含五個部分
 
@@ -44,70 +43,70 @@ XState 的 Machine 其實就是一個 State Machine (精確地說是 Statechart)
 讓我們來看一個紅綠燈的例子吧！
 
 ```js
-import { Machine } from 'xstate'
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
   states: {
     red: {},
     green: {},
     yellow: {},
-  }
+  },
 });
 ```
 
 首先我們需要訂定 Machine 會有哪些**狀態**，傳給 Machine 一個 object 內部必須有 `states` 這個屬性，而 `states` object 的每個 key 就是這個 Machine 擁有的**狀態。**所以這段程式碼代表這個 Machine 擁有 `red` , `green` , `yellow` 三種狀態。
 
-```javascript{5-7}
-import { Machine } from 'xstate'
+```js{5-7}
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
   states: {
     red: {},
     green: {},
     yellow: {},
-  }
+  },
 });
 ```
 
 接下來我們要定義**初始狀態**，假如說我們希望一開始是紅燈，那就給 `initial` 如下
 
 ```js{4}
-import { Machine } from 'xstate'
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
-  initial: 'red', 
+  initial: 'red',
   states: {
     red: {},
     green: {},
     yellow: {},
-  }
+  },
 });
 ```
 
 `initial` 給 `'red'` 這樣我們的 lightMachine 的初始狀態就會是 `red`。接下來我們要定義每個狀態下會有什麼**事件**，遇到這些**事件**時，會轉換成什麼狀態。這裡我們訂定三個狀態下都會有 `CLICK` 事件，並且狀態的轉換是 `red -> green -> yellow -> red ...` 那我們的程式碼就會像下這面這樣
 
 ```js{8,13,18}
-import { Machine } from 'xstate'
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
-  initial: 'red', 
+  initial: 'red',
   states: {
     red: {
       on: {
         CLICK: 'green',
-      }
+      },
     },
     green: {
       on: {
         CLICK: 'yellow',
-      }
+      },
     },
     yellow: {
       on: {
         CLICK: 'red',
-      }
+      },
     },
-  }
+  },
 });
 ```
 
@@ -116,7 +115,7 @@ const lightMachine = Machine({
 這時候我們就可以拿 `lightMachine` 來使用了！透過 `.transition(state, event)` 這個方法來取得下一個狀態
 
 ```js
-import { Machine } from 'xstate'
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
   //...
@@ -141,33 +140,33 @@ console.log(state3);
 value 可以拿到當前的狀態，matches 則可以用來判斷現在是否在某個狀態，比如說
 
 ```js
-import { Machine } from 'xstate'
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
   //...
 });
 
 const state0 = lightMachine.initialState;
-console.log(state0.value) // 'red'
+console.log(state0.value); // 'red'
 const state1 = lightMachine.transition(state0, 'CLICK');
-console.log(state1.value) // 'green'
+console.log(state1.value); // 'green'
 
-state0.matches('red') // true
-state0.matches('yellow') // false
-state0.matches('green') // false
+state0.matches('red'); // true
+state0.matches('yellow'); // false
+state0.matches('green'); // false
 ```
 
 nextEvents 則可以拿到該 state 有哪些 events 可以使用
 
 ```js
-import { Machine } from 'xstate'
+import { Machine } from 'xstate';
 
 const lightMachine = Machine({
   //...
 });
 
 const state0 = lightMachine.initialState;
-console.log(state0.nextEvents) // 'CLICK'
+console.log(state0.nextEvents); // 'CLICK'
 ```
 
 最後，把程式碼放到 XState Visualizer 上就會長相這樣
@@ -183,7 +182,7 @@ console.log(state0.nextEvents) // 'CLICK'
 XState 提供了一個叫 `interpret` 的 function 可以把一個 machine 實例轉換成一個具有狀態的 service，如下
 
 ```js{6-16}
-import { Machine, interpret } from 'xstate'
+import { Machine, interpret } from 'xstate';
 
 const lightMachine = Machine({
   //...
@@ -204,7 +203,7 @@ service.stop();
 interpret 得到的 service 具有自己的狀態，當 `start()` 後，這個 service 就會到**初始狀態**，同時可以對他傳送(send)**事件**，同時也可以透過 `service.state` 拿到當前的**狀態**，如下
 
 ```js{12-14}
-import { Machine, interpret } from 'xstate'
+import { Machine, interpret } from 'xstate';
 
 const lightMachine = Machine({
   //...
@@ -239,7 +238,7 @@ service.stop();
 const LIGHT_STATES = {
   RED: 'RED',
   GREEN: 'green',
-  YELLOW: 'yellow'
+  YELLOW: 'yellow',
 };
 
 const LIGHT_EVENTS = {
@@ -249,20 +248,20 @@ const LIGHT_EVENTS = {
 
 再定義 lightMachine
 
-```js
-import { useMachine } from '@xstate/react';
+```js:title=lightMachine.js
+import { Machine } from 'xstate';
 
 const LIGHT_STATES = {
   RED: 'RED',
   GREEN: 'GREEN',
-  YELLOW: 'YELLOW'
+  YELLOW: 'YELLOW',
 };
 
 const LIGHT_EVENTS = {
   CLICK: 'CLICK',
 };
 
-const lightMachine = Machine({
+export const lightMachine = Machine({
   initial: LIGHT_STATES.RED,
   states: {
     [LIGHT_STATES.RED]: {
@@ -286,9 +285,10 @@ const lightMachine = Machine({
 
 接著完成 React 的部分
 
-```js
+```jsx:title=App.jsx
 import React from 'react';
 import { useMachine } from '@xstate/react';
+import { lightMachine } from './lightMachine';
 
 function App() {
   const [state, send] = useMachine(lightMachine);
@@ -300,9 +300,10 @@ function App() {
 
 React 的部分我們使用了 XState 官方提供的 `@xstate/react` Library，這裡用到的 `useMachine` 其實就是用了前面提到的 `interpret` 它已經幫我們產生好 service 並會回傳 `[state, send, service]` 。
 
-```js
+```jsx:title=App.jsx
 import React from 'react';
 import { useMachine } from '@xstate/react';
+import { lightMachine } from './lightMachine';
 
 function App() {
   const [state, send] = useMachine(lightMachine);
