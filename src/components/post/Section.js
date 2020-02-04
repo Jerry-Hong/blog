@@ -124,7 +124,7 @@ export const Section = styled.section`
 
   .grvsc-line {
     display: inline-block;
-    padding: 0 1rem;
+    padding-left: 1rem;
   }
 
   .grvsc-container .grvsc-line-highlighted {
