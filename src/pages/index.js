@@ -134,7 +134,6 @@ const IndexPage = () => {
           Programming.I love learning new thing, and I also enjoy accessibly
           sharing what I learned and what I thought.
         </Desc>
-        <Desc>Welcome to my Blog!</Desc>
         <SubTitle>Latest Posts</SubTitle>
         <PostList data={posts.edges} />
         <SubTitle>Series</SubTitle>
