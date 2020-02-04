@@ -2,13 +2,7 @@ const R = require('ramda');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
-
-const kebabCase = s =>
-  s
-    .replace(/([A-Z])/g, ' $1')
-    .replace(/(\W+)/g, '-')
-    .replace(/^-|-$/g, '')
-    .toLowerCase();
+const { kebabCase } = require('lodash');
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;

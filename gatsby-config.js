@@ -1,8 +1,6 @@
-const path = require('path');
 let proxy = require('http-proxy-middleware');
 const DOMAIN = 'https://blog.jerry-hong.com';
 
-console.log(path.resolve('extensions'));
 module.exports = {
   siteMetadata: {
     title: 'J.H. Blog',

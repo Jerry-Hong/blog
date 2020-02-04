@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Tag as TagIcon } from 'react-feather';
 import { Link } from 'gatsby';
-import { kebabCase } from '../../utils/ramdaExtention';
+import { kebabCase } from 'lodash';
 
 const Content = styled.div`
   display: flex;

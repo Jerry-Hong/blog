@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { kebabCase } from 'lodash';
 import Layout from '../../components/Layout';
-import { kebabCase } from '../../utils/ramdaExtention';
 import Card from '../../components/Card';
 import { media } from '../../utils/mediaQuery';
 
