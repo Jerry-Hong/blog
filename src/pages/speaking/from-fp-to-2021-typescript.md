@@ -20,21 +20,21 @@ tags:
 
 ### Q&A 補充
 
-Q1. 想問定義 Object 的型別時，何時用 `type`、何時用 `interface`？如何決定用何者？
+#### Q1. 想問定義 Object 的型別時，何時用 `type`、何時用 `interface`？如何決定用何者？
 
 以 code readability 來說，建議統一用 type
 以 type check performance 的角度來說，[建議用 interface](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
 講者自己本身統一用 `type` 來定義
 
-Q2. 不寫 function 的單元測試，以 type 代替測試是可行的嗎？這樣的做法推薦嗎？
+#### Q2. 不寫 function 的單元測試，以 type 代替測試是可行的嗎？這樣的做法推薦嗎？
 
 不行，絕大多數 Strong type 的語言，Type 最多只能做到 Type Safe 不能保證程式的邏輯正確，除非語言本身有提供足夠強的 dependent type，把商業邏輯都定義在 Type 裡，才能做到不寫 unit test，像是 [Idris](https://www.idris-lang.org/)
 
-Q3. 若因一些歷史包袱，目前工作專案存有為數不少的 any type，在重構、移除 any type 的時候，有什麼具體的建議嗎？
+#### Q3. 若因一些歷史包袱，目前工作專案存有為數不少的 any type，在重構、移除 any type 的時候，有什麼具體的建議嗎？
 
 必須先足夠熟悉專案，對專案的功能都有一定的了解，知道需要定義哪些 Types 後，再把 `any` type 改成 `unknown` type 並足一把 Type Error 清掉。
 
-Q4. 突然想到 async await 裡的 try catch 的  error clause 是 any
+#### Q4. 突然想到 async await 裡的 try catch 的  error clause 是 any
 
 可以用 fp-ts 的 Either，讓 Promise 永遠都回傳 Either type，拿到 Either 後判斷是 `Right` 還是 `Left` 來拿到 data 或是 error， sample code 如下
 
