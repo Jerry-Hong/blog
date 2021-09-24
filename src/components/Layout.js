@@ -9,7 +9,6 @@ import { DOMAIN } from '../constants/index';
 import FixedMenu from './FixedMenu';
 import { media } from '../utils/mediaQuery';
 import FixedHeader from './FixedHeader';
-import 'katex/dist/katex.min.css';
 
 const Continer = styled.div`
   width: 100%;
