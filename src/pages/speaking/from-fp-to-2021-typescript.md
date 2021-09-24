@@ -23,7 +23,9 @@ tags:
 #### Q1. 想問定義 Object 的型別時，何時用 `type`、何時用 `interface`？如何決定用何者？
 
 以 code readability 來說，建議統一用 type
+
 以 type check performance 的角度來說，[建議用 interface](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
+
 講者自己本身統一用 `type` 來定義
 
 #### Q2. 不寫 function 的單元測試，以 type 代替測試是可行的嗎？這樣的做法推薦嗎？

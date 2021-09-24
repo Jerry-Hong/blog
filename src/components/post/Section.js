@@ -108,7 +108,7 @@ export const Section = styled.section`
     font-size: 18px;
     padding: 0 5px;
     border-radius: 5px;
-    background-color: #282c34;
+    background-color: rgb(40, 44, 52, 0.9);
     color: #e5c07b;
   }
 
