@@ -331,7 +331,7 @@ const counterMachine = Machine(
 搭配畫面會長像這樣
 
 <iframe
-  src="https://codesandbox.io/embed/wonderful-haslett-94ek4?autoresize=1&fontsize=14&hidenavigation=1&theme=dark&view=preview"
+  src="https://codesandbox.io/embed/react-xstate-2-428z3?autoresize=1&fontsize=14&hidenavigation=1&theme=dark&view=preview"
   style="border:0; border-radius: 4px; overflow:hidden;"
   title="react-xstate-example-1"
   allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
